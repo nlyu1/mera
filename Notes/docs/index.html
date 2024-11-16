@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Measure Theory, Functional Analysis</title>
+  <meta name="description" content="Measure Theory, Functional Analysis" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Measure Theory, Functional Analysis" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Measure Theory, Functional Analysis" />
+  
+  
+  
+
+<meta name="author" content="Nicholas Lyu" />
+
+
+<meta name="date" content="2024-10-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="prelimaries.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#organization"><i class="fa fa-check"></i>Organization</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#main-deliverables"><i class="fa fa-check"></i>Main deliverables</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="prelimaries.html"><a href="prelimaries.html"><i class="fa fa-check"></i><b>1</b> Prelimaries</a>
+<ul>
+<li class="chapter" data-level="" data-path="prelimaries.html"><a href="prelimaries.html#topology"><i class="fa fa-check"></i>Topology</a></li>
+<li class="chapter" data-level="" data-path="prelimaries.html"><a href="prelimaries.html#realAnalysis"><i class="fa fa-check"></i>Real analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="prelimaries.html"><a href="prelimaries.html#semi-continuity"><i class="fa fa-check"></i>Semi-continuity</a></li>
+<li class="chapter" data-level="" data-path="prelimaries.html"><a href="prelimaries.html#cauchy-sequences"><i class="fa fa-check"></i>Cauchy sequences</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="abstractMachinery.html"><a href="abstractMachinery.html"><i class="fa fa-check"></i><b>2</b> Measures and σ-algebra</a>
+<ul>
+<li class="chapter" data-level="" data-path="abstractMachinery.html"><a href="abstractMachinery.html#sigmaDefinition"><i class="fa fa-check"></i>σ-algebra</a></li>
+<li class="chapter" data-level="" data-path="abstractMachinery.html"><a href="abstractMachinery.html#measurableSpace"><i class="fa fa-check"></i>Measure space</a></li>
+<li class="chapter" data-level="" data-path="abstractMachinery.html"><a href="abstractMachinery.html#measurableFunction"><i class="fa fa-check"></i>Measurable function</a></li>
+<li class="chapter" data-level="" data-path="abstractMachinery.html"><a href="abstractMachinery.html#caratheodory"><i class="fa fa-check"></i>Carathéodory theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="realMeasures.html"><a href="realMeasures.html"><i class="fa fa-check"></i><b>3</b> Lebesgue measure</a>
+<ul>
+<li class="chapter" data-level="" data-path="realMeasures.html"><a href="realMeasures.html#extMeasure"><i class="fa fa-check"></i>Rectangles, exterior measure</a></li>
+<li class="chapter" data-level="" data-path="realMeasures.html"><a href="realMeasures.html#lebMeasure"><i class="fa fa-check"></i>Lebesgue measure, Borel regularity</a>
+<ul>
+<li class="chapter" data-level="" data-path="realMeasures.html"><a href="realMeasures.html#a-non-measurable-set"><i class="fa fa-check"></i>A non-measurable set</a></li>
+<li class="chapter" data-level="" data-path="realMeasures.html"><a href="realMeasures.html#approximation-of-measurable-sets"><i class="fa fa-check"></i>Approximation of measurable sets</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="realIntegration.html"><a href="realIntegration.html"><i class="fa fa-check"></i><b>4</b> Integration on <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#functionMeasurabilityConditions"><i class="fa fa-check"></i>Measurable functions on <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#simple-functions"><i class="fa fa-check"></i>Simple functions</a></li>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#conditions-for-measurability"><i class="fa fa-check"></i>Conditions for measurability</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#littlewoodPrinciples"><i class="fa fa-check"></i>Littlewood’s three principles</a></li>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#lebesgueIntegration"><i class="fa fa-check"></i>Lebesgue integration</a></li>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#lebesgueConvergence"><i class="fa fa-check"></i>Convergence theorems</a>
+<ul>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#comparison-with-riemann-integral"><i class="fa fa-check"></i>Comparison with Riemann integral</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="iteratedIntegrals.html"><a href="iteratedIntegrals.html"><i class="fa fa-check"></i><b>5</b> Iterated integrals</a>
+<ul>
+<li class="chapter" data-level="" data-path="iteratedIntegrals.html"><a href="iteratedIntegrals.html#properties-of-products"><i class="fa fa-check"></i>Properties of products</a></li>
+<li class="chapter" data-level="" data-path="iteratedIntegrals.html"><a href="iteratedIntegrals.html#fubinis-theorem"><i class="fa fa-check"></i>Fubini’s theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="banachSpaces.html"><a href="banachSpaces.html"><i class="fa fa-check"></i><b>6</b> Spaces of functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="banachSpaces.html"><a href="banachSpaces.html#vectorSpace"><i class="fa fa-check"></i>Normed spaces, Hahn-Banach</a></li>
+<li class="chapter" data-level="" data-path="banachSpaces.html"><a href="banachSpaces.html#banachSpace"><i class="fa fa-check"></i>Banach theorems</a></li>
+<li class="chapter" data-level="" data-path="banachSpaces.html"><a href="banachSpaces.html#kolmorogorov-arnold-theorem"><i class="fa fa-check"></i>Kolmorogorov-Arnold theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="Lpspaces.html"><a href="Lpspaces.html"><i class="fa fa-check"></i><b>7</b> <span class="math inline">\(L^p\)</span> Spaces</a>
+<ul>
+<li class="chapter" data-level="" data-path="Lpspaces.html"><a href="Lpspaces.html#convexAnalysis"><i class="fa fa-check"></i>Convexity</a></li>
+<li class="chapter" data-level="" data-path="Lpspaces.html"><a href="Lpspaces.html#LpSpace"><i class="fa fa-check"></i><span class="math inline">\(L^p\)</span> as a Banach space</a></li>
+<li class="chapter" data-level="" data-path="Lpspaces.html"><a href="Lpspaces.html#duality"><i class="fa fa-check"></i>Duality</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="Fourier.html"><a href="Fourier.html"><i class="fa fa-check"></i><b>8</b> Fourier Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="Fourier.html"><a href="Fourier.html#disc"><i class="fa fa-check"></i>Compact domain: <span class="math inline">\(\partial D\)</span></a>
+<ul>
+<li class="chapter" data-level="" data-path="Fourier.html"><a href="Fourier.html#the-poisson-kernel"><i class="fa fa-check"></i>The Poisson kernel</a></li>
+<li class="chapter" data-level="" data-path="Fourier.html"><a href="Fourier.html#convergence-results"><i class="fa fa-check"></i>Convergence results</a></li>
+<li class="chapter" data-level="" data-path="Fourier.html"><a href="Fourier.html#convolution-and-lp"><i class="fa fa-check"></i>Convolution and <span class="math inline">\(L^p\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="Fourier.html"><a href="Fourier.html#haar"><i class="fa fa-check"></i>The Haar measure</a></li>
+<li class="chapter" data-level="" data-path="Fourier.html"><a href="Fourier.html#fourierTransform"><i class="fa fa-check"></i>The dual group, Fourier transform</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Measure Theory, Functional Analysis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Measure Theory, Functional Analysis</h1>
+<p class="author"><em>Nicholas Lyu</em></p>
+<p class="date"><em>2024-10-26</em></p>
+</div>
+<div id="preface" class="section level1 unnumbered hasAnchor">
+<h1>Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>These notes accompany the Fall 2024 iteration of Math 114, a second-semester
+undergraduate course on real analysis and measure theory. These notes
+deviate quite a bit from lecture materials, in particular:</p>
+<ol style="list-style-type: decimal">
+<li>I prefer a more principled construction of the Lebesgue measure as the restriction of
+the exterior measure using the Carathéodory theorem.
+<ul>
+<li>Sets declared measurable by the Carathéodory criteria are automatically
+closed under <span class="math inline">\(\sigma\)</span>-algebra operations, so
+one only needs to show the measurability of rectangles
+to establish the measurability of the Borel sets.</li>
+</ul></li>
+<li>Materials are heavily supplemented by Sheldon Axler’s
+<em>Measure, Integration and Real Analysis</em>.</li>
+<li>Some time is spent on infinite-dimensional vector spaces and
+results in Banach spaces, since
+<ol style="list-style-type: decimal">
+<li>nontrivial complexities arive when we generalize linear algebra
+constructions to infinite-dimensions (e.g. Hammel basis, span, and orthonormal basis).</li>
+<li>several theorems are important for convex analysis.</li>
+</ol></li>
+<li>Much more time is spent on the Fourier transform, with intuitions developed
+on the compact domain <span class="math inline">\(\partial D\cong S^1\)</span> and later generalized to locally compact
+abelian groups.</li>
+<li>Other miscellany:
+<ul>
+<li>Proof of Young’s inequality (proposition <a href="Lpspaces.html#prp:youngInequality">7.2</a>)
+using the Legendre transform to highlight the role of convexity.</li>
+</ul></li>
+</ol>
+<div id="organization" class="section level2 unnumbered hasAnchor">
+<h2>Organization<a href="index.html#organization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Abstract machinery of <a href="abstractMachinery.html#abstractMachinery">measures and <span class="math inline">\(\sigma\)</span>-algebra</a>.
+<ul>
+<li>Lieb and Loss, chapter 1.</li>
+</ul></li>
+<li>The <a href="realMeasures.html#realMeasures">exterior measure and Lebesgue measure</a> on <span class="math inline">\(\mathbb R^n\)</span>.
+<ul>
+<li>Hunter.</li>
+</ul></li>
+<li><a href="#integration">Lebesgue integral</a>,
+Littlewood’s three principles, and integral convergence theorems.
+<ul>
+<li>Rudin, , chapter 11; Axler, chapter 2; Lieb and Loss, chapter 1.</li>
+</ul></li>
+<li><a href="#iteratedIntegrals%7D">Iterated integrals</a>: uniqueness of product measure
+and Fubini’s theorem.
+<ul>
+<li>Lieb and Loss, chapter 1.</li>
+</ul></li>
+<li><a href="banachSpaces.html#banachSpaces">Spaces of functions</a>:
+normed vector spaces, dual space of bounded linear functionals,<br />
+and the Hahn-Banach theorem; Baire’s theorem and other Banach theorems.
+<ul>
+<li>Axler, Chapter 6.</li>
+</ul></li>
+<li><a href="Lpspaces.html#Lpspaces"><span class="math inline">\(L^p\)</span> spaces</a>.
+<ul>
+<li>Lieb and Loss, chapter 2; Axler, chapter 7.</li>
+</ul></li>
+<li><a href="Fourier.html#Fourier">Fourier analysis</a>: Example of the Fourier series
+on a compact domain, the Haar measure, locally compact groups and their duals.
+<ul>
+<li>Axler, Chapter 11, Rudin (Fourier analysis), Chapter 1, Su.</li>
+</ul></li>
+</ol>
+<p>References for these notes</p>
+<ol style="list-style-type: decimal">
+<li>Axler, <em>Measure, Integration &amp; Real analysis</em> <span class="citation">(<a href="#ref-axler2020measure">Axler 2020</a>)</span>.</li>
+<li>Lieb and Loss, <em>Analysis</em> <span class="citation">(<a href="#ref-lieb2001analysis">Lieb and Loss 2001</a>)</span>.</li>
+<li>John K. Hunter, <a href="https://www.math.ucdavis.edu/~hunter/measure_theory/measure_notes_ch2.pdf">online notes</a>
+on the Lebesgue measure.</li>
+<li>Rudin, <em>Principles of Mathematical Analysis</em> <span class="citation">(<a href="#ref-rudin1964principles">Rudin et al. 1964</a>)</span>.</li>
+<li>Rudin, <em>Fourier analysis on groups</em> <span class="citation">(<a href="#ref-rudin2017fourier">Rudin 2017</a>)</span>.</li>
+<li>Dan Su, <em>The Fourier Transform for Locally Compact Abelian Groups</em>,
+<a href="https://math.uchicago.edu/~may/REU2016/REUPapers/Su.pdf">online notes</a>.</li>
+</ol>
+</div>
+<div id="main-deliverables" class="section level2 unnumbered hasAnchor">
+<h2>Main deliverables<a href="index.html#main-deliverables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><u>Monotone class theorem</u> <a href="abstractMachinery.html#thm:monotoneClassTheorem">2.1</a>:
+freely-generated monotone class equals freely-generated <span class="math inline">\(\sigma\)</span>-algebra
+for algebra of sets containing <span class="math inline">\(\Omega\)</span>.</li>
+<li><u>Carathéodory’s theorem</u> <a href="abstractMachinery.html#thm:measureConstruction">2.3</a>:
+given an outer measure <span class="math inline">\(\mu\)</span>, the measurable sets <span class="math inline">\(B\subset \Omega\)</span> satisfying
+<span class="math inline">\(\mu(\forall E) = \mu(E\cap B) + \mu(E\cap B^c)\)</span> form a <span class="math inline">\(\sigma\)</span>-algebra
+and obey countable additivity.</li>
+<li><u>Dominated convergence theorem</u> <a href="realIntegration.html#thm:dominatedConvergence">4.8</a>:
+dominated pointwise limit of measurable functions can be exchanged with integral.<br />
+</li>
+<li><u>Hahn-Banach, hyperplane separation</u> theorems:
+for every extension of a bounded linear functional, there exists a
+norm-minimizing one which preserves the original norm.</li>
+<li><u>Fubini’s theorem</u></li>
+<li><u>Baire’s theorem</u> <a href="banachSpaces.html#thm:baire">6.4</a>: for
+every cover of a complete metric space
+by closed sets, there exists an element with nonempty interior.</li>
+</ol>
+<p>Proof techniques:</p>
+<ol style="list-style-type: decimal">
+<li>Working with countable collection of approximations: given tolerance <span class="math inline">\(\epsilon\)</span>,
+introduce approximation of index <span class="math inline">\(j\)</span> with tolerance <span class="math inline">\(\epsilon 2^{-j}\)</span>
+to have additively bounded total tolerance.
+<ul>
+<li>Examples: outer measure properties of
+exterior measure (proposition <a href="realMeasures.html#prp:extOuterMeasure">3.1</a>).</li>
+</ul></li>
+<li>Prove properties for characteristic functions, then generalize them
+using approximation and limit theorems <a href="realIntegration.html#realIntegration">here</a>.
+<ul>
+<li>Examples: Luzin’s theorem,
+monotone convergence theorem <a href="realIntegration.html#thm:monotoneConvergence">4.7</a>,<br />
+</li>
+</ul></li>
+<li>Sandwich bounds
+<ul>
+<li>Lemma <a href="abstractMachinery.html#lem:caratheodoryAdditive">2.2</a>,
+Monotone convergence theorem.</li>
+</ul></li>
+<li>Argue the convergence of a subsequence satisfying <span class="math inline">\(\sum |f_k - f_{k-1}|&lt;\infty\)</span>
+when working with Cauchy sequences.
+<ul>
+<li>Baire’s theorem <a href="banachSpaces.html#thm:baire">6.4</a>.
+Completeness proof for <span class="math inline">\(L^p\)</span> (proposition <a href="Lpspaces.html#prp:LpBanach">7.7</a>).</li>
+</ul></li>
+<li>Prime example for the use of monotone convergence theorem, Fatou’s lemma,
+and dominated convergence theorem: proposition <a href="Lpspaces.html#prp:LpBanach">7.7</a>.</li>
+<li>Using the monotone class theorem (example theorem <a href="abstractMachinery.html#thm:uniqueMeasure">2.2</a>):
+rewrite nested chain as disjoint union, then pass through the limit
+using the countable additivity of measures.
+Next apply the reduction from finite to <span class="math inline">\(\sigma\)</span>-finite measures.</li>
+<li>Demonstrating a certain property (e.g. triviality): approximate by
+a tractable dense subset.
+<ul>
+<li>Orthonormality of the Fourier basis on <span class="math inline">\(L^2(\partial D)\)</span>
+(proposition <a href="Fourier.html#prp:discBasis">8.7</a>).</li>
+</ul></li>
+</ol>
+<p>Mandatory todo list:</p>
+<ol start="0" style="list-style-type: decimal">
+<li>Inductive generalization of Holder’s inequality.</li>
+<li>Put in some pset problems.</li>
+<li>Pset problem: separately continuous implies measurable.</li>
+<li>Dual of <span class="math inline">\(L^p\)</span> space.</li>
+</ol>
+<p>Optional:</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Lieb and Loss 2.9 to 2.18: compactness under weak convergence.</li>
+<li>Product measures and Fubini.</li>
+<li>Arnold-Kolmorogorov theorem.</li>
+</ol>
+
+</div>
+</div>
+<h3>Bibliography<a href="bibliography.html#bibliography" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-axler2020measure" class="csl-entry">
+Axler, Sheldon. 2020. <em>Measure, Integration &amp; Real Analysis</em>. Springer Nature.
+</div>
+<div id="ref-lieb2001analysis" class="csl-entry">
+Lieb, Elliott H, and Michael Loss. 2001. <em>Analysis</em>. Vol. 14. American Mathematical Soc.
+</div>
+<div id="ref-rudin1964principles" class="csl-entry">
+Rudin, Walter et al. 1964. <em>Principles of Mathematical Analysis</em>. Vol. 3. McGraw-hill New York.
+</div>
+<div id="ref-rudin2017fourier" class="csl-entry">
+Rudin, Walter. 2017. <em>Fourier Analysis on Groups</em>. Courier Dover Publications.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="prelimaries.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

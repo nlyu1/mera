@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Banach spaces | Math 114 Notes</title>
+  <meta name="description" content="6 Banach spaces | Math 114 Notes" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Banach spaces | Math 114 Notes" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Banach spaces | Math 114 Notes" />
+  
+  
+  
+
+<meta name="author" content="Nicholas Lyu" />
+
+
+<meta name="date" content="2024-10-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="iteratedIntegrals.html"/>
+<link rel="next" href="lp-spaces.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#organization"><i class="fa fa-check"></i>Organization</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#main-deliverables"><i class="fa fa-check"></i>Main deliverables</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="prelimaries.html"><a href="prelimaries.html"><i class="fa fa-check"></i><b>1</b> Prelimaries</a>
+<ul>
+<li class="chapter" data-level="" data-path="prelimaries.html"><a href="prelimaries.html#topology"><i class="fa fa-check"></i>Topology</a></li>
+<li class="chapter" data-level="" data-path="prelimaries.html"><a href="prelimaries.html#realAnalysis"><i class="fa fa-check"></i>Real analysis</a></li>
+<li class="chapter" data-level="" data-path="prelimaries.html"><a href="prelimaries.html#semi-continuity"><i class="fa fa-check"></i>Semi-continuity</a>
+<ul>
+<li class="chapter" data-level="" data-path="prelimaries.html"><a href="prelimaries.html#cauchy-sequences"><i class="fa fa-check"></i>Cauchy sequences</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="abstractMachinery.html"><a href="abstractMachinery.html"><i class="fa fa-check"></i><b>2</b> Measures and σ-algebra</a>
+<ul>
+<li class="chapter" data-level="" data-path="abstractMachinery.html"><a href="abstractMachinery.html#sigmaDefinition"><i class="fa fa-check"></i>σ-algebra</a></li>
+<li class="chapter" data-level="" data-path="abstractMachinery.html"><a href="abstractMachinery.html#measurableSpace"><i class="fa fa-check"></i>Measure space</a></li>
+<li class="chapter" data-level="" data-path="abstractMachinery.html"><a href="abstractMachinery.html#measurableFunction"><i class="fa fa-check"></i>Measurable function</a></li>
+<li class="chapter" data-level="" data-path="abstractMachinery.html"><a href="abstractMachinery.html#caratheodory"><i class="fa fa-check"></i>Carathéodory theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="realMeasures.html"><a href="realMeasures.html"><i class="fa fa-check"></i><b>3</b> Lebesgue measure</a>
+<ul>
+<li class="chapter" data-level="" data-path="realMeasures.html"><a href="realMeasures.html#extMeasure"><i class="fa fa-check"></i>Rectangles, exterior measure</a></li>
+<li class="chapter" data-level="" data-path="realMeasures.html"><a href="realMeasures.html#lebMeasure"><i class="fa fa-check"></i>Lebesgue measure, Borel regularity</a>
+<ul>
+<li class="chapter" data-level="" data-path="realMeasures.html"><a href="realMeasures.html#a-non-measurable-set"><i class="fa fa-check"></i>A non-measurable set</a></li>
+<li class="chapter" data-level="" data-path="realMeasures.html"><a href="realMeasures.html#approximation-of-measurable-sets"><i class="fa fa-check"></i>Approximation of measurable sets</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="realIntegration.html"><a href="realIntegration.html"><i class="fa fa-check"></i><b>4</b> Integration on <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#functionMeasurabilityConditions"><i class="fa fa-check"></i>Measurable functions on <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#simple-functions"><i class="fa fa-check"></i>Simple functions</a></li>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#conditions-for-measurability"><i class="fa fa-check"></i>Conditions for measurability</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#littlewoodPrinciples"><i class="fa fa-check"></i>Littlewood’s three principles</a></li>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#lebesgueIntegration"><i class="fa fa-check"></i>Lebesgue integration</a></li>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#lebesgueConvergence"><i class="fa fa-check"></i>Convergence theorems</a>
+<ul>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#comparison-with-riemann-integral"><i class="fa fa-check"></i>Comparison with Riemann integral</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="iteratedIntegrals.html"><a href="iteratedIntegrals.html"><i class="fa fa-check"></i><b>5</b> Iterated integrals</a>
+<ul>
+<li class="chapter" data-level="" data-path="iteratedIntegrals.html"><a href="iteratedIntegrals.html#product-measure"><i class="fa fa-check"></i>Product measure</a></li>
+<li class="chapter" data-level="" data-path="iteratedIntegrals.html"><a href="iteratedIntegrals.html#fubinis-theorem"><i class="fa fa-check"></i>Fubini’s theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="banach-spaces.html"><a href="banach-spaces.html"><i class="fa fa-check"></i><b>6</b> Banach spaces</a>
+<ul>
+<li class="chapter" data-level="" data-path="banach-spaces.html"><a href="banach-spaces.html#vectorSpace"><i class="fa fa-check"></i>Vector space</a></li>
+<li class="chapter" data-level="" data-path="banach-spaces.html"><a href="banach-spaces.html#banach-spaces-completeness"><i class="fa fa-check"></i>Banach spaces, completeness</a></li>
+<li class="chapter" data-level="" data-path="banach-spaces.html"><a href="banach-spaces.html#baires-theorem"><i class="fa fa-check"></i>Baire’s theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="lp-spaces.html"><a href="lp-spaces.html"><i class="fa fa-check"></i><b>7</b> <span class="math inline">\(L^p\)</span> Spaces</a>
+<ul>
+<li class="chapter" data-level="" data-path="lp-spaces.html"><a href="lp-spaces.html#banach-spaces-completeness-1"><i class="fa fa-check"></i>Banach spaces, completeness</a></li>
+<li class="chapter" data-level="" data-path="lp-spaces.html"><a href="lp-spaces.html#convexity"><i class="fa fa-check"></i>Convexity</a></li>
+<li class="chapter" data-level="" data-path="lp-spaces.html"><a href="lp-spaces.html#construction-of-lp"><i class="fa fa-check"></i>Construction of <span class="math inline">\(L^p\)</span></a></li>
+<li class="chapter" data-level="" data-path="lp-spaces.html"><a href="lp-spaces.html#duality"><i class="fa fa-check"></i>Duality</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Math 114 Notes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="banach-spaces" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Banach spaces<a href="banach-spaces.html#banach-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Banach spaces capture the <span class="math inline">\(L^p\)</span> spaces of integrable
+functions we will later be working with. We take care
+to develop some of its properties. In this section,
+we work with <span class="math inline">\(\mathbb F\)</span> which can be either real or complex.</p>
+<ol style="list-style-type: decimal">
+<li><a href="banach-spaces.html#vectorSpace">Vector space</a>: normed space of linear operators,
+existence of a basis, characterization of bounded linear functionals.</li>
+</ol>
+<p>Key takeaways:</p>
+<ol style="list-style-type: decimal">
+<li>Continuity of linear maps cannot be taken for granted in
+infinite-dimensional vector spaces. A linear map is continuous
+iff bounded.</li>
+</ol>
+<div id="vectorSpace" class="section level2 unnumbered hasAnchor">
+<h2>Vector space<a href="banach-spaces.html#vectorSpace" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unlabeled-div-62" class="definition"><strong>Definition 6.1  ((normed) space of linear operators) </strong></span>Given two vector spaces <span class="math inline">\(U, V\)</span>, the set of linear
+operators from <span class="math inline">\(U\)</span> to <span class="math inline">\(V\)</span> is also a vector space,
+which we denote <span class="math inline">\(\mathcal L(U, V)\)</span>. If <span class="math inline">\(U, V\)</span> are normed,
+then <span class="math inline">\(\mathcal L(U, V)\)</span> is equipped with the <strong>operator norm</strong>
+<span class="math display">\[
+    \|T\| = \sup_{\|f\in U\|\leq 1} \|Tf\|
+\]</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-63" class="definition"><strong>Definition 6.2  (bounded linear functional) </strong></span>A linear functional on a vector space <span class="math inline">\(V\)</span>
+is a linear map of signature <span class="math inline">\(T:V\to \mathbb F\)</span>.
+It is bounded if <span class="math inline">\(\|T\|&lt;\infty\)</span> using the operator norm.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-64" class="theorem"><strong>Theorem 6.1  (characterization of continuous linear maps) </strong></span>A linear map <span class="math inline">\(T:U\to V\)</span> is continuous iff it is any of the following:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(T\)</span> is bounded.</li>
+<li><span class="math inline">\(T\)</span> is uniformly continuous.</li>
+<li><span class="math inline">\(T^{-1}(B(0, r))\)</span> is an open subset of <span class="math inline">\(U\)</span> for some <span class="math inline">\(r&gt;0\)</span>.</li>
+</ol>
+</div>
+<div class="lemma">
+<p><span id="lem:unlabeled-div-65" class="lemma"><strong>Lemma 6.1  (Zorn's lemma) </strong></span>Placeholder</p>
+</div>
+</div>
+<div id="banach-spaces-completeness" class="section level2 unnumbered hasAnchor">
+<h2>Banach spaces, completeness<a href="banach-spaces.html#banach-spaces-completeness" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unlabeled-div-66" class="definition"><strong>Definition 6.3  (completeness, Banach space) </strong></span>A metric space is complete if every Cauchy sequence
+in the space converges. A Banach space is
+a complete normed metric space.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-67" class="proposition"><strong>Proposition 6.1  (connection between complete and closed spaces) </strong></span>A complete subset of a metric space is closed, and a closed
+subset of a complete metric space is complete.</p>
+</div>
+<details>
+<summary>
+Proof
+</summary>
+Given a complete subset <span class="math inline">\(V\)</span> of a metric space, every convergent
+sequence is also a convergent Cauchy sequence whose limit
+stays inside <span class="math inline">\(V\)</span>. Given a closed subset, the convergent
+limit of every Cauchy sequence must say within <span class="math inline">\(V\)</span> by closure
+property, so <span class="math inline">\(V\)</span> is complete.
+</details>
+<p>Recall that to argue for Cauchy convergence we can
+drop to subsequences (proposition <a href="prelimaries.html#prp:cauchySubsequence">1.7</a>).</p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-68" class="proposition"><strong>Proposition 6.2  (characterization of Banach space) </strong></span>A normed vector space <span class="math inline">\(V\)</span> is complete (i.e. a Banach space)
+iff <span class="math inline">\(\sum_{k=1}^\infty g_k\)</span> converges for every sequence
+<span class="math inline">\(g_j\in V\)</span> satisfying <span class="math inline">\(\sum_{k=1}^\infty \|g_k\|&lt;\infty\)</span>.</p>
+</div>
+<details>
+<summary>
+Proof
+</summary>
+Given <span class="math inline">\(V\)</span> complete, the partial sum of <span class="math inline">\(g\)</span> is a Cauchy
+sequence thus converges. Conversely,
+given a Cauchy sequence, drop to a subsequence <span class="math inline">\(f_j\)</span>
+and set <span class="math inline">\(f_0=0\)</span> so that<br />
+<span class="math display">\[
+    \sum_{k=1}^\infty \|f_k - f_{k-1}\| &lt; \infty
+\]</span>
+then by assumption
+<span class="math inline">\(\sum_{k=1}^\infty (f_k - f_{k-1})=\lim_{n\to \infty} f_n\)</span>
+exists.
+</details>
+</div>
+<div id="baires-theorem" class="section level2 unnumbered hasAnchor">
+<h2>Baire’s theorem<a href="banach-spaces.html#baires-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-69" class="theorem"><strong>Theorem 6.2  (Baire's theorem) </strong></span></p>
+<ol style="list-style-type: lower-alpha">
+<li>A complete vector space is not the countable union
+of closed subsets with empty interior.</li>
+<li>The countable intersection of dense open sets of a complete
+metric space is nonempty.</li>
+</ol>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-70" class="theorem"><strong>Theorem 6.3  (open mapping theorem) </strong></span>Placeholder.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-71" class="theorem"><strong>Theorem 6.4  (bounded inverse theorem) </strong></span>Placeholder.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-72" class="theorem"><strong>Theorem 6.5  (closed graph theorem) </strong></span>Placeholder.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:unlabeled-div-73" class="theorem"><strong>Theorem 6.6  (Hahn-Banach theorem) </strong></span>Placeholder.</p>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="iteratedIntegrals.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lp-spaces.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

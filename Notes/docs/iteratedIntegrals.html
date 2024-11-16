@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Iterated integrals | Measure Theory, Functional Analysis</title>
+  <meta name="description" content="5 Iterated integrals | Measure Theory, Functional Analysis" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Iterated integrals | Measure Theory, Functional Analysis" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Iterated integrals | Measure Theory, Functional Analysis" />
+  
+  
+  
+
+<meta name="author" content="Nicholas Lyu" />
+
+
+<meta name="date" content="2024-10-26" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="realIntegration.html"/>
+<link rel="next" href="banachSpaces.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#organization"><i class="fa fa-check"></i>Organization</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#main-deliverables"><i class="fa fa-check"></i>Main deliverables</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="prelimaries.html"><a href="prelimaries.html"><i class="fa fa-check"></i><b>1</b> Prelimaries</a>
+<ul>
+<li class="chapter" data-level="" data-path="prelimaries.html"><a href="prelimaries.html#topology"><i class="fa fa-check"></i>Topology</a></li>
+<li class="chapter" data-level="" data-path="prelimaries.html"><a href="prelimaries.html#realAnalysis"><i class="fa fa-check"></i>Real analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="prelimaries.html"><a href="prelimaries.html#semi-continuity"><i class="fa fa-check"></i>Semi-continuity</a></li>
+<li class="chapter" data-level="" data-path="prelimaries.html"><a href="prelimaries.html#cauchy-sequences"><i class="fa fa-check"></i>Cauchy sequences</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="abstractMachinery.html"><a href="abstractMachinery.html"><i class="fa fa-check"></i><b>2</b> Measures and σ-algebra</a>
+<ul>
+<li class="chapter" data-level="" data-path="abstractMachinery.html"><a href="abstractMachinery.html#sigmaDefinition"><i class="fa fa-check"></i>σ-algebra</a></li>
+<li class="chapter" data-level="" data-path="abstractMachinery.html"><a href="abstractMachinery.html#measurableSpace"><i class="fa fa-check"></i>Measure space</a></li>
+<li class="chapter" data-level="" data-path="abstractMachinery.html"><a href="abstractMachinery.html#measurableFunction"><i class="fa fa-check"></i>Measurable function</a></li>
+<li class="chapter" data-level="" data-path="abstractMachinery.html"><a href="abstractMachinery.html#caratheodory"><i class="fa fa-check"></i>Carathéodory theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="realMeasures.html"><a href="realMeasures.html"><i class="fa fa-check"></i><b>3</b> Lebesgue measure</a>
+<ul>
+<li class="chapter" data-level="" data-path="realMeasures.html"><a href="realMeasures.html#extMeasure"><i class="fa fa-check"></i>Rectangles, exterior measure</a></li>
+<li class="chapter" data-level="" data-path="realMeasures.html"><a href="realMeasures.html#lebMeasure"><i class="fa fa-check"></i>Lebesgue measure, Borel regularity</a>
+<ul>
+<li class="chapter" data-level="" data-path="realMeasures.html"><a href="realMeasures.html#a-non-measurable-set"><i class="fa fa-check"></i>A non-measurable set</a></li>
+<li class="chapter" data-level="" data-path="realMeasures.html"><a href="realMeasures.html#approximation-of-measurable-sets"><i class="fa fa-check"></i>Approximation of measurable sets</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="realIntegration.html"><a href="realIntegration.html"><i class="fa fa-check"></i><b>4</b> Integration on <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#functionMeasurabilityConditions"><i class="fa fa-check"></i>Measurable functions on <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#simple-functions"><i class="fa fa-check"></i>Simple functions</a></li>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#conditions-for-measurability"><i class="fa fa-check"></i>Conditions for measurability</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#littlewoodPrinciples"><i class="fa fa-check"></i>Littlewood’s three principles</a></li>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#lebesgueIntegration"><i class="fa fa-check"></i>Lebesgue integration</a></li>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#lebesgueConvergence"><i class="fa fa-check"></i>Convergence theorems</a>
+<ul>
+<li class="chapter" data-level="" data-path="realIntegration.html"><a href="realIntegration.html#comparison-with-riemann-integral"><i class="fa fa-check"></i>Comparison with Riemann integral</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="iteratedIntegrals.html"><a href="iteratedIntegrals.html"><i class="fa fa-check"></i><b>5</b> Iterated integrals</a>
+<ul>
+<li class="chapter" data-level="" data-path="iteratedIntegrals.html"><a href="iteratedIntegrals.html#properties-of-products"><i class="fa fa-check"></i>Properties of products</a></li>
+<li class="chapter" data-level="" data-path="iteratedIntegrals.html"><a href="iteratedIntegrals.html#fubinis-theorem"><i class="fa fa-check"></i>Fubini’s theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="banachSpaces.html"><a href="banachSpaces.html"><i class="fa fa-check"></i><b>6</b> Spaces of functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="banachSpaces.html"><a href="banachSpaces.html#vectorSpace"><i class="fa fa-check"></i>Normed spaces, Hahn-Banach</a></li>
+<li class="chapter" data-level="" data-path="banachSpaces.html"><a href="banachSpaces.html#banachSpace"><i class="fa fa-check"></i>Banach theorems</a></li>
+<li class="chapter" data-level="" data-path="banachSpaces.html"><a href="banachSpaces.html#kolmorogorov-arnold-theorem"><i class="fa fa-check"></i>Kolmorogorov-Arnold theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="Lpspaces.html"><a href="Lpspaces.html"><i class="fa fa-check"></i><b>7</b> <span class="math inline">\(L^p\)</span> Spaces</a>
+<ul>
+<li class="chapter" data-level="" data-path="Lpspaces.html"><a href="Lpspaces.html#convexAnalysis"><i class="fa fa-check"></i>Convexity</a></li>
+<li class="chapter" data-level="" data-path="Lpspaces.html"><a href="Lpspaces.html#LpSpace"><i class="fa fa-check"></i><span class="math inline">\(L^p\)</span> as a Banach space</a></li>
+<li class="chapter" data-level="" data-path="Lpspaces.html"><a href="Lpspaces.html#duality"><i class="fa fa-check"></i>Duality</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="Fourier.html"><a href="Fourier.html"><i class="fa fa-check"></i><b>8</b> Fourier Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="Fourier.html"><a href="Fourier.html#disc"><i class="fa fa-check"></i>Compact domain: <span class="math inline">\(\partial D\)</span></a>
+<ul>
+<li class="chapter" data-level="" data-path="Fourier.html"><a href="Fourier.html#the-poisson-kernel"><i class="fa fa-check"></i>The Poisson kernel</a></li>
+<li class="chapter" data-level="" data-path="Fourier.html"><a href="Fourier.html#convergence-results"><i class="fa fa-check"></i>Convergence results</a></li>
+<li class="chapter" data-level="" data-path="Fourier.html"><a href="Fourier.html#convolution-and-lp"><i class="fa fa-check"></i>Convolution and <span class="math inline">\(L^p\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="Fourier.html"><a href="Fourier.html#haar"><i class="fa fa-check"></i>The Haar measure</a></li>
+<li class="chapter" data-level="" data-path="Fourier.html"><a href="Fourier.html#fourierTransform"><i class="fa fa-check"></i>The dual group, Fourier transform</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Measure Theory, Functional Analysis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="iteratedIntegrals" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Iterated integrals<a href="iteratedIntegrals.html#iteratedIntegrals" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Key takeaways:</p>
+<ol style="list-style-type: decimal">
+<li>The product <span class="math inline">\(\sigma\)</span>-algebra is characterized by the
+section property (proposition <a href="#prp:productSection"><strong>??</strong></a>).</li>
+<li><span class="math inline">\(\sigma\)</span>-finiteness is extremely important.</li>
+</ol>
+<div id="properties-of-products" class="section level2 unnumbered hasAnchor">
+<h2>Properties of products<a href="iteratedIntegrals.html#properties-of-products" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recall that the product <span class="math inline">\(\sigma\)</span>-algebra
+<span class="math inline">\(\Sigma_1\times \Sigma_2\)</span> is freely generated by
+measurable rectangles (definition <a href="abstractMachinery.html#def:productSigmaAlg">2.6</a>).</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-60" class="definition"><strong>Definition 5.1  ((cross) sections) </strong></span>Given sets <span class="math inline">\(X, Y\)</span> and <span class="math inline">\(E\subset X\times Y\)</span>, define
+for <span class="math inline">\(x\in X, y\in Y\)</span> the sections
+<span class="math display">\[
+    [E]_x = \{y\in Y: (x, y)\in E\}, \quad
+    [E]^y = \{x\in X: (x, y)\in E\}
+\]</span>
+The notation should be reminiscent of slicing along
+<span class="math inline">\(X=x\)</span> on the horizontal, or <span class="math inline">\(Y=y\)</span> on the vertical axis.
+Similarly, the sections of <span class="math inline">\(f\)</span> defined on <span class="math inline">\(X\times Y\)</span> is
+<span class="math display">\[
+    [f]_x(y) = [f]^y(x) = f(x, y)
+\]</span></p>
+</div>
+<div class="proposition">
+<p><span id="prp:measurableSectionSets" class="proposition"><strong>Proposition 5.1  (sections of measurable sets are measurable) </strong></span>The product <span class="math inline">\(\sigma\)</span>-algebra <span class="math inline">\(\Sigma = \Sigma_1\times \Sigma_2\)</span>
+has the section property that, <span class="math inline">\(\forall A\in \Sigma\)</span>,
+<span class="math display">\[
+    [A]_{\forall x\in \Omega_1}\in \Sigma_2, \quad
+    [A]^{\forall y\in \Omega_2} \in \Sigma_1
+\]</span></p>
+</div>
+<details>
+<summary>
+Proof
+</summary>
+The set <span class="math inline">\(\Sigma&#39;\)</span> of all subsets of <span class="math inline">\(\Omega_1\times \Omega_2\)</span>
+(regarded as Cartesian product of sets)
+satisfying the section property is a <span class="math inline">\(\sigma\)</span>-algebra containing
+<span class="math inline">\(\Sigma_1\times \Sigma_2\)</span> (since sections of the Cartesian
+product of measurable sets are measurable);
+the proof concludes by the universal
+property of <span class="math inline">\(\Sigma_1\times \Sigma_2\)</span>, which is the smallest
+<span class="math inline">\(\sigma\)</span>-algebra generated by products of measurable sets.
+</details>
+<div class="proposition">
+<p><span id="prp:measurableSectionFunctions" class="proposition"><strong>Proposition 5.2  (sections of measurable functions are measurable) </strong></span>Given a <span class="math inline">\(\Sigma_1\times \Sigma_2\)</span> measurable function
+<span class="math inline">\(f\)</span> on <span class="math inline">\(\Omega_1\times \Omega_2\)</span>, then
+<span class="math inline">\([f]_{\forall x\in \Omega_1}\)</span> is a measurable function
+on <span class="math inline">\(\Omega_2\)</span>, and <span class="math inline">\([f]^{\forall y\in \Omega_2}\)</span> is a measurable
+function on <span class="math inline">\(\Omega_1\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-61" class="definition"><strong>Definition 5.2  (product measures) </strong></span>The product of two measure spaces is
+<span class="math display">\[
+    (\Omega_1\times \Omega_2, \Sigma_1\times \Sigma_2, \mu_1\times \mu_2)
+    = (\Omega_1, \Sigma_1, \mu_1)\times (\Omega_2, \Sigma_2, \mu_2)
+\]</span>
+where <span class="math inline">\(\Omega_1\times \Omega_2\)</span> is the Cartesian product of sets,
+<span class="math inline">\(\Sigma_1\times \Sigma_2\)</span> is the <span class="math inline">\(\sigma\)</span>-algebra product
+<a href="abstractMachinery.html#def:productSigmaAlg">2.6</a>,
+and <span class="math inline">\(\mu_1\times \mu_2\)</span> is uniquely
+defined by the requirement
+<span class="math display">\[
+    \mu(A_1\times A_2) = \mu_1(A_1) \mu_2(A_2)
+\]</span>
+The exact definition and uniqueness of the
+product measure is postponed to
+theorem <a href="iteratedIntegrals.html#thm:productMeasure">5.1</a>.</p>
+</div>
+</div>
+<div id="fubinis-theorem" class="section level2 unnumbered hasAnchor">
+<h2>Fubini’s theorem<a href="iteratedIntegrals.html#fubinis-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="theorem">
+<p><span id="thm:productMeasure" class="theorem"><strong>Theorem 5.1  (product measure) </strong></span>Placeholder.</p>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="realIntegration.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="banachSpaces.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
