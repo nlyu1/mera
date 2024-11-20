@@ -1,0 +1,153 @@
+# Geometry
+
+## Riemannian Space {-}
+
+:::{.definition name="Poincare half-plane model"}
+The $n$-dimensional hyperbolic space 
+is defined as 
+\[ 
+    \mbb H^n = \{(x_1, \dots, x_{n-1}, y) | y\geq 0\}
+\] 
+Equipped with the Riemannian metric 
+\[ 
+    ds^2 = \df 1 {y^2} \left(dy^2 + \sum_j dx_j^2\right)
+\] 
+:::
+
+:::{.definition name="Poincare ball model"}
+$\mbb H^n = B_1(0)\subset \R^n$ with metric 
+\[ 
+    ds^2 = 4\df {\sum dx_j^2}{(1-|x|^2)^2}
+\] 
+:::
+
+:::{.definition name="hyperboloid model"}
+$\mbb H^n = \{(x_1, \dots, x_n, x_{n+1})| \la x, x\ra_M = 1\}$, 
+where $\la \cdot, \cdot\ra_M$ is the Minkowski metric, 
+with metric given by the pullback metric. 
+:::
+
+:::{.proposition name="geodesics in half-plane model"}
+Consider $\mbb H^2$ in the ball model, the geodesic equations 
+are derived by extremizing the length functional with Lagrangian 
+given by the metric. Omitting the factor of $4$: 
+\[ 
+    \mca L = \df{\dot x_1^2 + \dot x_2^2}{(1-x_1^2-x_2^2)^2}
+\] 
+:::
+
+## Hyperbolic Spaces {-}
+
+### Basic definitions {-}
+
+:::{.definition name="geodesic metric space"}
+A metric space $(X, d)$ is geodesic if 
+every two points $x, y$ is joined by a 
+path $\overline{xy}$ with length equal to $d(x, y)$. 
+:::
+
+:::{.definition name="hyperbolic space"}
+A geodesic metric space $(X, d)$ is $\delta$-hyperbolic, 
+for $\delta \geq 0$, if for every $x, y, z\in X$, we have 
+\[ 
+    \overline{xy} \subset B_\delta(\overline{zx})\cup 
+    B_\delta(\overline{zy})
+\] 
+The space is hyperbolic if $\delta$-hyperbolic for 
+some $\delta>0$. 
+:::
+
+- Any tree with length distance is $0$-hyperbolic. In such 
+    ideal hyperbolic spaces, geodesic triangles are tripods. 
+- <span style="color:green">
+Standard hyperbolic plane $\mbb H^2$ is 
+$\log(\sqrt 2+1)$-hyperbolic
+</span>. 
+
+:::{.definition name="hyperbolic group"}
+A finitely generated group $G$ is word-hyperbolic if there is a 
+finite generating set $S\subset G$ such that the Cayley graph $\Gamma(G, S)$ 
+is hyperbolic w.r.t. the word metric $d_S$. 
+:::
+
+:::{.definition name="Gromov product"}
+Given a metric space $(X, d)$ and $x, y, z\in X$, 
+the Gromov product is defined as 
+\[ 
+    (x, y)_z = \df {
+        d(x, z) + d(y, z) - d(x, y)
+    } 2
+\] 
+:::
+
+- In the tree-case, the Gromov product is always $0$. 
+    The product measures the precision of the triangle inequality by 
+\[ 
+    d(x, y) \leq d(x, z) + d(y, z) \iff 
+    0 \leq 2 (x, y)_z 
+\] 
+- Again, in the tree-case, $(x, y)_z$ measures 
+    how long $\overline{zx}, \overline{zy}$ travel 
+    before diverging. 
+
+:::{.definition name="Hausdorff distance"}
+Given $A, B\subset X$, the Hausdorff distance is 
+\[ 
+    d_H(A, B) = \inf\left\{ 
+        \epsilon | A\subset B_\epsilon(B), 
+        B\subset B_\epsilon(A)
+    \right\} 
+\] 
+It measures the minimal amount we have to expand 
+$A, B$ by for them to contain each other. 
+:::
+
+:::{.proposition}
+In a $\delta$-hyperbolic space $(X, d)$: 
+
+1. The initial segments of length $(y, z)_x$ of 
+    $\overline{xy}$ and $\overline{xz}$ are 
+    $2\delta$-Hausdorff close. 
+2. $(y, z)_x$ approximates within $2\delta$ 
+    the distance from $x$ to $\overline{yz}$. 
+:::
+
+<span style="color:red">
+TODO
+</span>. 
+
+:::{.definition name="equivalence of geodesic rays"}
+Two geodesic rays $\gamma_1, \gamma_2:[0, \infty)\to X$ 
+are equivalent, written $\gamma_1\sim \gamma_2$, 
+if $\exists K>0$ such that 
+\[ 
+    d(\gamma_1(\forall t), \gamma_2(t)) \leq K 
+\] 
+Transitivity follows from the triangle inequality, so 
+$\sim$ is indeed an equivalence relation. 
+:::
+
+:::{.proposition name="equivalent characterization of geodesic equivalence"}
+$\gamma_1\sim \gamma_2$ iff their images have finite Hausdorff distance. 
+:::
+
+### Boundary {-}
+
+:::{.definition name="geodesic boundary"}
+Given a $\delta$-hyperbolic space and base-point $x\in X$, 
+
+- The relative geodesic boundary of $X$ w.r.t. $x$ is 
+\[ 
+    \pd x^g X = \{\text{geodesic rays with } \gamma(0)=x\} / \sim 
+\] 
+- The geodesic boundary of $X$ is 
+$\partial^g X = \text{geodesic rays} / \sim$.  
+:::
+
+:::{.definition name="convergence to infinity"}
+Given a base-point $x\in X$ in a hyperbolic metric space, 
+a sequence $(x_n)$ of points converges to infinity if 
+\[ 
+    \liminf_{i, j\to \infty} (x_i, x_j)_x = \infty 
+\] 
+:::

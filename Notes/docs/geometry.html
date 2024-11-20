@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1 Geometry | MERA Learning Material</title>
+  <meta name="description" content="1 Geometry | MERA Learning Material" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1 Geometry | MERA Learning Material" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1 Geometry | MERA Learning Material" />
+  
+  
+  
+
+<meta name="author" content="Nicholas Lyu" />
+
+
+<meta name="date" content="2024-11-19" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="bibliography.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#organization"><i class="fa fa-check"></i>Organization</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#main-deliverables"><i class="fa fa-check"></i>Main deliverables</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="geometry.html"><a href="geometry.html"><i class="fa fa-check"></i><b>1</b> Geometry</a>
+<ul>
+<li class="chapter" data-level="" data-path="geometry.html"><a href="geometry.html#riemannian-space"><i class="fa fa-check"></i>Riemannian Space</a></li>
+<li class="chapter" data-level="" data-path="geometry.html"><a href="geometry.html#hyperbolic-spaces"><i class="fa fa-check"></i>Hyperbolic Spaces</a>
+<ul>
+<li class="chapter" data-level="" data-path="geometry.html"><a href="geometry.html#basic-definitions"><i class="fa fa-check"></i>Basic definitions</a></li>
+<li class="chapter" data-level="" data-path="geometry.html"><a href="geometry.html#boundary"><i class="fa fa-check"></i>Boundary</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MERA Learning Material</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="geometry" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Geometry<a href="geometry.html#geometry" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="riemannian-space" class="section level2 unnumbered hasAnchor">
+<h2>Riemannian Space<a href="geometry.html#riemannian-space" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:unlabeled-div-1" class="definition"><strong>Definition 1.1  (Poincare half-plane model) </strong></span>The <span class="math inline">\(n\)</span>-dimensional hyperbolic space
+is defined as
+<span class="math display">\[
+    \mathbb H^n = \{(x_1, \dots, x_{n-1}, y) | y\geq 0\}
+\]</span>
+Equipped with the Riemannian metric
+<span class="math display">\[
+    ds^2 = \dfrac 1 {y^2} \left(dy^2 + \sum_j dx_j^2\right)
+\]</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-2" class="definition"><strong>Definition 1.2  (Poincare ball model) </strong></span><span class="math inline">\(\mathbb H^n = B_1(0)\subset \mathbb R^n\)</span> with metric
+<span class="math display">\[
+    ds^2 = 4\dfrac{\sum dx_j^2}{(1-|x|^2)^2}
+\]</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-3" class="definition"><strong>Definition 1.3  (hyperboloid model) </strong></span><span class="math inline">\(\mathbb H^n = \{(x_1, \dots, x_n, x_{n+1})| \langle x, x\rangle_M = 1\}\)</span>,
+where <span class="math inline">\(\langle\cdot, \cdot\rangle_M\)</span> is the Minkowski metric,
+with metric given by the pullback metric.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-4" class="proposition"><strong>Proposition 1.1  (geodesics in half-plane model) </strong></span>Consider <span class="math inline">\(\mathbb H^2\)</span> in the ball model, the geodesic equations
+are derived by extremizing the length functional with Lagrangian
+given by the metric. Omitting the factor of <span class="math inline">\(4\)</span>:
+<span class="math display">\[
+    \mathcal L = \dfrac{\dot x_1^2 + \dot x_2^2}{(1-x_1^2-x_2^2)^2}
+\]</span></p>
+</div>
+</div>
+<div id="hyperbolic-spaces" class="section level2 unnumbered hasAnchor">
+<h2>Hyperbolic Spaces<a href="geometry.html#hyperbolic-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="basic-definitions" class="section level3 unnumbered hasAnchor">
+<h3>Basic definitions<a href="geometry.html#basic-definitions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="definition">
+<p><span id="def:unlabeled-div-5" class="definition"><strong>Definition 1.4  (geodesic metric space) </strong></span>A metric space <span class="math inline">\((X, d)\)</span> is geodesic if
+every two points <span class="math inline">\(x, y\)</span> is joined by a
+path <span class="math inline">\(\overline{xy}\)</span> with length equal to <span class="math inline">\(d(x, y)\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-6" class="definition"><strong>Definition 1.5  (hyperbolic space) </strong></span>A geodesic metric space <span class="math inline">\((X, d)\)</span> is <span class="math inline">\(\delta\)</span>-hyperbolic,
+for <span class="math inline">\(\delta \geq 0\)</span>, if for every <span class="math inline">\(x, y, z\in X\)</span>, we have
+<span class="math display">\[
+    \overline{xy} \subset B_\delta(\overline{zx})\cup
+    B_\delta(\overline{zy})
+\]</span>
+The space is hyperbolic if <span class="math inline">\(\delta\)</span>-hyperbolic for
+some <span class="math inline">\(\delta&gt;0\)</span>.</p>
+</div>
+<ul>
+<li>Any tree with length distance is <span class="math inline">\(0\)</span>-hyperbolic. In such
+ideal hyperbolic spaces, geodesic triangles are tripods.</li>
+<li><span style="color:green">
+Standard hyperbolic plane <span class="math inline">\(\mathbb H^2\)</span> is
+<span class="math inline">\(\log(\sqrt 2+1)\)</span>-hyperbolic
+</span>.</li>
+</ul>
+<div class="definition">
+<p><span id="def:unlabeled-div-7" class="definition"><strong>Definition 1.6  (hyperbolic group) </strong></span>A finitely generated group <span class="math inline">\(G\)</span> is word-hyperbolic if there is a
+finite generating set <span class="math inline">\(S\subset G\)</span> such that the Cayley graph <span class="math inline">\(\Gamma(G, S)\)</span>
+is hyperbolic w.r.t. the word metric <span class="math inline">\(d_S\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-8" class="definition"><strong>Definition 1.7  (Gromov product) </strong></span>Given a metric space <span class="math inline">\((X, d)\)</span> and <span class="math inline">\(x, y, z\in X\)</span>,
+the Gromov product is defined as
+<span class="math display">\[
+    (x, y)_z = \dfrac{
+        d(x, z) + d(y, z) - d(x, y)
+    } 2
+\]</span></p>
+</div>
+<ul>
+<li>In the tree-case, the Gromov product is always <span class="math inline">\(0\)</span>.
+The product measures the precision of the triangle inequality by
+<span class="math display">\[
+  d(x, y) \leq d(x, z) + d(y, z) \iff
+  0 \leq 2 (x, y)_z
+\]</span></li>
+<li>Again, in the tree-case, <span class="math inline">\((x, y)_z\)</span> measures
+how long <span class="math inline">\(\overline{zx}, \overline{zy}\)</span> travel
+before diverging.</li>
+</ul>
+<div class="definition">
+<p><span id="def:unlabeled-div-9" class="definition"><strong>Definition 1.8  (Hausdorff distance) </strong></span>Given <span class="math inline">\(A, B\subset X\)</span>, the Hausdorff distance is
+<span class="math display">\[
+    d_H(A, B) = \inf\left\{
+        \epsilon | A\subset B_\epsilon(B),
+        B\subset B_\epsilon(A)
+    \right\}
+\]</span>
+It measures the minimal amount we have to expand
+<span class="math inline">\(A, B\)</span> by for them to contain each other.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-10" class="proposition"><strong>Proposition 1.2  </strong></span>In a <span class="math inline">\(\delta\)</span>-hyperbolic space <span class="math inline">\((X, d)\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li>The initial segments of length <span class="math inline">\((y, z)_x\)</span> of
+<span class="math inline">\(\overline{xy}\)</span> and <span class="math inline">\(\overline{xz}\)</span> are
+<span class="math inline">\(2\delta\)</span>-Hausdorff close.</li>
+<li><span class="math inline">\((y, z)_x\)</span> approximates within <span class="math inline">\(2\delta\)</span>
+the distance from <span class="math inline">\(x\)</span> to <span class="math inline">\(\overline{yz}\)</span>.</li>
+</ol>
+</div>
+<p><span style="color:red">
+TODO
+</span>.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-11" class="definition"><strong>Definition 1.9  (equivalence of geodesic rays) </strong></span>Two geodesic rays <span class="math inline">\(\gamma_1, \gamma_2:[0, \infty)\to X\)</span>
+are equivalent, written <span class="math inline">\(\gamma_1\sim \gamma_2\)</span>,
+if <span class="math inline">\(\exists K&gt;0\)</span> such that
+<span class="math display">\[
+    d(\gamma_1(\forall t), \gamma_2(t)) \leq K
+\]</span>
+Transitivity follows from the triangle inequality, so
+<span class="math inline">\(\sim\)</span> is indeed an equivalence relation.</p>
+</div>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-12" class="proposition"><strong>Proposition 1.3  (equivalent characterization of geodesic equivalence) </strong></span><span class="math inline">\(\gamma_1\sim \gamma_2\)</span> iff their images have finite Hausdorff distance.</p>
+</div>
+</div>
+<div id="boundary" class="section level3 unnumbered hasAnchor">
+<h3>Boundary<a href="geometry.html#boundary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="definition">
+<p><span id="def:unlabeled-div-13" class="definition"><strong>Definition 1.10  (geodesic boundary) </strong></span>Given a <span class="math inline">\(\delta\)</span>-hyperbolic space and base-point <span class="math inline">\(x\in X\)</span>,</p>
+<ul>
+<li>The relative geodesic boundary of <span class="math inline">\(X\)</span> w.r.t. <span class="math inline">\(x\)</span> is
+<span class="math display">\[
+  \partial_{x}^g X = \{\text{geodesic rays with } \gamma(0)=x\} / \sim
+\]</span></li>
+<li>The geodesic boundary of <span class="math inline">\(X\)</span> is
+<span class="math inline">\(\partial^g X = \text{geodesic rays} / \sim\)</span>.<br />
+</li>
+</ul>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-14" class="definition"><strong>Definition 1.11  (convergence to infinity) </strong></span>Given a base-point <span class="math inline">\(x\in X\)</span> in a hyperbolic metric space,
+a sequence <span class="math inline">\((x_n)\)</span> of points converges to infinity if
+<span class="math display">\[
+    \liminf_{i, j\to \infty} (x_i, x_j)_x = \infty
+\]</span></p>
+</div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bibliography.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

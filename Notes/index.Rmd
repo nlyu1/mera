@@ -38,6 +38,7 @@ link-citations: true
 \newcommand{\supp}{\mrm{supp}}
 
 \newcommand{\poly}{\mrm{poly}}
+\newcommand{\hyper}{\mbb H}
 
 
 
