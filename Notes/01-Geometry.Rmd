@@ -150,4 +150,25 @@ a sequence $(x_n)$ of points converges to infinity if
 \[ 
     \liminf_{i, j\to \infty} (x_i, x_j)_x = \infty 
 \] 
+Intuitively, this says that geodesics from $w$ to later pairs 
+in the sequence $x_n, x_m$ can travel for arbitrarily long 
+distances together. 
+:::
+<span style="color:red">
+Why is this definition independent of $w$?
+</span> 
+
+When $X$ is $\delta$-hyperbolic, also define the equivalence relation 
+\[ 
+    \{x_n\}\sim \{y_n\} \iff \liminf_{j, k\to \infty} (x_j, y_k) = \infty 
+\] 
+
+:::{.definition name="Gromov boundary"}
+The Gromov boundary $\partial X$ is 
+the sequences $x_n\to \infty$ modulo the equivalence relation above, 
+with basis given by 
+\[ 
+    B_\delta(p \in \partial X) = \{q\in \partial X | 
+    \exists (x_n) \in p, (y_n)\in q: \liminf
+\] 
 :::
