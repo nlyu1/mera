@@ -1,0 +1,159 @@
+# Tensor Networks and Geometry
+
+Reference: [Tensor networks and geometry](https://arxiv.org/pdf/1106.1082) 
+[@evenbly2011tensor]. This works presents a perspective on the 
+entanglement and correlator properties of tensor-network states by examining the 
+geometry of the tensor network ansatz. 
+
+## Critical v. non-critical systems {-}
+
+:::{.definition name="two-point correlator"}
+Given local operators $P_{x_1}, Q_{x_2}$ supported on sites 
+$x_1, x_2\in \mca L$, the two-point correlator is defined as 
+\[ 
+    C(x_1, x_2) = \la P_{x_1}Q_{x_2}\ra - \la P_{x_1}\ra \la Q_{x_2}\ra 
+\] 
+Where $\la O\ra$ denotes the expectation w.r.t. the ground state 
+of a given Hamiltonian. 
+:::
+
+Known results for the decay of correlators, when the Hamiltonian 
+features local interactions: 
+
+1. Gapped Hamiltonian (i.e. finite separation between ground and excited spectrums): 
+\[ 
+    C(x_1, x_2) \approx e^{|x_1 - x_2|/\xi}
+\] 
+here $\xi\geq 0$ is the **correlation length**. Such systems are also known as 
+<u> non-critical systems </u>
+2. Gapless Hamiltonian i.e. <u>critical systems</u>: 
+\[ 
+    C(x_1, x_2) \approx |x_1 - x_2|^{-q} 
+\] 
+
+
+:::{.definition name="entanglement entropy"}
+Given a block $A\subset \mca L$ of the lattice, the entanglement entropy is 
+\[ 
+    S(A) =  -\tr(\rho_A \log_2 \rho_A)
+\] 
+:::
+
+The following results are also known for the entanglement entropy 
+in $D$ dimensions: 
+
+1. For gapped systems, $S(A) \approx |\partial A| \approx L^{D-1}$. 
+2. Gapless systems exhibit mixed behavior: 
+    - For Fermi surface dimension $\Gamma < D-1$, the boundary law holds. 
+    - Systems with $\Gamma = D - 1$ exhibit 
+    a logarithmic correction to the boundary law: 
+    \[ 
+        S(A) \approx L^{D-1}\log L
+    \] 
+
+## Connection to tensor networks {-}
+
+Assuming a generic _homogeneous_ tensor network i.e. all tensors of the same type 
+are copies of a single tensor, with coefficients chosen randomly, connectivity 
+determines important properties about the correlators and entanglement entropy. 
+
+
+:::{.proposition name="geodesic distance and correlators"}
+Given two sites $x_1, x_2\in \mca L$ with geodesic distance 
+$D(x_1, x_2)$, 
+\[ 
+    C(x_1, x_2) \approx e^{-\alpha D(x_1, x_2)}
+\] 
+:::
+_Proof:_ The transfer matrix which determines contraction has positive eigenvalues, 
+maximally $1$, and the correlator is obtained by evaluating an expression involving the 
+$D(x_1, x_2)$-th power of the transfer matrix. 
+
+This implies the following correlator bounds for MPS and MERA: 
+
+1. $C_{\mrm{MPS}}(x_1, x_2) \approx e^{-\alpha |x_1 - x_2|}$. 
+2. $C_{\mrm{MERA}}(x_1, x_2) \approx e^{-\alpha \log_2 |x_1 - x_2|} \approx |x_1 - x_2|^{-q}$. 
+
+
+:::{.proposition name="entanglement entropy and boundary size"}
+Let $\bar A = \mca L - A$ denote the complementary system with $|A|\leq |\bar A|$, 
+given a Schmidt decomposition of the ground state w.r.t. the partition 
+with Schmidt rank $\chi$: 
+\[ 
+    |\psi\ra = \sum_{j=1}^{\chi} \lambda_j |\psi^A_j\ra |\psi^{\bar A}_j\ra, \quad 
+    \sum \lambda_j^2 = 1, \quad \chi\leq |A|
+\] 
+The entanglement entropy is maximized when $\lambda_{\forall j} = 1/\sqrt \chi$ 
+\[ 
+    S(A) = -\sum_{j=1}^{\chi} \lambda_j^2 \log \df 1 {\lambda_j^2} 
+    \leq \log_2 \chi 
+\] 
+:::
+
+Given $A\subset \mca L$, for every partition $\Omega_A\sqcup \Omega_B$ 
+of the nodes in the tensor network with such that $\Omega_A$ contains all the 
+free legs of $A$, we can upper-bound the entanglement entropy according to 
+\[ 
+    S(A) \leq |\partial \Omega_A| \log_2\chi 
+\] 
+where $|\partial \Omega_A|$ is the number of legs 
+across the cut $\Omega_A\sqcup \Omega_B$, and $\chi$ is the bond dimension 
+of the homogeneous tensor.  
+
+1. In 1D-MPS, $|\Omega_A|=2$, yielding the saturation of entanglement entropy. 
+2. In 1D-MERA, $|\Omega_A| = \sum_{z=1}^{\log L} 2 \approx \log L$, 
+    yielding the logarithmic violation. 
+3. In $D>1$ MERA, $|\Omega_A| = \sum_{z=1}^{\log L} L^{D-1}/2^z 
+    \approx L^{D-1}$. Only the shortest length-scale 
+    (i.e. least coarse-graining) contributes meaningfully to the entropy. 
+
+
+## Branched MERA {-}
+
+The concluding section of [@evenbly2011tensor] mentioned the idea 
+of branching, subsequently developed in [@evenbly2014scaling], 
+[_Scaling of entanglement entropy in the (branching) MERA_](https://arxiv.org/pdf/1310.8372). 
+The main contributions are: 
+
+1. Generalization of MERA by introducing a branching parameter $b$, 
+    with $b=1$ corresponding to the known MERA. 
+2. The $b=2^{D-1}$-branched MERA supports 
+    logarithmic area law in $D>1$ dimensions: 
+    $S(A) \approx L^{D-1}\log L$. 
+3. Numerical evidence that the upper-bound for entanglement entropy 
+    is saturated up to leading order. 
+
+The paper identifies two regimes in the coarse-graining procedure: 
+
+1. <u>Shrinking regime</u>: the size of the coarse-grained block shrinks 
+    as a result of the coarse-graining isometry. 
+    At this scale, the coarse-grained system is entangled with the 
+    complementary system. 
+2. <u>Stationary regime</u>: the size of the coarse-grained 
+    block stays constant (or vanishes). At this scale and above, 
+    the coarse-grained system no longer contributes entanglement. 
+
+The total entanglement entropy can be computed as 
+\[ 
+    S(A) \propto |\partial \Omega_A| 
+    = \sum_{z=0}^{\bar z} |\partial A_z|
+\] 
+where $\partial A_z$ is the size of the boundary of the coarse-grain 
+of $A$ at scale $z$. For the traditional MERA on lattice dimension $D$, 
+each coarse-graining maps $L \mapsto L/2$, so 
+\[ 
+    |\partial A_{z+1}| = |\partial A_z| 2^{-(D-1)}
+\]  
+with $A$ being a hypercube of size $L$, we have $\bar z = \log_2 L$ 
+and $|\partial A_z|=L^{D-1}/2^z$. 
+
+In order to yield the desired $L^{D-1}\log L$ entropy, 
+we need to multiplicatively correct 
+$|\partial A_z| \mapsto |\partial A_z| 2^{(D-1)z}$ to obtain 
+logarithmic violation 
+\[ 
+    S(A) \propto  \sum_{z=0}^{\bar z} \df{|\partial A_z| 2^{(D-1)z}}{2^{(D-1)z}}
+    = L^{D-1} \log_2 L 
+\] 
+This corresponds to introducing $2^{(D-1)}$ copies of the coarse-grained 
+site at each coarse-graining step. 

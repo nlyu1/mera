@@ -23,7 +23,7 @@
 <meta name="author" content="Nicholas Lyu" />
 
 
-<meta name="date" content="2024-11-19" />
+<meta name="date" content="2024-11-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="index.html"/>
-<link rel="next" href="bibliography.html"/>
+<link rel="next" href="tensor-networks-and-geometry.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -59,6 +59,29 @@
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 </head>
 
@@ -85,6 +108,11 @@
 <li class="chapter" data-level="" data-path="geometry.html"><a href="geometry.html#basic-definitions"><i class="fa fa-check"></i>Basic definitions</a></li>
 <li class="chapter" data-level="" data-path="geometry.html"><a href="geometry.html#boundary"><i class="fa fa-check"></i>Boundary</a></li>
 </ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html"><i class="fa fa-check"></i><b>2</b> Tensor Networks and Geometry</a>
+<ul>
+<li class="chapter" data-level="" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html#critical-v.-non-critical-systems"><i class="fa fa-check"></i>Critical v. non-critical systems</a></li>
+<li class="chapter" data-level="" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html#connection-to-tensor-networks"><i class="fa fa-check"></i>Connection to tensor networks</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
 </ul>
@@ -248,6 +276,25 @@ Transitivity follows from the triangle inequality, so
 a sequence <span class="math inline">\((x_n)\)</span> of points converges to infinity if
 <span class="math display">\[
     \liminf_{i, j\to \infty} (x_i, x_j)_x = \infty
+\]</span>
+Intuitively, this says that geodesics from <span class="math inline">\(w\)</span> to later pairs
+in the sequence <span class="math inline">\(x_n, x_m\)</span> can travel for arbitrarily long
+distances together.</p>
+</div>
+<p><span style="color:red">
+Why is this definition independent of <span class="math inline">\(w\)</span>?
+</span></p>
+<p>When <span class="math inline">\(X\)</span> is <span class="math inline">\(\delta\)</span>-hyperbolic, also define the equivalence relation
+<span class="math display">\[
+    \{x_n\}\sim \{y_n\} \iff \liminf_{j, k\to \infty} (x_j, y_k) = \infty
+\]</span></p>
+<div class="definition">
+<p><span id="def:unlabeled-div-15" class="definition"><strong>Definition 1.12  (Gromov boundary) </strong></span>The Gromov boundary <span class="math inline">\(\partial X\)</span> is
+the sequences <span class="math inline">\(x_n\to \infty\)</span> modulo the equivalence relation above,
+with basis given by
+<span class="math display">\[
+    B_\delta(p \in \partial X) = \{q\in \partial X |
+    \exists (x_n) \in p, (y_n)\in q: \liminf
 \]</span></p>
 </div>
 
@@ -260,7 +307,7 @@ a sequence <span class="math inline">\((x_n)\)</span> of points converges to inf
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="bibliography.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tensor-networks-and-geometry.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

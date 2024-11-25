@@ -1,15 +1,5 @@
 def:unlabeled-div-1
 def:unlabeled-div-2
-def:unlabeled-div-3
+prp:unlabeled-div-3
 prp:unlabeled-div-4
-def:unlabeled-div-5
-def:unlabeled-div-6
-def:unlabeled-div-7
-def:unlabeled-div-8
-def:unlabeled-div-9
-prp:unlabeled-div-10
-def:unlabeled-div-11
-prp:unlabeled-div-12
-def:unlabeled-div-13
-def:unlabeled-div-14
-geometry
+tensor-networks-and-geometry
