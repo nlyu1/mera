@@ -47,3 +47,19 @@ link-citations: true
 ## Organization {-}
 
 ## Main deliverables {-}
+
+Proceeding to compute the commutator: 
+\begin{align}
+    [J_{\xi_1}, J_{\xi_2}] 
+    &= [\bar \omega^{q_1p_1/2} V^{q_1} U^{p_1},
+    \bar \omega^{q_2 p_2/2} V^{q_2} U^{p_2}] \\ 
+    &= \bar \omega^{\frac 1 2 (q_1p_1 - q_2 p_2)} 
+    (V^{q_1} U^{p_1} V^{q_2} U^{p_2} - V^{q_2} U^{p_2}V^{q_1} U^{p_1}) \\ 
+    &= \bar \omega^{\frac 1 2 (q_1p_1 - q_2 p_2)} 
+    V^{q_1 + q_2} U^{p_1 + p_2} (\omega^{p_1 q_2} - \omega^{q_1p_2}) 
+\end{align}
+On the other hand, we obtain 
+\begin{align}
+    J_{\xi_1+\xi_2} 
+    &= \bar \omega^{\frac 1 2 (q_1+q_2)(p_1+p_2)} V^{q_1+q_2}U^{p_1+p_2}
+\end{align}
