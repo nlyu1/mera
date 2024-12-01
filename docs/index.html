@@ -23,7 +23,7 @@
 <meta name="author" content="Nicholas Lyu" />
 
 
-<meta name="date" content="2024-11-26" />
+<meta name="date" content="2024-11-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 
-<link rel="next" href="tensor-networks-and-geometry.html"/>
+<link rel="next" href="weyl-algebra.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -100,7 +100,13 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#organization"><i class="fa fa-check"></i>Organization</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#main-deliverables"><i class="fa fa-check"></i>Main deliverables</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html"><i class="fa fa-check"></i><b>1</b> Tensor Networks and Geometry</a>
+<li class="chapter" data-level="1" data-path="weyl-algebra.html"><a href="weyl-algebra.html"><i class="fa fa-check"></i><b>1</b> Weyl Algebra</a>
+<ul>
+<li class="chapter" data-level="" data-path="weyl-algebra.html"><a href="weyl-algebra.html#weyl-parafermions"><i class="fa fa-check"></i>Weyl parafermions</a></li>
+<li class="chapter" data-level="" data-path="weyl-algebra.html"><a href="weyl-algebra.html#fock-parafermions"><i class="fa fa-check"></i>Fock parafermions</a></li>
+<li class="chapter" data-level="" data-path="weyl-algebra.html"><a href="weyl-algebra.html#canonical-transforms"><i class="fa fa-check"></i>Canonical transforms</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html"><i class="fa fa-check"></i><b>2</b> Tensor Networks and Geometry</a>
 <ul>
 <li class="chapter" data-level="" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html#critical-v.-non-critical-systems"><i class="fa fa-check"></i>Critical v. non-critical systems</a></li>
 <li class="chapter" data-level="" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html#connection-to-tensor-networks"><i class="fa fa-check"></i>Connection to tensor networks</a></li>
@@ -127,7 +133,7 @@ div.csl-indent {
 <div id="header">
 <h1 class="title">MERA Learning Material</h1>
 <p class="author"><em>Nicholas Lyu</em></p>
-<p class="date"><em>2024-11-26</em></p>
+<p class="date"><em>2024-11-30</em></p>
 </div>
 <div id="preface" class="section level1 unnumbered hasAnchor">
 <h1>Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -136,22 +142,6 @@ div.csl-indent {
 </div>
 <div id="main-deliverables" class="section level2 unnumbered hasAnchor">
 <h2>Main deliverables<a href="index.html#main-deliverables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Proceeding to compute the commutator:
-<span class="math display">\[\begin{align}
-    [J_{\xi_1}, J_{\xi_2}]
-    &amp;= [\bar \omega^{q_1p_1/2} V^{q_1} U^{p_1},
-    \bar \omega^{q_2 p_2/2} V^{q_2} U^{p_2}] \\
-    &amp;= \bar \omega^{\frac 1 2 (q_1p_1 - q_2 p_2)}
-    (V^{q_1} U^{p_1} V^{q_2} U^{p_2} - V^{q_2} U^{p_2}V^{q_1} U^{p_1}) \\
-    &amp;= \bar \omega^{\frac 1 2 (q_1p_1 - q_2 p_2)}
-    V^{q_1 + q_2} U^{p_1 + p_2} (\omega^{p_1 q_2} - \omega^{q_1p_2})
-\end{align}\]</span>
-On the other hand, we obtain
-<span class="math display">\[\begin{align}
-    J_{\xi_1+\xi_2}
-    &amp;= \bar \omega^{\frac 1 2 (q_1+q_2)(p_1+p_2)} V^{q_1+q_2}U^{p_1+p_2}
-\end{align}\]</span></p>
-
 </div>
 </div>
             </section>
@@ -160,7 +150,7 @@ On the other hand, we obtain
         </div>
       </div>
 
-<a href="tensor-networks-and-geometry.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="weyl-algebra.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

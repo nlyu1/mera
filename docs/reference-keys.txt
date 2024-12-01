@@ -1,5 +1,15 @@
 def:unlabeled-div-1
-def:unlabeled-div-2
+prp:unlabeled-div-2
+eq:commWeyl
 prp:unlabeled-div-3
-prp:unlabeled-div-4
+def:unlabeled-div-4
+def:unlabeled-div-5
+def:unlabeled-div-6
+prp:unlabeled-div-7
+def:unlabeled-div-8
+def:unlabeled-div-9
+def:unlabeled-div-10
+prp:unlabeled-div-11
+prp:unlabeled-div-12
+weyl-algebra
 tensor-networks-and-geometry
