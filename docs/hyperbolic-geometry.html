@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Hyperbolic geometry | MERA Learning Material</title>
+  <meta name="description" content="2 Hyperbolic geometry | MERA Learning Material" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Hyperbolic geometry | MERA Learning Material" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Hyperbolic geometry | MERA Learning Material" />
+  
+  
+  
+
+<meta name="author" content="Nicholas Lyu" />
+
+
+<meta name="date" content="2025-01-15" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="tensor-networks-and-geometry.html"/>
+<link rel="next" href="bibliography.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#organization"><i class="fa fa-check"></i>Organization</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#main-deliverables"><i class="fa fa-check"></i>Main deliverables</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html"><i class="fa fa-check"></i><b>1</b> Tensor Networks and Geometry</a>
+<ul>
+<li class="chapter" data-level="" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html#critical-v.-non-critical-systems"><i class="fa fa-check"></i>Critical v. non-critical systems</a></li>
+<li class="chapter" data-level="" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html#connection-to-tensor-networks"><i class="fa fa-check"></i>Connection to tensor networks</a></li>
+<li class="chapter" data-level="" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html#branched-mera"><i class="fa fa-check"></i>Branched MERA</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="hyperbolic-geometry.html"><a href="hyperbolic-geometry.html"><i class="fa fa-check"></i><b>2</b> Hyperbolic geometry</a>
+<ul>
+<li class="chapter" data-level="" data-path="hyperbolic-geometry.html"><a href="hyperbolic-geometry.html#geometric-definitions"><i class="fa fa-check"></i>Geometric definitions</a></li>
+<li class="chapter" data-level="" data-path="hyperbolic-geometry.html"><a href="hyperbolic-geometry.html#quasi-geodesics-in-hyperbolic-spaces"><i class="fa fa-check"></i>Quasi-geodesics in hyperbolic spaces</a></li>
+<li class="chapter" data-level="" data-path="hyperbolic-geometry.html"><a href="hyperbolic-geometry.html#dehn-algorithm"><i class="fa fa-check"></i>Dehn algorithm</a></li>
+<li class="chapter" data-level="" data-path="hyperbolic-geometry.html"><a href="hyperbolic-geometry.html#gromov-boundaries"><i class="fa fa-check"></i>Gromov-boundaries</a></li>
+<li class="chapter" data-level="" data-path="hyperbolic-geometry.html"><a href="hyperbolic-geometry.html#other-relevant-results"><i class="fa fa-check"></i>Other relevant results</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MERA Learning Material</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="hyperbolic-geometry" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Hyperbolic geometry<a href="hyperbolic-geometry.html#hyperbolic-geometry" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This section recounts the basic concepts of geometric group theory.
+We also discuss the Dehn algorithm for solving the word problem in
+hyperbolic groups; this problem exemplifies the implications of hyperbolicity
+and helps us compute the Cayley graphs of known hyperbolic groups.</p>
+<p>References:</p>
+<ol style="list-style-type: decimal">
+<li><em>Geometric Group Theory: an Introduction</em> <span class="citation">(<a href="#ref-loh2017geometric">Löh 2017</a>)</span>.
+<ul>
+<li>Chapter 5: Quasi-isometries.</li>
+<li>Chapter 7: Geodesics and hyperbolicity.</li>
+<li>Chapter 8: Gromov boundaries.</li>
+</ul></li>
+<li><a href="https://math.uchicago.edu/~may/REU2013/REUPapers/Hyun.pdf">Hyperbolicity and the Word Problem</a>.</li>
+</ol>
+<p>Main takeaways:</p>
+<ol style="list-style-type: decimal">
+<li>Quasi-properties are only sensitive to behaviors on a large (but uniform) scale.</li>
+<li>Quasi-isometric invariance apply to Cayley graphs (up to changes in generating sets) and hyperbolicity.</li>
+<li>One key property of hyperbolic spaces is that local geodesics are well-approximated by global geodesics (lemma <a href="hyperbolic-geometry.html#lem:locGeoApprox">2.4</a>).</li>
+</ol>
+<p>Progress:</p>
+<ol style="list-style-type: decimal">
+<li>We have identified a class of hyperbolic groups with Gromov boundary <span class="math inline">\(S^2\)</span>,
+corresponding to the fundamental groups of closed hyperbolic <span class="math inline">\(3\)</span>-manifolds.
+<ul>
+<li>Additionally, this candidate class is ranked in terms of the simplicity of the
+triangulation, which roughly concurs with the simplicity of the presentation
+(number of generators, and length of the relations).</li>
+</ul></li>
+<li>Next step is to calculate the Cayley graphs of such groups, plotting them and investigating
+their minimal surfaces up to a certain radius.
+<ul>
+<li>There seems to be no established programmatic way of doing this (Mathematica supports plotting
+Cayley graphs but only for finite-order groups), so I’m working on a custom implementation of this.</li>
+<li>In order to compute the Cayley graph, I have been working on understanding and
+implementing the Dehn algorithm for solving the word problem.</li>
+</ul></li>
+</ol>
+<div id="geometric-definitions" class="section level2 unnumbered hasAnchor">
+<h2>Geometric definitions<a href="hyperbolic-geometry.html#geometric-definitions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We first define quasi-properties,
+then proceed to apply the quasi-definitions to geodesics and hyperbolicity.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-5" class="definition"><strong>Definition 2.1  (quasi-isometry) </strong></span></p>
+<ul>
+<li>A map <span class="math inline">\(\phi:(X, d)\to X(X&#39;, d&#39;)\)</span> is a <span class="math inline">\((\alpha_{\geq 1}, \beta_{\geq 0})\)</span>-<strong>quasi-isometric embedding</strong> if
+<span class="math inline">\(\forall x, y\in X\)</span>:
+<span class="math display">\[
+  \dfrac 1 {\alpha} d(x, y) - \beta \leq d&#39;(\phi(x), \phi(y)) \leq \alpha d(x, y) + \beta
+\]</span></li>
+<li><span class="math inline">\(\phi\)</span> is a quasi-isometry if, additionally, the expanded image
+of <span class="math inline">\(\phi(X)\)</span> covers <span class="math inline">\(X&#39;\)</span> up to some uniform bound, i.e. <span class="math inline">\(\exists k_3\geq 0\)</span> such that
+<span class="math display">\[
+  \forall y\in X&#39;, \exists x\in X: d&#39;(y, \phi(x)) \leq k_3
+\]</span></li>
+</ul>
+</div>
+<p>Caveat: quasi-isometries are not bijective in general, e.g. <span class="math inline">\(\mathbb Z\)</span> is quasi-isometric to <span class="math inline">\(\mathbb R\)</span>.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-6" class="definition"><strong>Definition 2.2  (geodesics and hyperbolic spaces) </strong></span>Fixing a metric space <span class="math inline">\((M, d)\)</span>:</p>
+<ul>
+<li>A <strong>geodesic</strong> is an isometric embedding <span class="math inline">\(\gamma:I\to M\)</span>, i.e. 
+<span class="math display" id="eq:geodesic">\[
+  \forall a, b\in I: d(\gamma(a), \gamma(b)) = |a-b|
+  \tag{2.1}
+\]</span></li>
+<li>A <span class="math inline">\((\alpha, \beta)\)</span> <strong>quasi-geodesic</strong> is a <span class="math inline">\((\alpha, \beta)\)</span>-quasi-isometric embedding <span class="math inline">\(I\to M\)</span>.</li>
+<li>A <span class="math inline">\(k\)</span>-local geodesic is a path <span class="math inline">\(\gamma:I\to M\)</span>
+such that <a href="hyperbolic-geometry.html#eq:geodesic">(2.1)</a> holds for all <span class="math inline">\(a, b\in I\)</span> with <span class="math inline">\(|a-b|\leq k\)</span>.</li>
+<li>A metric space <span class="math inline">\((M, d)\)</span> is a <strong>geodesic space</strong> if any two points
+are connected by a geodesic. Quasi-geodesic spaces are defined analogously.</li>
+<li>A geodesic metric space is <span class="math inline">\(\eta\)</span>-<strong>hyperbolic</strong> if for any geodesic triangle
+<span class="math inline">\([a, b], [b, c], [a, c]\)</span>, every edge is contained in the <span class="math inline">\(\eta\)</span>-neighborhood of the
+other two edges. The space is hyperbolic if it is <span class="math inline">\(\eta\)</span>-hyperbolic for some <span class="math inline">\(\eta\geq 0\)</span>.</li>
+</ul>
+</div>
+<p>Geodesics in the differential geometric sense are more analogous to “local geodesics” in the definitions above.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-7" class="definition"><strong>Definition 2.3  (Cayley graph) </strong></span>Given a group <span class="math inline">\(G\)</span> and a generating set <span class="math inline">\(S\)</span>, the Cayley graph <span class="math inline">\(\Delta(G, S)\)</span> of <span class="math inline">\(G\)</span>
+w.r.t <span class="math inline">\(S\)</span> is the undirected graph defined by</p>
+<ul>
+<li>Vertices denoting elements of <span class="math inline">\(G\)</span>, and</li>
+<li>Edges given by <span class="math inline">\(\{(g, gs): g\in G, s\in S\cup S^{-1}-\{1\}\}\)</span>.</li>
+</ul>
+<p>Each Cayley graph is endowed with the natural word metric, with each edge having unit length.</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-8" class="definition"><strong>Definition 2.4  (hyperbolic group) </strong></span>A finitely generated group <span class="math inline">\(G\)</span> is <strong>hyperbolic</strong> if the
+Cayley graph of <span class="math inline">\(G\)</span> with the word metric is a hyperbolic space.</p>
+</div>
+<p>We also quote the following results, which state that hyperbolicity and Cayley graphs
+are quasi-isometric invariants.</p>
+<div class="lemma">
+<p><span id="lem:unlabeled-div-9" class="lemma"><strong>Lemma 2.1  </strong></span>(<span class="citation">(<a href="#ref-loh2017geometric">Löh 2017</a>)</span>, prop. 5.2.5) Given finite generating sets <span class="math inline">\(S, S&#39;\)</span> for a group <span class="math inline">\(G\)</span>, there exists a quasi-isometry
+from <span class="math inline">\(\Delta(G, S)\)</span> to <span class="math inline">\(\Delta(G, S&#39;)\)</span> and vice versa.</p>
+</div>
+<div class="lemma">
+<p><span id="lem:unlabeled-div-10" class="lemma"><strong>Lemma 2.2  </strong></span>(<span class="citation">(<a href="#ref-loh2017geometric">Löh 2017</a>)</span>, corollary 7.2.13) Given two quasi-isometric geodesic spaces <span class="math inline">\(X, X&#39;\)</span>, <span class="math inline">\(X\)</span> is hyperbolic iff <span class="math inline">\(X&#39;\)</span> is.</p>
+</div>
+</div>
+<div id="quasi-geodesics-in-hyperbolic-spaces" class="section level2 unnumbered hasAnchor">
+<h2>Quasi-geodesics in hyperbolic spaces<a href="hyperbolic-geometry.html#quasi-geodesics-in-hyperbolic-spaces" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This section recounts in greater detail <span class="citation">(<a href="#ref-loh2017geometric">Löh 2017</a>)</span>, section 7.2.
+We feel that this is necessary to</p>
+<ol style="list-style-type: decimal">
+<li>Obtain concrete intuition for how hyperbolicity imply the relation between local and global structures.</li>
+<li>Understand the Dehn algorithm for solving the word problem, needed for plotting Cayley graphs.</li>
+</ol>
+<div class="theorem">
+<p><span id="thm:qgeoStab" class="theorem"><strong>Theorem 2.1  (quasi-geodesic approximation in hyperbolic spaces (Theorem 7.2.10)) </strong></span>In a <span class="math inline">\(\eta\)</span>-hyperbolic space <span class="math inline">\(X\)</span>, every <span class="math inline">\((\alpha, \beta)\)</span>-quasi-geodesic <span class="math inline">\(\gamma:I\to X\)</span> is
+contained in the <span class="math inline">\(\delta\)</span>-neighborhood of every geodesic <span class="math inline">\([\gamma(0), \gamma(b)]\)</span>, where
+<span class="math inline">\(\delta\)</span> only depends upon <span class="math inline">\(\eta, \alpha, \beta\)</span>.</p>
+</div>
+<div class="lemma">
+<p><span id="lem:christmas" class="lemma"><strong>Lemma 2.3  (christmas tree lemma) </strong></span>In an <span class="math inline">\(\eta\)</span>-hyperbolic space <span class="math inline">\(X\)</span>, to every continuous curve <span class="math inline">\(\gamma:[0, L]\to X\)</span> and
+geodesic <span class="math inline">\([\gamma(0), \gamma(L)]=\gamma&#39;:[0, L&#39;]\to X\)</span>, the distance from <span class="math inline">\([\gamma(0), \gamma(L)]\)</span> to
+<span class="math inline">\(\mathrm{im}(\gamma)\)</span> is bounded by the log-length of <span class="math inline">\(\gamma\)</span>:
+<span class="math display">\[
+    \sup_{t\in [0, L&#39;]} d(\gamma&#39;_t, \mathrm{im}\, \gamma) \leq \delta \cdot | \log_2 \circ L_X(\gamma) | + 1
+\]</span></p>
+</div>
+<div class="lemma">
+<p><span id="lem:locGeoApprox" class="lemma"><strong>Lemma 2.4  (local geodesic approximation) </strong></span>In an <span class="math inline">\(\eta\)</span>-hyperbolic space <span class="math inline">\(X\)</span>, for every <span class="math inline">\(k_{&gt;8\eta}\)</span>-local geodesic <span class="math inline">\(\gamma:[0, L]\to X\)</span>
+and geodesic <span class="math inline">\(\gamma:[0, L&#39;]\to X\)</span> with the same endpoints, the image <span class="math inline">\(\mathrm{im}\, \gamma\)</span> is
+contained in the <span class="math inline">\(2\eta\)</span>-neighborhood of <span class="math inline">\(\mathrm{im}\, \gamma&#39;\)</span>.</p>
+</div>
+<p><em>Proof:</em>
+Pick a point <span class="math inline">\(x=\gamma(t)\)</span> at <em>maximal</em> distance from <span class="math inline">\(\gamma&#39;\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>First suppose <span class="math inline">\(t, L-t &gt; 4\eta\)</span>. By <span class="math inline">\(k_{&gt;8\eta}\)</span> local-geodesic condition,
+pick a subarc of length in <span class="math inline">\((8\eta, k)\)</span> with endpoints <span class="math inline">\(y, z\in \mathrm{im}\, \gamma\)</span> and midpoint <span class="math inline">\(x\)</span>.
+<ul>
+<li>Let <span class="math inline">\(y&#39;, z&#39;\)</span> be the closest points on <span class="math inline">\(\gamma&#39;\)</span> to <span class="math inline">\(y, z\)</span>, respectively.</li>
+<li>Then <span class="math inline">\([y, z]\)</span> (a subarc of <span class="math inline">\(\gamma\)</span> through <span class="math inline">\(x\)</span>), <span class="math inline">\([y, y&#39;]\)</span>, and <span class="math inline">\([z, y&#39;]\)</span> form a geodesic triangle.</li>
+<li>By <span class="math inline">\(\eta\)</span>-hyperbolic condition, there exists <span class="math inline">\(w\)</span> on <span class="math inline">\([y, y&#39;]\)</span> or <span class="math inline">\([y&#39;, z]\)</span> such that <span class="math inline">\(d(w, x)&lt;\eta\)</span>.
+<ul>
+<li>Claim: <span class="math inline">\(w\)</span> cannot exist on <span class="math inline">\([y, y&#39;]\)</span> (so must be on <span class="math inline">\([y&#39;, z]\)</span>), else this contradicts the maximality of <span class="math inline">\(x\)</span>:</li>
+<li>Since <span class="math inline">\(L([y, x])&gt;4\eta\)</span> and <span class="math inline">\(L([w, x])&lt;\eta\)</span>, by the triangle inequality,
+<span class="math display">\[
+  L([y, w]) &gt; 3\eta &gt; L([w, x])
+  \]</span>
+This implies that <span class="math inline">\(d(x, y&#39;) &lt; d(y, y&#39;)\)</span>. Combined with the extremality of <span class="math inline">\(y&#39;\)</span> w.r.t. <span class="math inline">\(y\)</span>, we contradict the
+construction of <span class="math inline">\(x\)</span> by
+<span class="math display">\[
+  d(x, \gamma&#39;) &lt; d(x, y&#39;) &lt; d(y, y&#39;) = d(y, \gamma&#39;)
+  \]</span></li>
+</ul></li>
+<li>Again, <span class="math inline">\([y&#39;, z], [y&#39;, z&#39;], [z, z&#39;]\)</span> form a geodesic triangle, and by <span class="math inline">\(\eta\)</span>-hyperbolic condition,
+there exists <span class="math inline">\(w&#39;\)</span> on <span class="math inline">\([z, z&#39;]\cup [y&#39;, z&#39;]\)</span> such that <span class="math inline">\(d(w&#39;, w)&lt;\eta\)</span>.
+<ul>
+<li>Claim: <span class="math inline">\(w&#39;\)</span> cannot exist on <span class="math inline">\([z, z&#39;]\)</span>, else contradicting the maximality of <span class="math inline">\(x\)</span>:</li>
+<li>Assuming by contradiction, <span class="math inline">\(d(x, w&#39;) \leq d(x, w) + d(w, w&#39;) &lt; 2\eta\)</span>, then
+<span class="math display">\[
+  d(z, w&#39;) \geq d(x, z)_{&gt;4\eta} - d(x, w&#39;)_{&lt;2\eta} &gt; 2\eta &gt; d(x, w&#39;)
+  \implies d(x, z&#39;) &lt; d(z, z&#39;)
+  \]</span>
+Then <span class="math inline">\(d(x, \gamma) \leq d(x, z&#39;) &lt; d(z, z&#39;) = d(z, \gamma)\)</span>, contradicting the maximality of <span class="math inline">\(x\)</span>.</li>
+</ul></li>
+<li>Combining the two results, we obtain <span class="math inline">\(d(x, \gamma) &lt; 2\eta\)</span>.</li>
+</ul></li>
+<li>For one of <span class="math inline">\(t, L-t &lt; 4\eta\)</span>, assume w.l.o.g. that <span class="math inline">\(t&lt;4\eta\)</span> and apply the same construction to the geodesic
+triangle <span class="math inline">\([\gamma_0, z, z&#39;]\)</span>.</li>
+<li>For the trivial case <span class="math inline">\(t, L-t &lt; 4\eta\)</span>, <span class="math inline">\(\gamma\)</span> is a geodesic.</li>
+</ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="images/locGeoApprox.png" alt="Hypothetical (for contradiction) constructions are in green. Geodesics are in blue." width="85%" />
+<p class="caption">
+Figure 2.1: Hypothetical (for contradiction) constructions are in green. Geodesics are in blue.
+</p>
+</div>
+</div>
+<div id="dehn-algorithm" class="section level2 unnumbered hasAnchor">
+<h2>Dehn algorithm<a href="hyperbolic-geometry.html#dehn-algorithm" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This section models section 7.4.1, which efficiently solves the word problem for hyperbolic groups.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-11" class="definition"><strong>Definition 2.5  (Dehn presentation) </strong></span>A finite presentation <span class="math inline">\(\langle S|R\rangle\)</span> is a <strong>Dehn presentation</strong> if
+there exists words <span class="math inline">\((u_1, v_1), \dots, (u_n, v_n)\in (S\cup S^{-1})^*\)</span> such that</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(R = \{u_1 v_1^{-1}, \dots, u_n v_n^{-1}\}\)</span>.</li>
+<li>For all <span class="math inline">\(j\)</span>, <span class="math inline">\(|v_j| \leq |u_j|\)</span>.</li>
+<li>For all nontrivial null-homotopic words <span class="math inline">\(w\in (S\cup S^{-1})^*\)</span>, some <span class="math inline">\(u_j\)</span> is a subword of <span class="math inline">\(w\)</span>.</li>
+</ol>
+<p>Note that <span class="math inline">\(v_j\)</span> can be null. For example, the free group of rank <span class="math inline">\(2\)</span> has Dehn representation
+<span class="math inline">\(v_1=\dots=v_4=1\)</span>, and
+<span class="math display">\[
+    u_1 = xx^{-1}, \quad u_2=x^{-1}x, \quad u_3=yy^{-1}, \quad u_4=y^{-1}y
+\]</span></p>
+</div>
+<p>Given a Dehn presentation, the word problem is solvable in time <span class="math inline">\(O(|w|)\)</span> by a replacement algorithm.</p>
+<div class="lemma">
+<p><span id="lem:hShortcuts" class="lemma"><strong>Lemma 2.5  (shortcuts in cycles in hyperbolic groups) </strong></span>Given a hyperbolic group <span class="math inline">\(G\)</span>, a finite generating set <span class="math inline">\(S\)</span> and <span class="math inline">\(\Delta(G, S)\)</span> being <span class="math inline">\(\eta\)</span>-hyperbolic,
+if <span class="math inline">\(\gamma:[0, n]\to \Delta(N, G)\)</span> is a piecewise-geodesic cycle (of length <span class="math inline">\(n\)</span>),
+then there exists a restriction $_{[t, t’]} with <span class="math inline">\(t, t&#39;\in [0, n]\)</span> such that
+<span class="math display">\[
+    L(\gamma_{[t, t&#39;]}) \leq 8\eta
+\]</span>
+and such that <span class="math inline">\(\gamma_{|[t, t&#39;]}\)</span> is not geodesic.</p>
+</div>
+<p><em>Proof:</em></p>
+</div>
+<div id="gromov-boundaries" class="section level2 unnumbered hasAnchor">
+<h2>Gromov-boundaries<a href="hyperbolic-geometry.html#gromov-boundaries" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This section discusses the relevant results in Chapter 8 of <span class="citation">(<a href="#ref-loh2017geometric">Löh 2017</a>)</span>.
+Intuitively, the definition of boundary should satisfy:</p>
+<ol style="list-style-type: decimal">
+<li>To every metric space <span class="math inline">\(X\)</span> a (preferably compact) topological space <span class="math inline">\(X_\infty\)</span>.</li>
+<li>Quasi-isometric invariance: <span class="math inline">\(X\)</span> is quasi-isometric to <span class="math inline">\(X&#39;\iff X_\infty\)</span> is homeomorphic to <span class="math inline">\(X&#39;_\infty\)</span>.</li>
+<li>Functoriality: a quasi-isometric embedding <span class="math inline">\(X\to Y\)</span> induces a continuous map <span class="math inline">\(X_\infty\to Y_\infty\)</span>
+compatible with composition: <span class="math inline">\((g\circ f)_\infty = g_\infty\circ f_\infty\)</span>, for <span class="math inline">\(f, g\)</span> quasi-isometric embeddings.</li>
+</ol>
+<p>The main idea is to define points on the boundary as equivalence classes of geodesic rays.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-12" class="definition"><strong>Definition 2.6  (Gromov boundary) </strong></span>hello</p>
+</div>
+</div>
+<div id="other-relevant-results" class="section level2 unnumbered hasAnchor">
+<h2>Other relevant results<a href="hyperbolic-geometry.html#other-relevant-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Given a compact hyperbolic manifold <span class="math inline">\(M\)</span>, its fundamental group <span class="math inline">\(\pi_1(M)\)</span> is hyperbolic since
+<span class="math inline">\(\pi_1(M)\)</span> is quasi-isometric to the hyperbolic universal covering of <span class="math inline">\(M\)</span> by the
+Svarc-Milnor lemma (<span class="citation">(<a href="#ref-loh2017geometric">Löh 2017</a>)</span>, Pg. 221).</li>
+</ol>
+
+</div>
+</div>
+<h3>Bibliography<a href="bibliography.html#bibliography" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-loh2017geometric" class="csl-entry">
+Löh, Clara. 2017. <em>Geometric Group Theory</em>. Springer.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="tensor-networks-and-geometry.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bibliography.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
