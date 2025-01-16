@@ -14,6 +14,10 @@ fig:unnamed-chunk-1
 def:unlabeled-div-11
 lem:hShortcut
 thm:dehnPresentation
+eq:dehnPresentation
 def:unlabeled-div-12
+thm:unlabeled-div-13
+research-agenda
 tensor-networks-and-geometry
-hyperbolic-geometry
+hyperbolic-groups
+covering-theory-in-progress

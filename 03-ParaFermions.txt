@@ -235,3 +235,18 @@ Next compute the commutator brackets: for $j, k, l$ distinct, we obtain
     \gamma_k \gamma_l^2 \gamma_j \gamma_k^2  
     = (1 - \omega^{2s_{kl} + s_{kj} + 2s_{lj}}) \Gamma_{jl}
 \end{align}
+
+Question: 
+
+I think we're making concrete progress is constructing the Cayley graphs 
+    of groups with $S^2$ boundary, so maybe it's helpful to 
+
+What does it mean to construct a MERA which obeys the area law for $S^n$ 
+systems? My current interpretation is as follows: 
+
+1. We're constructing a tensor network with leaves (open legs) corresponding 
+    to lattice points on $S^n$. 
+    - The tensor network should be roughly tree-like 
+    (at least on some large scale) to reflect the multi-scale nature. 
+2. We're looking for "area law": i.e. given a patch $A$ 
+    on the site surface $S^n$, 

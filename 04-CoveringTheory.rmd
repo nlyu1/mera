@@ -1,0 +1,24 @@
+# Covering theory (in progress)
+
+This section recounts the theory of universal 
+covers for "nice" topological spaces. 
+
+In particular, we aim to understand (and program) how the 
+fundamental groups of closed hyperbolic $3$-manifolds can be 
+represented by matrix subgroups of the isometry group of $\mbb H^3$ 
+(Mobius transforms?). 
+
+## Universal covers, deck transforms {-}
+
+This section recounts relevant results for how the 
+fundamental groups of metric manifolds may be embedded as subgroups 
+of the universal covers' isometry group. 
+
+## Isometry group of $\mbb H^3$ {-}
+
+This section entails the matrix representation of 
+the isometry group of $\mbb H^3$. 
+
+## Matrix representation of $\pi_1$ {-}
+
+This section computes the matrix representation of select closed 3-manifolds. 

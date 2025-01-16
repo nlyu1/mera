@@ -40,10 +40,68 @@ link-citations: true
 \newcommand{\poly}{\mrm{poly}}
 \newcommand{\ot}{\otimes}
 
+# Research agenda 
 
+1. Identify "nice" groups with Gromov boundary $S^2$. 
+2. Construct their Cayley graphs out to a fixed radius, 
+    embedding endpoints on $S^2$. 
+3. Investigate the minimal-surface property of the Cayley graphs 
+    (at least an upper-bound) 
 
-# Preface {-}
+## Progress log {-}
 
-## Organization {-}
+Main takeaways so far: 
 
-## Main deliverables {-}
+1. $\partial \mbb H^3\cong S^2$, and quasi-isometric metric spaces have 
+    the same Gromov boundary, so it suffices to find groups which are 
+    quasi-isometric to $\mbb H^3$. 
+2. By the Svarc-Milnor lemma (Corollary 5.4.13 in [@loh2017geometric]), 
+    the fundamental groups of closed hyperbolic 3-manifolds have Gromov boundary $S^2$. 
+
+Examples of groups with $S^2$ Gromov boundary (from Regina): 
+
+- m003(-3, 1): $\la a, b| a^2b^2a^2b^{-1}ab^{-1}, a^2b^2a^{-1}ba^{-1}b^2\ra$. 
+- m003(-2, 3): $\la a, b|a^{-1}b^{-1}aba^{-1}bab^{-1}a^{-1}b^2, ab^{-1}a^{-1}baba^{-1}b^{-1}ab^3\ra$. 
+- m003(-4, 3): $\la a, b|a^2bab^{-2}ab, a^2b^2a^{-1}ba^{-1}b^2\ra$. 
+- m003(-4, 1): $\la a, b|a^{-3}b^2abab^2, aba^3b^{-2}a^3b\ra$. 
+
+### Jan 16: the word problem for candidate groups {-}
+
+See section 3 for more details on (1-4) below. 
+The approach in (5) is in progress in section 4. 
+
+1. <u>We have identified a class of hyperbolic groups with Gromov boundary $S^2$</u>, 
+    corresponding to the fundamental groups of closed hyperbolic $3$-manifolds. 
+    - We obtained a "census" of this set of groups from Regina's database. 
+    - Additionally, the database sorted the stored groups by the hyperbolic volume 
+    of its corresponding manifold, which roughly concurs with the simplicity of the presentation 
+    (number of generators, and length of the relations). 
+2. There seems to be no established technology for 
+    <u>constructing the Cayley graphs</u> of such groups (up to a certain radius). 
+    - Mathematica supports plotting Cayley graphs but only for finite-order groups. 
+3. Computing the Cayley graphs requires <u>solving the word problem</u>.  
+4. My first attempt has been understanding and implementing the Dehn algorithm, 
+    which yields a linear-time algorithm for solving the word problem. 
+    - After carefully reading the proof (in hopes of understanding the algorithm), 
+    I found that the Dehn algorithm is quite computationally infeasible. 
+    Computing the Dehn presentation has exponential complexity in the hyperbolic constant, 
+    which is likely exponentially-intractible as well. 
+5. I'm looking more into aother approach to solving the word problem: 
+    by representing the fundamental group as subgroups of the isometry group of 
+    the universal cover $\mbb H^3$ (which should be the group of Mobius transforms, 
+    which admit a convenient matrix representation?). 
+    I intend to proceed by the following: 
+    - Understand the isomorphism between fundamental groups and deck transformations. 
+    - Understand the embedding of deck transformations into the isometry 
+    group of the universal cover. 
+    - Understand the matrix representation of the isometry group of $\mbb H^2$. 
+    - Compute the matrix representations of select hyperbolic groups, solve the 
+    word problem, and write a program to compute the Cayley graphs. 
+
+The resulting Cayley graph may not have neat tree-like structure. 
+There is a chance that in order to understand which edges should correspond to 
+the lattice sites (and to compute the size of a boundary patch), 
+I may also need to dig into the construction of the quasi-isometry 
+between the $\pi_1$ of closed hyperbolic $3$-manifolds and $\mbb H^3$. 
+
+### Jan (?): Matrix representations of hyperbolic groups {-}

@@ -1,4 +1,4 @@
-# Hyperbolic geometry 
+# Hyperbolic Groups
 
 This section recounts the basic concepts of geometric group theory. 
 We also discuss the Dehn algorithm for solving the word problem in 
@@ -11,27 +11,17 @@ References:
     - Chapter 5: Quasi-isometries. 
     - Chapter 7: Geodesics and hyperbolicity. 
     - Chapter 8: Gromov boundaries. 
+    - Appendix A3: hyperbolic Riemmanian geometry (quite detailed introductory treatment). 
 2. [Hyperbolicity and the Word Problem](https://math.uchicago.edu/~may/REU2013/REUPapers/Hyun.pdf). 
 
 Main takeaways:
 
 1. Quasi-properties are only sensitive to behaviors on a large (but uniform) scale. 
-2. Quasi-isometric invariance apply to Cayley graphs (up to changes in generating sets) and hyperbolicity. 
-3. One key property of hyperbolic spaces is that local geodesics are well-approximated by global geodesics (lemma \@ref(lem:locGeoApprox)). 
-
-Progress:
-
-1. We have identified a class of hyperbolic groups with Gromov boundary $S^2$, 
-    corresponding to the fundamental groups of closed hyperbolic $3$-manifolds. 
-    - Additionally, this candidate class is ranked in terms of the simplicity of the 
-    triangulation, which roughly concurs with the simplicity of the presentation 
-    (number of generators, and length of the relations). 
-2. Next step is to calculate the Cayley graphs of such groups, plotting them and investigating 
-    their minimal surfaces up to a certain radius. 
-    - There seems to be no established programmatic way of doing this (Mathematica supports plotting 
-    Cayley graphs but only for finite-order groups), so I'm working on a custom implementation of this. 
-    - In order to compute the Cayley graph, I have been working on understanding and 
-    implementing the Dehn algorithm for solving the word problem. 
+2. Quasi-isometric invariance apply to Cayley graphs (up to changes in generating sets) 
+    and hyperbolicity. 
+3. One key property of hyperbolic spaces is that local geodesics are close to 
+    global geodesics (lemma \@ref(lem:locGeoApprox)), which implies the contractability of 
+    loops in Cayley graphs and the Dehn presentation. 
 
 ## Geometric definitions {-}
 
@@ -150,7 +140,7 @@ Pick a point $x=\gamma(t)$ at _maximal_ distance from $\gamma'$.
 knitr::include_graphics("images/locGeoApprox.png")
 ```
 
-## Dehn algorithm {-}
+## Dehn algorithm {- #dehn}
 
 This part follows section 7.4.1, which efficiently solves the word problem for hyperbolic groups. 
 The main idea of the proof is as follows:
@@ -216,6 +206,7 @@ Using the shortcut lemma, consider the finite set
         \leq \lceil 8\eta\rceil + 2, \,\,
         |v|=d(1, \pi(u)), \,\,\pi(u)=\pi(v)
     \right\} 
+    (\#eq:dehnPresentation)
 \] 
 The interpretation for each constraint are: 
 
@@ -248,13 +239,40 @@ Intuitively, the definition of boundary should satisfy:
 The main idea is to define points on the boundary as equivalence classes of geodesic rays. 
 
 :::{.definition name="Gromov boundary"}
-hello
+Two quasi-geodesic rays $\gamma, \gamma':[0, \infty)\to X$ 
+are equivalent if they have finite Hausdorff distance, i.e. $\exists c>0$ such that 
+\[ 
+    \mrm{im}\, \gamma \subset B_c(\mrm{im}\, \gamma'), \quad 
+    \mrm{im}\, \gamma' \subset B_c(\mrm{im}\, \gamma)
+\] 
+The Gromov boundary is defined as the set of quasi-geodesic rays modulo $\sim$ above, 
+with the topology defined as follows: 
+
+- Given $(x_n), x\subset \partial X$, we say $x_n\to x$ if there exists 
+    representative rays $(\gamma_n), \gamma$ such that every subsequence of 
+    $(\gamma_n)$ contains a subsequence which converges to $\gamma$ uniformly on compact 
+    subsets of $[0, \infty)$. 
 :::
 
+Importantly, the Gromov boundary of $\mbb H^n$ is 
+$S^{n-1}$ ([@loh2017geometric], Example 8.3.5). 
 
-## Other relevant results {-}
+:::{.theorem name="quasi-isometric invariance of Gromov boundary"}
+For two geodesic metric spaces $X, X'$, we have 
+$\partial X\cong \partial X'\iff X, X'$ 
+are quasi-isometric to one another. 
+:::
 
-1. Given a compact hyperbolic manifold $M$, its fundamental group $\pi_1(M)$ is hyperbolic since 
-$\pi_1(M)$ is quasi-isometric to the hyperbolic universal covering of $M$ by the 
-Svarc-Milnor lemma ([@loh2017geometric], Pg. 221). 
+The immediate implications of this result are as follows: 
 
+- The Gromov boundaries of hyperbolic groups are well-defined 
+    as the Gromov boundaries of their Cayley graphs, regardless of 
+    the generating sets. 
+- Groups which are quasi-isometric to $\mbb H^3$ have Gromov boundary $S^2$. 
+
+## Interesting Misc {-}
+
+The Gromov boundary of free groups (of nontrivial rank) are Cantor sets, 
+which is not homeomorphic to $S^1$. Since Gromov boundary is a quasi-isometric 
+invariant, it follows that <u>nontrivial free groups are not 
+quasi-isometric to the hyperbolic space</u> $\mbb H^2$. 
