@@ -9,12 +9,11 @@ def:unlabeled-div-7
 def:unlabeled-div-8
 lem:unlabeled-div-9
 lem:unlabeled-div-10
-thm:qgeoStab
-lem:christmas
 lem:locGeoApprox
 fig:unnamed-chunk-1
 def:unlabeled-div-11
-lem:hShortcuts
+lem:hShortcut
+thm:dehnPresentation
 def:unlabeled-div-12
 tensor-networks-and-geometry
 hyperbolic-geometry

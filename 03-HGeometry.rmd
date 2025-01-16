@@ -109,21 +109,6 @@ We feel that this is necessary to
 1. Obtain concrete intuition for how hyperbolicity imply the relation between local and global structures. 
 2. Understand the Dehn algorithm for solving the word problem, needed for plotting Cayley graphs. 
 
-:::{.theorem #qgeoStab name="quasi-geodesic approximation in hyperbolic spaces (Theorem 7.2.10)"}
-In a $\eta$-hyperbolic space $X$, every $(\alpha, \beta)$-quasi-geodesic $\gamma:I\to X$ is 
-contained in the $\delta$-neighborhood of every geodesic $[\gamma(0), \gamma(b)]$, where 
-$\delta$ only depends upon $\eta, \alpha, \beta$. 
-:::
-
-:::{.lemma #christmas name="christmas tree lemma"}
-In an $\eta$-hyperbolic space $X$, to every continuous curve $\gamma:[0, L]\to X$ and 
-geodesic $[\gamma(0), \gamma(L)]=\gamma':[0, L']\to X$, the distance from $[\gamma(0), \gamma(L)]$ to 
-$\mrm{im}(\gamma)$ is bounded by the log-length of $\gamma$: 
-\[ 
-    \sup_{t\in [0, L']} d(\gamma'_t, \mrm{im}\, \gamma) \leq \delta \cdot | \log_2 \circ L_X(\gamma) | + 1 
-\] 
-:::
-
 :::{.lemma #locGeoApprox name="local geodesic approximation"}
 In an $\eta$-hyperbolic space $X$, for every $k_{>8\eta}$-local geodesic $\gamma:[0, L]\to X$ 
 and geodesic $\gamma:[0, L']\to X$ with the same endpoints, the image $\mrm{im}\, \gamma$ is 
@@ -167,7 +152,17 @@ knitr::include_graphics("images/locGeoApprox.png")
 
 ## Dehn algorithm {-}
 
-This section models section 7.4.1, which efficiently solves the word problem for hyperbolic groups. 
+This part follows section 7.4.1, which efficiently solves the word problem for hyperbolic groups. 
+The main idea of the proof is as follows:
+
+1. By lemma \@ref(lem:locGeoApprox), local geodesics are close to global geodesics. 
+2. This implies the shortcut lemma \@ref(lem:hShortcut), which means that every loop 
+    in the Cayley graph (which is piecewise geodesic) of a hyperbolic group contains a geodesic 
+    shortcut. 
+3. Null-homotopic words correspond to loops in the Cayley graph, and Dehn relations correspond 
+    to rules with which to "shrink" the loops. 
+    - The shortcut lemma implies the existence of a Dehn presentation in which 
+    loops can always be shrunk to a smaller loops. 
 
 :::{.definition name="Dehn presentation"}
 A finite presentation $\la S|R\ra$ is a **Dehn presentation** if 
@@ -186,18 +181,59 @@ $v_1=\dots=v_4=1$, and
 
 Given a Dehn presentation, the word problem is solvable in time $O(|w|)$ by a replacement algorithm. 
 
-:::{.lemma #hShortcuts name="shortcuts in cycles in hyperbolic groups"}
-Given a hyperbolic group $G$, a finite generating set $S$ and $\Delta(G, S)$ being $\eta$-hyperbolic, 
+:::{.lemma #hShortcut name="shortcuts in cycles in hyperbolic groups"}
+Given an $\eta$-hyperbolic group $G$, a finite generating set $S$ and $\Delta(G, S)$ 
+being $\eta$-hyperbolic, 
 if $\gamma:[0, n]\to \Delta(N, G)$ is a piecewise-geodesic cycle (of length $n$), 
-then there exists a restriction $\gamma_{[t, t']} with $t, t'\in [0, n]$ such that 
+then there exists a restriction $\gamma_{[t, t']}$ with $t, t'\in [0, n]$ such that 
 \[ 
     L(\gamma_{[t, t']}) \leq 8\eta 
 \] 
 and such that $\gamma_{|[t, t']}$ is not geodesic. 
 :::
 _Proof:_ 
+The lemma equivalently claims that there is no $c_{>8\eta}$-local geodesic cycle, 
+and we argue by contradiction. Since $\gamma$ is a loop, we first have $n>8\eta$. 
+By lemma \@ref(lem:locGeoApprox), $\gamma$ is $2\eta$-close to the trivial geodesic 
+at $\gamma_0$, so $\mrm{im}\, \gamma$ is in the $2\eta$-ball centered at $\gamma_0$. 
+Then we obtain the following contradiction (the last equality follows by the local geodesic 
+condition): 
+\[ 
+    4\eta \geq \mrm{diam}\, B_{2\delta}(\gamma_0) \geq d(\gamma_0, \gamma_{5\eta}) = 5\eta 
+\] 
+Note that the $8\eta$ here is inherited from lemma \@ref(lem:locGeoApprox). 
 
+:::{.theorem #dehnPresentation name="Dehn presentations and hyperbolic groups"}
+Given a hyperbolic group $G$ and a finite generating set $S$, there exists a finite 
+set $R\subset (S\cup S^{-1})^*$ such that $\la S|R\ra$ is a Dehn presentation of $G$. 
+:::
+_Proof:_ Consider the canonical presentation 
+$\pi:F(S)\to G$. 
+Using the shortcut lemma, consider the finite set 
+\[ 
+    R = \left\{
+        uv^{-1} \,|\, u, v\in (S\cup S^{-1})^*: d(1, \pi(u)) < |u| 
+        \leq \lceil 8\eta\rceil + 2, \,\,
+        |v|=d(1, \pi(u)), \,\,\pi(u)=\pi(v)
+    \right\} 
+\] 
+The interpretation for each constraint are: 
 
+1. $|v|=d_s(1, \pi(u))$: $v$ is the geodesic connecting the identity to $u$, i.e. 
+    the word $v$ is the "canonical word" representing $u$. 
+2. $\pi(u)=\pi(v)$: the geometric realization of $uv^{-1}$ forms a loop. 
+
+The canonical isomorphism $\pi/\la R\ra^{\unlhd}:\la S|R\ra\to G$ is surjective 
+by the $\pi(u)=\pi(v)$ constraint, and we next argue that it is injective, i.e. 
+every null-homotopic word satisfies $w\in \la R\ra^{\unlhd}$. This can be argued 
+inductively by applying the shortcut lemma: 
+
+- If $w$ contains a subword $ss^{-1}$, then $(ss^{-1})1\in R$. Remove 
+    $ss^{-1}$ by conjugating $w=a(ss^{-1})b$ with $a(s^{-1}s)a^{-1}$ and apply the 
+    inductive hypothesis. 
+- If $w$ contains no subword of the form $ww^{-1}$, then $w$ realizes a cycle; apply 
+    the shortcut lemma to obtain $w=w'uw''$ and replace $u\mapsto v$ by conjugation, 
+    the apply the inductive hypothesis. 
 
 ## Gromov-boundaries {-}
 

@@ -23,7 +23,7 @@
 <meta name="author" content="Nicholas Lyu" />
 
 
-<meta name="date" content="2025-01-15" />
+<meta name="date" content="2025-01-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -152,7 +152,7 @@ and helps us compute the Cayley graphs of known hyperbolic groups.</p>
 <ol style="list-style-type: decimal">
 <li>Quasi-properties are only sensitive to behaviors on a large (but uniform) scale.</li>
 <li>Quasi-isometric invariance apply to Cayley graphs (up to changes in generating sets) and hyperbolicity.</li>
-<li>One key property of hyperbolic spaces is that local geodesics are well-approximated by global geodesics (lemma <a href="hyperbolic-geometry.html#lem:locGeoApprox">2.4</a>).</li>
+<li>One key property of hyperbolic spaces is that local geodesics are well-approximated by global geodesics (lemma <a href="hyperbolic-geometry.html#lem:locGeoApprox">2.3</a>).</li>
 </ol>
 <p>Progress:</p>
 <ol style="list-style-type: decimal">
@@ -242,21 +242,8 @@ We feel that this is necessary to</p>
 <li>Obtain concrete intuition for how hyperbolicity imply the relation between local and global structures.</li>
 <li>Understand the Dehn algorithm for solving the word problem, needed for plotting Cayley graphs.</li>
 </ol>
-<div class="theorem">
-<p><span id="thm:qgeoStab" class="theorem"><strong>Theorem 2.1  (quasi-geodesic approximation in hyperbolic spaces (Theorem 7.2.10)) </strong></span>In a <span class="math inline">\(\eta\)</span>-hyperbolic space <span class="math inline">\(X\)</span>, every <span class="math inline">\((\alpha, \beta)\)</span>-quasi-geodesic <span class="math inline">\(\gamma:I\to X\)</span> is
-contained in the <span class="math inline">\(\delta\)</span>-neighborhood of every geodesic <span class="math inline">\([\gamma(0), \gamma(b)]\)</span>, where
-<span class="math inline">\(\delta\)</span> only depends upon <span class="math inline">\(\eta, \alpha, \beta\)</span>.</p>
-</div>
 <div class="lemma">
-<p><span id="lem:christmas" class="lemma"><strong>Lemma 2.3  (christmas tree lemma) </strong></span>In an <span class="math inline">\(\eta\)</span>-hyperbolic space <span class="math inline">\(X\)</span>, to every continuous curve <span class="math inline">\(\gamma:[0, L]\to X\)</span> and
-geodesic <span class="math inline">\([\gamma(0), \gamma(L)]=\gamma&#39;:[0, L&#39;]\to X\)</span>, the distance from <span class="math inline">\([\gamma(0), \gamma(L)]\)</span> to
-<span class="math inline">\(\mathrm{im}(\gamma)\)</span> is bounded by the log-length of <span class="math inline">\(\gamma\)</span>:
-<span class="math display">\[
-    \sup_{t\in [0, L&#39;]} d(\gamma&#39;_t, \mathrm{im}\, \gamma) \leq \delta \cdot | \log_2 \circ L_X(\gamma) | + 1
-\]</span></p>
-</div>
-<div class="lemma">
-<p><span id="lem:locGeoApprox" class="lemma"><strong>Lemma 2.4  (local geodesic approximation) </strong></span>In an <span class="math inline">\(\eta\)</span>-hyperbolic space <span class="math inline">\(X\)</span>, for every <span class="math inline">\(k_{&gt;8\eta}\)</span>-local geodesic <span class="math inline">\(\gamma:[0, L]\to X\)</span>
+<p><span id="lem:locGeoApprox" class="lemma"><strong>Lemma 2.3  (local geodesic approximation) </strong></span>In an <span class="math inline">\(\eta\)</span>-hyperbolic space <span class="math inline">\(X\)</span>, for every <span class="math inline">\(k_{&gt;8\eta}\)</span>-local geodesic <span class="math inline">\(\gamma:[0, L]\to X\)</span>
 and geodesic <span class="math inline">\(\gamma:[0, L&#39;]\to X\)</span> with the same endpoints, the image <span class="math inline">\(\mathrm{im}\, \gamma\)</span> is
 contained in the <span class="math inline">\(2\eta\)</span>-neighborhood of <span class="math inline">\(\mathrm{im}\, \gamma&#39;\)</span>.</p>
 </div>
@@ -307,7 +294,20 @@ Figure 2.1: Hypothetical (for contradiction) constructions are in green. Geodesi
 </div>
 <div id="dehn-algorithm" class="section level2 unnumbered hasAnchor">
 <h2>Dehn algorithm<a href="hyperbolic-geometry.html#dehn-algorithm" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This section models section 7.4.1, which efficiently solves the word problem for hyperbolic groups.</p>
+<p>This part follows section 7.4.1, which efficiently solves the word problem for hyperbolic groups.
+The main idea of the proof is as follows:</p>
+<ol style="list-style-type: decimal">
+<li>By lemma <a href="hyperbolic-geometry.html#lem:locGeoApprox">2.3</a>, local geodesics are close to global geodesics.</li>
+<li>This implies the shortcut lemma <a href="hyperbolic-geometry.html#lem:hShortcut">2.4</a>, which means that every loop
+in the Cayley graph (which is piecewise geodesic) of a hyperbolic group contains a geodesic
+shortcut.</li>
+<li>Null-homotopic words correspond to loops in the Cayley graph, and Dehn relations correspond
+to rules with which to “shrink” the loops.
+<ul>
+<li>The shortcut lemma implies the existence of a Dehn presentation in which
+loops can always be shrunk to a smaller loops.</li>
+</ul></li>
+</ol>
 <div class="definition">
 <p><span id="def:unlabeled-div-11" class="definition"><strong>Definition 2.5  (Dehn presentation) </strong></span>A finite presentation <span class="math inline">\(\langle S|R\rangle\)</span> is a <strong>Dehn presentation</strong> if
 there exists words <span class="math inline">\((u_1, v_1), \dots, (u_n, v_n)\in (S\cup S^{-1})^*\)</span> such that</p>
@@ -324,15 +324,58 @@ there exists words <span class="math inline">\((u_1, v_1), \dots, (u_n, v_n)\in 
 </div>
 <p>Given a Dehn presentation, the word problem is solvable in time <span class="math inline">\(O(|w|)\)</span> by a replacement algorithm.</p>
 <div class="lemma">
-<p><span id="lem:hShortcuts" class="lemma"><strong>Lemma 2.5  (shortcuts in cycles in hyperbolic groups) </strong></span>Given a hyperbolic group <span class="math inline">\(G\)</span>, a finite generating set <span class="math inline">\(S\)</span> and <span class="math inline">\(\Delta(G, S)\)</span> being <span class="math inline">\(\eta\)</span>-hyperbolic,
+<p><span id="lem:hShortcut" class="lemma"><strong>Lemma 2.4  (shortcuts in cycles in hyperbolic groups) </strong></span>Given an <span class="math inline">\(\eta\)</span>-hyperbolic group <span class="math inline">\(G\)</span>, a finite generating set <span class="math inline">\(S\)</span> and <span class="math inline">\(\Delta(G, S)\)</span>
+being <span class="math inline">\(\eta\)</span>-hyperbolic,
 if <span class="math inline">\(\gamma:[0, n]\to \Delta(N, G)\)</span> is a piecewise-geodesic cycle (of length <span class="math inline">\(n\)</span>),
-then there exists a restriction $_{[t, t’]} with <span class="math inline">\(t, t&#39;\in [0, n]\)</span> such that
+then there exists a restriction <span class="math inline">\(\gamma_{[t, t&#39;]}\)</span> with <span class="math inline">\(t, t&#39;\in [0, n]\)</span> such that
 <span class="math display">\[
     L(\gamma_{[t, t&#39;]}) \leq 8\eta
 \]</span>
 and such that <span class="math inline">\(\gamma_{|[t, t&#39;]}\)</span> is not geodesic.</p>
 </div>
-<p><em>Proof:</em></p>
+<p><em>Proof:</em>
+The lemma equivalently claims that there is no <span class="math inline">\(c_{&gt;8\eta}\)</span>-local geodesic cycle,
+and we argue by contradiction. Since <span class="math inline">\(\gamma\)</span> is a loop, we first have <span class="math inline">\(n&gt;8\eta\)</span>.
+By lemma <a href="hyperbolic-geometry.html#lem:locGeoApprox">2.3</a>, <span class="math inline">\(\gamma\)</span> is <span class="math inline">\(2\eta\)</span>-close to the trivial geodesic
+at <span class="math inline">\(\gamma_0\)</span>, so <span class="math inline">\(\mathrm{im}\, \gamma\)</span> is in the <span class="math inline">\(2\eta\)</span>-ball centered at <span class="math inline">\(\gamma_0\)</span>.
+Then we obtain the following contradiction (the last equality follows by the local geodesic
+condition):
+<span class="math display">\[
+    4\eta \geq \mathrm{diam}\, B_{2\delta}(\gamma_0) \geq d(\gamma_0, \gamma_{5\eta}) = 5\eta
+\]</span>
+Note that the <span class="math inline">\(8\eta\)</span> here is inherited from lemma <a href="hyperbolic-geometry.html#lem:locGeoApprox">2.3</a>.</p>
+<div class="theorem">
+<p><span id="thm:dehnPresentation" class="theorem"><strong>Theorem 2.1  (Dehn presentations and hyperbolic groups) </strong></span>Given a hyperbolic group <span class="math inline">\(G\)</span> and a finite generating set <span class="math inline">\(S\)</span>, there exists a finite
+set <span class="math inline">\(R\subset (S\cup S^{-1})^*\)</span> such that <span class="math inline">\(\langle S|R\rangle\)</span> is a Dehn presentation of <span class="math inline">\(G\)</span>.</p>
+</div>
+<p><em>Proof:</em> Consider the canonical presentation
+<span class="math inline">\(\pi:F(S)\to G\)</span>.
+Using the shortcut lemma, consider the finite set
+<span class="math display">\[
+    R = \left\{
+        uv^{-1} \,|\, u, v\in (S\cup S^{-1})^*: d(1, \pi(u)) &lt; |u|
+        \leq \lceil 8\eta\rceil + 2, \,\,
+        |v|=d(1, \pi(u)), \,\,\pi(u)=\pi(v)
+    \right\}
+\]</span>
+The interpretation for each constraint are:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(|v|=d_s(1, \pi(u))\)</span>: <span class="math inline">\(v\)</span> is the geodesic connecting the identity to <span class="math inline">\(u\)</span>, i.e. 
+the word <span class="math inline">\(v\)</span> is the “canonical word” representing <span class="math inline">\(u\)</span>.</li>
+<li><span class="math inline">\(\pi(u)=\pi(v)\)</span>: the geometric realization of <span class="math inline">\(uv^{-1}\)</span> forms a loop.</li>
+</ol>
+<p>The canonical isomorphism <span class="math inline">\(\pi/\langle R\rangle^{\unlhd}:\langle S|R\rangle\to G\)</span> is surjective
+by the <span class="math inline">\(\pi(u)=\pi(v)\)</span> constraint, and we next argue that it is injective, i.e. 
+every null-homotopic word satisfies <span class="math inline">\(w\in \langle R\rangle^{\unlhd}\)</span>. This can be argued
+inductively by applying the shortcut lemma:</p>
+<ul>
+<li>If <span class="math inline">\(w\)</span> contains a subword <span class="math inline">\(ss^{-1}\)</span>, then <span class="math inline">\((ss^{-1})1\in R\)</span>. Remove
+<span class="math inline">\(ss^{-1}\)</span> by conjugating <span class="math inline">\(w=a(ss^{-1})b\)</span> with <span class="math inline">\(a(s^{-1}s)a^{-1}\)</span> and apply the
+inductive hypothesis.</li>
+<li>If <span class="math inline">\(w\)</span> contains no subword of the form <span class="math inline">\(ww^{-1}\)</span>, then <span class="math inline">\(w\)</span> realizes a cycle; apply
+the shortcut lemma to obtain <span class="math inline">\(w=w&#39;uw&#39;&#39;\)</span> and replace <span class="math inline">\(u\mapsto v\)</span> by conjugation,
+the apply the inductive hypothesis.</li>
+</ul>
 </div>
 <div id="gromov-boundaries" class="section level2 unnumbered hasAnchor">
 <h2>Gromov-boundaries<a href="hyperbolic-geometry.html#gromov-boundaries" class="anchor-section" aria-label="Anchor link to header"></a></h2>
