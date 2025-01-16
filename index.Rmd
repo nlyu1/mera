@@ -86,7 +86,7 @@ The approach in (5) is in progress in section 4.
     I found that the Dehn algorithm is quite computationally infeasible. 
     Computing the Dehn presentation has exponential complexity in the hyperbolic constant, 
     which is likely exponentially-intractible as well. 
-5. I'm looking more into aother approach to solving the word problem: 
+5. I'm investigating aother approach to solving the word problem: 
     by representing the fundamental group as subgroups of the isometry group of 
     the universal cover $\mbb H^3$ (which should be the group of Mobius transforms, 
     which admit a convenient matrix representation?). 
