@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>MERA Learning Material</title>
-  <meta name="description" content="MERA Learning Material" />
+  <title>5 Hyperbolic Surfaces | MERA Learning Material</title>
+  <meta name="description" content="5 Hyperbolic Surfaces | MERA Learning Material" />
   <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="MERA Learning Material" />
+  <meta property="og:title" content="5 Hyperbolic Surfaces | MERA Learning Material" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="MERA Learning Material" />
+  <meta name="twitter:title" content="5 Hyperbolic Surfaces | MERA Learning Material" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="tensor-networks-and-geometry.html"/>
+<link rel="prev" href="covering-theory-in-progress.html"/>
+<link rel="next" href="bibliography.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -142,104 +142,113 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">MERA Learning Material</h1>
-<p class="author"><em>Nicholas Lyu</em></p>
-<p class="date"><em>2025-01-18</em></p>
+<div id="hyperbolic-surfaces" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Hyperbolic Surfaces<a href="hyperbolic-surfaces.html#hyperbolic-surfaces" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>The Poincaré ball model of <span class="math inline">\(\mathbb H^3\cong B_1(0)\)</span> is equipped with
+the Riemmanian metric
+<span class="math display">\[
+    ds^2 = \dfrac{4(dx^2 + dy^2 + dz^2)}{(1-r^2)^2}, \quad
+    g_{ab} = \dfrac 4 {(1-r^2)^2} \begin{pmatrix}
+        1 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 1
+    \end{pmatrix}
+\]</span></p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-14" class="proposition"><strong>Proposition 5.1  (Poincaré's and hyperbolic radius) </strong></span>The length <span class="math inline">\(\rho\)</span> of a radial line which goes from <span class="math inline">\(r=0\)</span> to <span class="math inline">\(r=R\)</span> is
+<span class="math inline">\(\rho = 2\, \mathrm{arctanh}\, R\)</span>.</p>
 </div>
-<div id="research-agenda" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">1</span> Research agenda<a href="index.html#research-agenda" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<ol style="list-style-type: decimal">
-<li>Identify “nice” groups with Gromov boundary <span class="math inline">\(S^2\)</span>.</li>
-<li>Construct their Cayley graphs out to a fixed radius,
-embedding endpoints on <span class="math inline">\(S^2\)</span>.</li>
-<li>Investigate the minimal-surface property of the Cayley graphs
-(at least an upper-bound)</li>
-</ol>
-<div id="progress-log" class="section level2 unnumbered hasAnchor">
-<h2>Progress log<a href="index.html#progress-log" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Main takeaways so far:</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(\partial \mathbb H^3\cong S^2\)</span>, and quasi-isometric metric spaces have
-the same Gromov boundary, so it suffices to find groups which are
-quasi-isometric to <span class="math inline">\(\mathbb H^3\)</span>.</li>
-<li>By the Svarc-Milnor lemma (Corollary 5.4.13 in <span class="citation">(<a href="#ref-loh2017geometric">Löh 2017</a>)</span>),
-the fundamental groups of closed hyperbolic 3-manifolds have Gromov boundary <span class="math inline">\(S^2\)</span>.</li>
-</ol>
-<p>Examples of groups with <span class="math inline">\(S^2\)</span> Gromov boundary (from Regina):</p>
-<ul>
-<li>m003(-3, 1): <span class="math inline">\(\langle a, b| a^2b^2a^2b^{-1}ab^{-1}, a^2b^2a^{-1}ba^{-1}b^2\rangle\)</span>.</li>
-<li>m003(-2, 3): <span class="math inline">\(\langle a, b|a^{-1}b^{-1}aba^{-1}bab^{-1}a^{-1}b^2, ab^{-1}a^{-1}baba^{-1}b^{-1}ab^3\rangle\)</span>.</li>
-<li>m003(-4, 3): <span class="math inline">\(\langle a, b|a^2bab^{-2}ab, a^2b^2a^{-1}ba^{-1}b^2\rangle\)</span>.</li>
-<li>m003(-4, 1): <span class="math inline">\(\langle a, b|a^{-3}b^2abab^2, aba^3b^{-2}a^3b\rangle\)</span>.</li>
-</ul>
-<div id="jan-16-the-word-problem-for-candidate-groups" class="section level3 unnumbered hasAnchor">
-<h3>Jan 16: the word problem for candidate groups<a href="index.html#jan-16-the-word-problem-for-candidate-groups" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>See section 3 for more details on (1-4) below.
-The approach in (5) is in progress in section 4.</p>
-<ol style="list-style-type: decimal">
-<li><u>We have identified a class of hyperbolic groups with Gromov boundary <span class="math inline">\(S^2\)</span></u>,
-corresponding to the fundamental groups of closed hyperbolic <span class="math inline">\(3\)</span>-manifolds.
-<ul>
-<li>We obtained a “census” of this set of groups from Regina’s database.</li>
-<li>Additionally, the database sorted the stored groups by the hyperbolic volume
-of its corresponding manifold, which roughly concurs with the simplicity of the presentation
-(number of generators, and length of the relations).</li>
-</ul></li>
-<li>There seems to be no established technology for
-<u>constructing the Cayley graphs</u> of such groups (up to a certain radius).
-<ul>
-<li>Mathematica supports plotting Cayley graphs but only for finite-order groups.</li>
-</ul></li>
-<li>Computing the Cayley graphs requires <u>solving the word problem</u>.<br />
-</li>
-<li>My first attempt has been understanding and implementing the Dehn algorithm,
-which yields a linear-time algorithm for solving the word problem.
-<ul>
-<li>After carefully reading the proof (in hopes of understanding the algorithm),
-I found that the Dehn algorithm is quite computationally infeasible.
-Computing the Dehn presentation has exponential complexity in the hyperbolic constant,
-which is likely exponentially-intractible as well.</li>
-</ul></li>
-<li>I’m investigating aother approach to solving the word problem:
-by representing the fundamental group as subgroups of the isometry group of
-the universal cover <span class="math inline">\(\mathbb H^3\)</span> (which should be the group of Mobius transforms,
-which admit a convenient matrix representation?).
-I intend to proceed by the following:
-<ul>
-<li>Understand the isomorphism between fundamental groups and deck transformations.</li>
-<li>Understand the embedding of deck transformations into the isometry
-group of the universal cover.</li>
-<li>Understand the matrix representation of the isometry group of <span class="math inline">\(\mathbb H^2\)</span>.</li>
-<li>Compute the matrix representations of select hyperbolic groups, solve the
-word problem, and write a program to compute the Cayley graphs.</li>
-</ul></li>
-</ol>
-<p>The resulting Cayley graph may not have neat tree-like structure.
-There is a chance that in order to understand which edges should correspond to
-the lattice sites (and to compute the size of a boundary patch),
-I may also need to dig into the construction of the quasi-isometry
-between the <span class="math inline">\(\pi_1\)</span> of closed hyperbolic <span class="math inline">\(3\)</span>-manifolds and <span class="math inline">\(\mathbb H^3\)</span>.</p>
+<p><em>Proof:</em> The radial scaling factor of length is <span class="math inline">\(2/(1-r^2)\)</span>.
+Integrating this yields
+<span class="math display">\[
+    \rho =  \int_0^R dr\, \dfrac{2}{1-r^2}
+    = \log \dfrac{1+R}{1-R} = 2\, \mathrm{arctanh}\, R
+\]</span></p>
+<div class="proposition">
+<p><span id="prp:hSectorArea" class="proposition"><strong>Proposition 5.2  (hyperbolic sector area) </strong></span>The area <span class="math inline">\(A\)</span> of the hyperbolic sector subtended by angle <span class="math inline">\(\phi\)</span> and
+Poincaré radius <span class="math inline">\(R\)</span> is
+<span class="math display">\[
+    A = \dfrac{2\phi}{1/R^2 - 1}
+\]</span></p>
 </div>
-<div id="jan-matrix-representations-of-hyperbolic-groups" class="section level3 unnumbered hasAnchor">
-<h3>Jan (?): Matrix representations of hyperbolic groups<a href="index.html#jan-matrix-representations-of-hyperbolic-groups" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>Proof:</em>
+The Jacobian of the inclusion map and the induced metric <span class="math inline">\(g&#39;\)</span> in <span class="math inline">\((\theta, r)\)</span>
+coordinates are, respectively,
+<span class="math display">\[\begin{align}
+    J &amp;= T\, \iota = \begin{pmatrix}
+        \partial_{\theta }(r\cos\theta) &amp; \partial_{\theta }(r\sin\theta) &amp; 0 \\
+        \partial_{r} (r\cos\theta) &amp; \partial_{r} (r\sin\theta) &amp; 0
+    \end{pmatrix} = \begin{pmatrix}
+        -r\sin\theta &amp; r\cos\theta &amp; 0 \\
+        \cos\theta &amp; \sin\theta &amp; 0
+    \end{pmatrix} \\
+    g&#39; &amp;= JgJ^T = \dfrac 4 {(1-r^2)^2} \begin{pmatrix}
+        r^2 \\ &amp; 1
+    \end{pmatrix}, \quad \sqrt{\det g&#39;} = \dfrac{4r}{(1-r^2)^2}
+\end{align}\]</span>
+Direct integration yields the desired area:
+<span class="math display">\[\begin{align}
+    A = \int_0^R \int_0^\phi \sqrt{\det g&#39;} \, d\theta \, dr
+    &amp;= \phi \int_0^R \dfrac{4r}{(1-r^2)^2} \, dr
+    = \phi \dfrac{2R^2}{1-R^2} = \dfrac{2\phi}{1/R^2 - 1}
+\end{align}\]</span></p>
+<div class="proposition">
+<p><span id="prp:hSectorLength" class="proposition"><strong>Proposition 5.3  (hyperbolic sector length) </strong></span>The length <span class="math inline">\(L\)</span> of the arc subtended by angle <span class="math inline">\(\phi\)</span> and Poincaré radius <span class="math inline">\(R\)</span> is
+<span class="math display">\[
+    L = \dfrac{2R\phi}{1-R^2}
+\]</span></p>
+</div>
+<p><em>Proof:</em>
+The inclusion map <span class="math inline">\(\iota&#39;\)</span> of the curve has Jacobian
+<span class="math inline">\(J&#39; = (-R\sin\theta, R\cos\theta, 0)\)</span>.
+The induced metric and length follows:
+<span class="math display">\[
+    g&#39;&#39; = J&#39; g (J&#39;)^T = \dfrac{4R^2}{(1-R^2)^2},
+    \quad \sqrt{\det g&#39;&#39;} = \dfrac{2R}{1-R^2} \implies
+    L = \dfrac{2R\phi}{1-R^2}
+\]</span></p>
+<div class="proposition">
+<p><span id="prp:hAreaLaw" class="proposition"><strong>Proposition 5.4  (area law? for hyperbolic spherical surfaces) </strong></span></p>
+Consider a surface <span class="math inline">\(S\)</span> on a hyperbolic sphere of radius <span class="math inline">\(\rho\in (0, \infty)\)</span>.
+Let <span class="math inline">\(A\)</span> be the lateral area of the radial cone covering <span class="math inline">\(S\)</span>.
+We have
+<span class="math display">\[
+    A = \tanh(\rho/2) |\partial S| \leq |\partial S|
+\]</span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="images/hSphereAreaLaw.png" alt="Hypothetical (for contradiction) constructions are in green. Geodesics are in blue." width="85%" />
+<p class="caption">
+Figure 5.1: Hypothetical (for contradiction) constructions are in green. Geodesics are in blue.
+</p>
+</div>
+</div>
+<p><em>Proof:</em> Comparing propositions <a href="hyperbolic-surfaces.html#prp:hSectorArea">5.2</a> and <a href="hyperbolic-surfaces.html#prp:hSectorLength">5.3</a>,
+we obtain <span class="math inline">\(A = RL\)</span>. Take the infinitesimal limit <span class="math inline">\((A, L)\mapsto (dA, d|\partial S|)\)</span>
+and integrate to yield <span class="math inline">\(A = R|\partial S| = \tanh(\rho/2) |\partial S| \leq |\partial S|\)</span>.</p>
+<div class="hypothesis">
+<p><span id="hyp:unlabeled-div-15" class="hypothesis"><strong>Hypothesis 5.1  (area law for hyperbolic MERAs) </strong></span>For MERAs representing the a Cayley graph such that
+the graph with the word metric is quasi-isometric to <span class="math inline">\(\mathbb H^3\)</span>,
+the area law is satisfied.</p>
+</div>
+<p><em>Proof (???):</em> We’re making two assumptions (which I believe follow from
+the quasi-isometric condition):</p>
+<ol style="list-style-type: decimal">
+<li>Given a subsystem <span class="math inline">\(B\)</span> of the lattice embedded on a hyperbolic sphere,
+the area (size) of the subsystem is faithfully represented by the
+hyperbolic area <span class="math inline">\(S\)</span> as in proposition <a href="hyperbolic-surfaces.html#prp:hAreaLaw">5.4</a>.</li>
+<li>The number of tensor legs crossing the lateral surface of the radial cone
+covering <span class="math inline">\(B\)</span> is proportional to the lateral area <span class="math inline">\(A\)</span> of the surface.</li>
+</ol>
+<p>Given these assumptions, the area law follows from proposition <a href="hyperbolic-surfaces.html#prp:hAreaLaw">5.4</a>.</p>
 
-</div>
-</div>
-</div>
-<h3>Bibliography<a href="bibliography.html#bibliography" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
-<div id="ref-loh2017geometric" class="csl-entry">
-Löh, Clara. 2017. <em>Geometric Group Theory</em>. Springer.
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="tensor-networks-and-geometry.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="covering-theory-in-progress.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bibliography.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

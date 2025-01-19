@@ -17,7 +17,14 @@ thm:dehnPresentation
 eq:dehnPresentation
 def:unlabeled-div-12
 thm:unlabeled-div-13
+prp:unlabeled-div-14
+prp:hSectorArea
+prp:hSectorLength
+prp:hAreaLaw
+fig:unnamed-chunk-2
+hyp:unlabeled-div-15
 research-agenda
 tensor-networks-and-geometry
 hyperbolic-groups
 covering-theory-in-progress
+hyperbolic-surfaces
