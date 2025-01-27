@@ -17,6 +17,10 @@ thm:dehnPresentation
 eq:dehnPresentation
 def:unlabeled-div-12
 thm:unlabeled-div-13
+thm:svarcMilnor
+eq:SMquasiIsometricBound
+cor:svarcMilnorRiemann
+eq:CoverQuasiIsometricBound
 prp:unlabeled-div-14
 prp:hSectorArea
 prp:hSectorLength
@@ -26,5 +30,5 @@ hyp:unlabeled-div-15
 research-agenda
 tensor-networks-and-geometry
 hyperbolic-groups
-covering-theory-in-progress
+covering-theory
 hyperbolic-surfaces

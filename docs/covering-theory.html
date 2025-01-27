@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Covering theory (in progress) | MERA Learning Material</title>
-  <meta name="description" content="4 Covering theory (in progress) | MERA Learning Material" />
+  <title>4 Covering theory | MERA Learning Material</title>
+  <meta name="description" content="4 Covering theory | MERA Learning Material" />
   <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Covering theory (in progress) | MERA Learning Material" />
+  <meta property="og:title" content="4 Covering theory | MERA Learning Material" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Covering theory (in progress) | MERA Learning Material" />
+  <meta name="twitter:title" content="4 Covering theory | MERA Learning Material" />
   
   
   
@@ -117,13 +117,11 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#gromov-boundaries"><i class="fa fa-check"></i>Gromov-boundaries</a></li>
 <li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#interesting-misc"><i class="fa fa-check"></i>Interesting Misc</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="covering-theory-in-progress.html"><a href="covering-theory-in-progress.html"><i class="fa fa-check"></i><b>4</b> Covering theory (in progress)</a>
+<li class="chapter" data-level="4" data-path="covering-theory.html"><a href="covering-theory.html"><i class="fa fa-check"></i><b>4</b> Covering theory</a>
 <ul>
-<li class="chapter" data-level="" data-path="covering-theory-in-progress.html"><a href="covering-theory-in-progress.html#covering-theory"><i class="fa fa-check"></i>Covering theory</a></li>
-<li class="chapter" data-level="" data-path="covering-theory-in-progress.html"><a href="covering-theory-in-progress.html#švarcmilnor-lemma"><i class="fa fa-check"></i>Švarc–Milnor lemma</a></li>
-<li class="chapter" data-level="" data-path="covering-theory-in-progress.html"><a href="covering-theory-in-progress.html#hyperbolic-manifolds"><i class="fa fa-check"></i>Hyperbolic manifolds</a></li>
-<li class="chapter" data-level="" data-path="covering-theory-in-progress.html"><a href="covering-theory-in-progress.html#isometry-group-of-mathbb-h3"><i class="fa fa-check"></i>Isometry group of <span class="math inline">\(\mathbb H^3\)</span></a></li>
-<li class="chapter" data-level="" data-path="covering-theory-in-progress.html"><a href="covering-theory-in-progress.html#matrix-representation-of-pi_1"><i class="fa fa-check"></i>Matrix representation of <span class="math inline">\(\pi_1\)</span></a></li>
+<li class="chapter" data-level="" data-path="covering-theory.html"><a href="covering-theory.html#topological-preliminaries"><i class="fa fa-check"></i>Topological preliminaries</a></li>
+<li class="chapter" data-level="" data-path="covering-theory.html"><a href="covering-theory.html#švarcmilnor-lemma"><i class="fa fa-check"></i>Švarc–Milnor lemma</a></li>
+<li class="chapter" data-level="" data-path="covering-theory.html"><a href="covering-theory.html#cayley-graph-of-pi_1textweeks-manifold"><i class="fa fa-check"></i>Cayley graph of <span class="math inline">\(\pi_1(\text{Weeks manifold})\)</span></a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="hyperbolic-surfaces.html"><a href="hyperbolic-surfaces.html"><i class="fa fa-check"></i><b>5</b> Hyperbolic Surfaces</a></li>
 <li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
@@ -144,24 +142,34 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="covering-theory-in-progress" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">4</span> Covering theory (in progress)<a href="covering-theory-in-progress.html#covering-theory-in-progress" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="covering-theory" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Covering theory<a href="covering-theory.html#covering-theory" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This section recounts the theory of universal
 covers for “nice” topological spaces.</p>
 <p>In particular, we aim to understand (and program) how the
 fundamental groups of closed hyperbolic <span class="math inline">\(3\)</span>-manifolds can be
-represented by matrix subgroups of the isometry group of <span class="math inline">\(\mathbb H^3\)</span>
-(Mobius transforms?).</p>
+represented by matrix subgroups of the isometry group of <span class="math inline">\(\mathbb H^3\)</span>,
+and how such representations can be visualized as “lattice tilings” of <span class="math inline">\(\mathbb H^3\)</span>.</p>
 <ol style="list-style-type: decimal">
+<li>Review the basics of covering theory.</li>
 <li>We revisit the proof of the Švarc–Milnor lemma (Loh, 5.4), which
 gives an explicit construction of the <u>quasi-isometric embedding
 of the Cayley graph of a fundamental group into the
 universal cover. </u></li>
-<li></li>
 </ol>
-<div id="covering-theory" class="section level2 unnumbered hasAnchor">
-<h2>Covering theory<a href="covering-theory-in-progress.html#covering-theory" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>See Loh (A.1.2) and Munkres for more detailed results. Here
+<p>To obtain the quasi-isometry constants of the embedding
+<span class="math inline">\(\Delta(\pi_1(\text{Weeks manifold}), \{a, b\})\)</span>, we:</p>
+<ol style="list-style-type: decimal">
+<li>Compute the generating set <span class="math inline">\(S\)</span> of <span class="math inline">\(\pi_1(\text{Weeks manifold})\)</span> according to
+the Švarc–Milnor lemma.</li>
+<li>Compute the quasi-isometry constants of the embedding
+<span class="math inline">\(\Delta(\pi_1(\text{Weeks manifold}), S)\)</span>.</li>
+<li>Use the fact that <span class="math inline">\(\Delta(\pi_1(\text{Weeks manifold}), \{a, b\})\)</span>
+is quasi-isometric to <span class="math inline">\(\Delta(\pi_1(\text{Weeks manifold}), S)\)</span>.</li>
+</ol>
+<div id="topological-preliminaries" class="section level2 unnumbered hasAnchor">
+<h2>Topological preliminaries<a href="covering-theory.html#topological-preliminaries" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>See Loh (A.1.2) and Munkres for more details. Here
 we recount the basics of covering theory.</p>
 <ul>
 <li>Every “nice” topological space has a universal cover <span class="math inline">\(\widetilde X\)</span> which is simply connected.</li>
@@ -174,9 +182,25 @@ to the class of <span class="math inline">\(\widetilde x_0\)</span>. In a sense 
 of <span class="math inline">\(\pi_1(X, x_0)\)</span> is isometric, so <u>fundamental groups are subgroups of the isometry group
 of the universal cover</u>.</li>
 </ul>
+<p>Some more results about hyperbolic spaces:</p>
+<ol style="list-style-type: decimal">
+<li>Using the hyperboloid model of <span class="math inline">\(\mathbb H^3\)</span> as the <span class="math inline">\(x_0&gt;0\)</span> slice of <span class="math inline">\(\mathbb R^4\)</span>
+under the contour equation <span class="math inline">\(-x_0^2 + x_1^2 + x_2^2 + x_3^2 = 1\)</span>, we obtain
+<span class="math display">\[
+     \mathrm{Isom}\, \mathbb H^3 = O^+(3, 1)
+\]</span>
+where <span class="math inline">\(O^+(3, 1)\)</span> is the group of proper orthochronous
+Lorentz transformations which keep the upper-sheet
+of the hyperboloid invariant.</li>
+<li>A standard result has <span class="math inline">\(\mathrm{SO}^+(3, 1)\cong \mathrm{PSL}(2, \mathbb C)\)</span>, i.e. there is a
+<span class="math inline">\(2\)</span>-to-<span class="math inline">\(1\)</span> covering <span class="math inline">\(\mathrm{SL}(2, \mathbb C)\to \mathrm{SO}^+(3, 1)\)</span>.</li>
+<li><strong>Need to double-check:</strong> for orientable closed manifolds (e.g. the Weeks manifold?),
+the deck transformations are orientation-preserving, so
+<span class="math inline">\(\pi_1(\text{Weeks manifold}) \subset \mathrm{SO}^+(3, 1)\)</span>.</li>
+</ol>
 </div>
 <div id="švarcmilnor-lemma" class="section level2 unnumbered hasAnchor">
-<h2>Švarc–Milnor lemma<a href="covering-theory-in-progress.html#švarcmilnor-lemma" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<h2>Švarc–Milnor lemma<a href="covering-theory.html#švarcmilnor-lemma" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="theorem">
 <p><span id="thm:svarcMilnor" class="theorem"><strong>Theorem 4.1  (Švarc–Milnor lemma) </strong></span>Given the group action of <span class="math inline">\(G\)</span> on a non-empty metric space
 <span class="math inline">\((X, d)\)</span> such that <span class="math inline">\(\forall g: x\mapsto g\cdot x\)</span> is an isometry.
@@ -271,29 +295,52 @@ the fundamental group <span class="math inline">\(\pi_1(M)\)</span> is finitely-
     \pi_1(M)\xrightarrow {g\mapsto g\cdot x} \widetilde M
 \]</span>
 given by the action of the fundamental group on <span class="math inline">\(\widetilde M\)</span> by deck transformations
-(analogous to reshuffling pancakes) is a quasi-isometry.</p>
+(analogous to reshuffling pancakes) is a quasi-isometry with bound
+<span class="math display" id="eq:CoverQuasiIsometricBound">\[
+    b \cdot d_S(e, g) \leq d(x, g\cdot x) \leq 2(\mathrm{diam}\, B + 2b) \cdot d_S(e, g)
+    \tag{4.2}
+\]</span>
+<u> Note that varying <span class="math inline">\(b\)</span> will vary the generating set </u> S.</p>
 </div>
 <p><em>Proof:</em> The action of deck transformations for closed Riemannian manifolds is isometric,
 proper, and cocompact. Also note that <span class="math inline">\(\widetilde M\)</span> is
 <span class="math inline">\((1, b)\)</span>-quasi-geodesic for every <span class="math inline">\(b\in \mathbb R_{&gt;0}\)</span>.
-Given such action, we simply choose <span class="math inline">\(B=M\)</span> in theorem <a href="covering-theory-in-progress.html#thm:svarcMilnor">4.1</a>.</p>
+Given such action, we simply choose <span class="math inline">\(B=M\)</span> in theorem <a href="covering-theory.html#thm:svarcMilnor">4.1</a>.
+To obtain the claimed bound, substitute <span class="math inline">\(c=1\)</span> in <a href="covering-theory.html#eq:SMquasiIsometricBound">(4.1)</a>.</p>
 </div>
-<div id="hyperbolic-manifolds" class="section level2 unnumbered hasAnchor">
-<h2>Hyperbolic manifolds<a href="covering-theory-in-progress.html#hyperbolic-manifolds" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Here, we simply recall some facts about closed hyperbolic manifolds:</p>
-<ol style="list-style-type: decimal">
-<li>The universal cover of the Weeks manifold is <span class="math inline">\(\mathbb H^3\)</span>.</li>
-<li></li>
-</ol>
-</div>
-<div id="isometry-group-of-mathbb-h3" class="section level2 unnumbered hasAnchor">
-<h2>Isometry group of <span class="math inline">\(\mathbb H^3\)</span><a href="covering-theory-in-progress.html#isometry-group-of-mathbb-h3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This section entails the matrix representation of
-the isometry group of <span class="math inline">\(\mathbb H^3\)</span>.</p>
-</div>
-<div id="matrix-representation-of-pi_1" class="section level2 unnumbered hasAnchor">
-<h2>Matrix representation of <span class="math inline">\(\pi_1\)</span><a href="covering-theory-in-progress.html#matrix-representation-of-pi_1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This section computes the matrix representation of select closed 3-manifolds.</p>
+<div id="cayley-graph-of-pi_1textweeks-manifold" class="section level2 unnumbered hasAnchor">
+<h2>Cayley graph of <span class="math inline">\(\pi_1(\text{Weeks manifold})\)</span><a href="covering-theory.html#cayley-graph-of-pi_1textweeks-manifold" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This section computes the matrix representation of select closed 3-manifolds.
+Regina provided the following presentation for the fundamental group of the Weeks manifold:
+<span class="math display">\[
+    \pi_1(\text{Weeks manifold}) = \langle a, b \, | \,
+    a^2b^2a^2b^{-1}ab^{-1}, \, a^2b^2a^{-1}ba^{-1}b^2\rangle
+\]</span>
+Using SnapPy, the <span class="math inline">\(O^+(3, 1)\)</span> representation of the generators of the fundamental group
+of the Weeks manifold are found to be (after rounding)
+<span class="math display">\[
+    \rho(a) =
+    \begin{pmatrix}
+        2.912 &amp; -1.327 &amp; -1.546 &amp; -1.824 \\
+        0.214 &amp; -0.958 &amp; 0.355 &amp; 0.053 \\
+        2.672 &amp; -1.274 &amp; -1.513 &amp; -2.056 \\
+        0.542 &amp; -0.470 &amp; -0.987 &amp; 0.314
+    \end{pmatrix}, \quad
+    \rho(b) =
+    \begin{pmatrix}
+        9.866 &amp; -1.785 &amp; -7.901 &amp; 5.543 \\
+        -0.637 &amp; 1.086 &amp; 0.281 &amp; -0.385 \\
+        9.339 &amp; -1.692 &amp; -7.736 &amp; 5.051 \\
+        -2.951 &amp; 0.376 &amp; 1.873 &amp; -2.461
+    \end{pmatrix}
+\]</span>
+Recall that the hyperboloid model for <span class="math inline">\(\mathbb H^3\)</span> is the upper sheet of
+<span class="math inline">\(-x_0^2 + x_1^2 + x_2^2 + x_3^2 = 1\)</span> in <span class="math inline">\(\mathbb R^4\)</span>.
+The map from the hyperboloid model to the Poincaré disk model is given by
+<span class="math display">\[
+    (x_0, x_1, x_2, x_3) \mapsto
+    \dfrac 1 {x_0 + 1} (x_1, x_2, x_3)
+\]</span></p>
 
 </div>
 </div>

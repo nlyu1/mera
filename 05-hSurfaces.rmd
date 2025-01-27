@@ -24,7 +24,7 @@ Integrating this yields
 
 :::{.proposition #hSectorArea name="hyperbolic sector area"}
 The area $A$ of the hyperbolic sector subtended by angle $\phi$ and 
-Poincaré radius $R$ is 
+Poincaré radius $R\in (0, 1)$ is 
 \[ 
     A = \df{2\phi}{1/R^2 - 1}
 \] 
@@ -51,7 +51,7 @@ Direct integration yields the desired area:
     = \phi \df{2R^2}{1-R^2} = \df{2\phi}{1/R^2 - 1}
 \end{align}
 
-:::{.proposition #hSectorLength name="hyperbolic sector length"}
+:::{.proposition #hSectorLength name="hyperbolic arc length"}
 The length $L$ of the arc subtended by angle $\phi$ and Poincaré radius $R$ is 
 \[ 
     L = \df{2R\phi}{1-R^2}
