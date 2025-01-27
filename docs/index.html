@@ -100,7 +100,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#progress-log"><i class="fa fa-check"></i>Progress log</a>
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#jan-16-the-word-problem-for-candidate-groups"><i class="fa fa-check"></i>Jan 16: the word problem for candidate groups</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#jan-matrix-representations-of-hyperbolic-groups"><i class="fa fa-check"></i>Jan (?): Matrix representations of hyperbolic groups</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#jan-26-visualizing-the-cayley-graph-of-the-weeks-manifold"><i class="fa fa-check"></i>Jan 26: Visualizing the Cayley graph of the Weeks manifold</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html"><i class="fa fa-check"></i><b>2</b> Tensor Networks and Geometry</a>
@@ -221,8 +221,41 @@ the lattice sites (and to compute the size of a boundary patch),
 I may also need to dig into the construction of the quasi-isometry
 between the <span class="math inline">\(\pi_1\)</span> of closed hyperbolic <span class="math inline">\(3\)</span>-manifolds and <span class="math inline">\(\mathbb H^3\)</span>.</p>
 </div>
-<div id="jan-matrix-representations-of-hyperbolic-groups" class="section level3 unnumbered hasAnchor">
-<h3>Jan (?): Matrix representations of hyperbolic groups<a href="index.html#jan-matrix-representations-of-hyperbolic-groups" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="jan-26-visualizing-the-cayley-graph-of-the-weeks-manifold" class="section level3 unnumbered hasAnchor">
+<h3>Jan 26: Visualizing the Cayley graph of the Weeks manifold<a href="index.html#jan-26-visualizing-the-cayley-graph-of-the-weeks-manifold" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>We have been able to find the holonomy representation of the fundamental group of the
+Weeks manifold as a subgroup of <span class="math inline">\(O(3, 1)\)</span> (it comes with SnapPy).
+<ul>
+<li>With this faithful representation in hand, we can compute the Cayley graph
+efficiently (up to floating-point errors).</li>
+</ul></li>
+<li>On the theoretical side, I delved into the Svarc-Milnor lemma,
+which gives the explicit construction of the quasi-isometry between
+<ol style="list-style-type: decimal">
+<li>the Cayley graph of a fundamental group of a manifold, and (2) the universal
+cover of the manifold.</li>
+</ol>
+<ul>
+<li>I believe that the quasi-isometric embedding given by this lemma is the one we need
+to “visualize” the Cayley graph as a discrete tiling of <span class="math inline">\(\mathbb H^3\)</span>.</li>
+<li>In particular, <u>the vertices of the image of the Cayley graph under this embedding
+are simply the image of an arbitrary basepoint (e.g. the “center” of <span class="math inline">\(\mathbb H^3\)</span>)
+under the corresponding deck transformation</u>.</li>
+<li>With the matrix representation of the fundamental group in hand, we can compute
+the image of the center under the matrix representation in the hyperboloid model,
+then change to the familiar Poincaré disk (ball) model.</li>
+<li>Theoretically, we can also explicitly compute the
+quasi-isometric constants for the particular case of the Weeks manifold.</li>
+</ul></li>
+<li>I have made some numerical progress in computing the Cayley graph, but a very
+rudimentary implementation of visualizing it did not yield the neat, desired “tiling”
+of the Poincaré ball.
+<ul>
+<li>This may be a bug or something more fundamental (e.g. the Svarc-Milnor quasi-isometry
+does not guarantee a neat “tiling”).</li>
+</ul></li>
+</ol>
 
 </div>
 </div>

@@ -104,4 +104,28 @@ the lattice sites (and to compute the size of a boundary patch),
 I may also need to dig into the construction of the quasi-isometry 
 between the $\pi_1$ of closed hyperbolic $3$-manifolds and $\mbb H^3$. 
 
-### Jan (?): Matrix representations of hyperbolic groups {-}
+### Jan 26: Visualizing the Cayley graph of the Weeks manifold {-}
+
+1. We have been able to find the holonomy representation of the fundamental group of the 
+    Weeks manifold as a subgroup of $O(3, 1)$ (it comes with SnapPy). 
+    - With this faithful representation in hand, we can compute the Cayley graph 
+    efficiently (up to floating-point errors). 
+2. On the theoretical side, I delved into the Svarc-Milnor lemma, 
+    which gives the explicit construction of the quasi-isometry between 
+    (1) the Cayley graph of a fundamental group of a manifold, and (2) the universal 
+    cover of the manifold. 
+    - I believe that the quasi-isometric embedding given by this lemma is the one we need 
+    to "visualize" the Cayley graph as a discrete tiling of $\mbb H^3$. 
+    - In particular, <u>the vertices of the image of the Cayley graph under this embedding 
+    are simply the image of an arbitrary basepoint (e.g. the "center" of $\mbb H^3$) 
+    under the corresponding deck transformation</u>. 
+    - With the matrix representation of the fundamental group in hand, we can compute 
+    the image of the center under the matrix representation in the hyperboloid model, 
+    then change to the familiar Poincaré disk (ball) model. 
+    - Theoretically, we can also explicitly compute the 
+    quasi-isometric constants for the particular case of the Weeks manifold. 
+3. I have made some numerical progress in computing the Cayley graph, but a very 
+    rudimentary implementation of visualizing it did not yield the neat, desired "tiling" 
+    of the Poincaré ball. 
+    - This may be a bug or something more fundamental (e.g. the Svarc-Milnor quasi-isometry 
+    does not guarantee a neat "tiling"). 
