@@ -224,27 +224,24 @@ between the <span class="math inline">\(\pi_1\)</span> of closed hyperbolic <spa
 <div id="jan-26-visualizing-the-cayley-graph-of-the-weeks-manifold" class="section level3 unnumbered hasAnchor">
 <h3>Jan 26: Visualizing the Cayley graph of the Weeks manifold<a href="index.html#jan-26-visualizing-the-cayley-graph-of-the-weeks-manifold" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>We have been able to find the holonomy representation of the fundamental group of the
-Weeks manifold as a subgroup of <span class="math inline">\(O(3, 1)\)</span> (it comes with SnapPy).
+<li>I found the holonomy representation of the fundamental group of the
+Weeks manifold as a subgroup of <span class="math inline">\(O(3, 1)\)</span>, after tampering with SnapPy a bit.
 <ul>
 <li>With this faithful representation in hand, we can compute the Cayley graph
-efficiently (up to floating-point errors).</li>
+efficiently, up to floating-point errors.</li>
 </ul></li>
 <li>On the theoretical side, I delved into the Svarc-Milnor lemma,
-which gives the explicit construction of the quasi-isometry between
-<ol style="list-style-type: decimal">
-<li>the Cayley graph of a fundamental group of a manifold, and (2) the universal
-cover of the manifold.</li>
-</ol>
+which gives the explicit construction of the quasi-isometry between (1) the Cayley
+graph of a fundamental group of a manifold, and (2) the universal cover of the manifold.
 <ul>
 <li>I believe that the quasi-isometric embedding given by this lemma is the one we need
 to “visualize” the Cayley graph as a discrete tiling of <span class="math inline">\(\mathbb H^3\)</span>.</li>
 <li>In particular, <u>the vertices of the image of the Cayley graph under this embedding
 are simply the image of an arbitrary basepoint (e.g. the “center” of <span class="math inline">\(\mathbb H^3\)</span>)
-under the corresponding deck transformation</u>.</li>
+under the corresponding deck transformations</u>.</li>
 <li>With the matrix representation of the fundamental group in hand, we can compute
-the image of the center under the matrix representation in the hyperboloid model,
-then change to the familiar Poincaré disk (ball) model.</li>
+the image of the basepoint under the matrix representation in the hyperboloid model,
+then change to the familiar Poincaré disk (ball) model to visualize the Cayley graph in 3D.</li>
 <li>Theoretically, we can also explicitly compute the
 quasi-isometric constants for the particular case of the Weeks manifold.</li>
 </ul></li>
@@ -252,8 +249,9 @@ quasi-isometric constants for the particular case of the Weeks manifold.</li>
 rudimentary implementation of visualizing it did not yield the neat, desired “tiling”
 of the Poincaré ball.
 <ul>
-<li>This may be a bug or something more fundamental (e.g. the Svarc-Milnor quasi-isometry
-does not guarantee a neat “tiling”).</li>
+<li>This may be a bug in implementation,
+or something more fundamental (e.g. the Svarc-Milnor quasi-isometry does not guarantee a neat “tiling”
+in the visual sense).</li>
 </ul></li>
 </ol>
 
