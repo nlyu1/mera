@@ -76,26 +76,6 @@ htmltools::tags$iframe(
 )
 ```
 
-Observations:
-
-1. Dimensional difficulty
-    - In 1D, imposing periodic boundary conditions 
-    straightforwardly folds $\mbb R$ to $S^1$, and the translational 
-    symmetry of the MERA is mapped to the rotational symmetry of $S^1$. 
-    - However in 2D, there is no straightforward boundary conditions 
-    which folds $\mbb R^2\to S^2$. In particular, such transformation 
-    will not map the 2D translational symmetry of the MERA to the rotational 
-    symmetries of $S^2$. 
-2. How does this relate to the Gromov boundaries? We know that the 1D
-    MERA is quasi-isometric to $\mbb H^2$ so has $S^1$ Gromov boundary. 
-    Does anything break down in two-dimensions? 
-    Is the graph of the 2D-MERA quasi-isometric to $\mbb H^3$? 
-    This seems plausible in the half-space model. 
-3. Does the notion of quasi-isometry capture the argument in point (1), or 
-    are they unrelated? Why can't we use a quasi-isometry to 
-    represent the 2D MERA in the Poincare sphere model, then truncate after 
-    a finite radius?
-
 ## Cayley Graph of the Weeks Group {-}
 
 Recalling the Svarc-Milnor lemma, we have an explicit embedding 
