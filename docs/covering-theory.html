@@ -23,7 +23,7 @@
 <meta name="author" content="Nicholas Lyu" />
 
 
-<meta name="date" content="2025-01-26" />
+<meta name="date" content="2025-02-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="hyperbolic-groups.html"/>
-<link rel="next" href="hyperbolic-surfaces.html"/>
+<link rel="next" href="quasi-isometries-in-practice.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -101,6 +101,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#jan-16-the-word-problem-for-candidate-groups"><i class="fa fa-check"></i>Jan 16: the word problem for candidate groups</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#jan-26-visualizing-the-cayley-graph-of-the-weeks-manifold"><i class="fa fa-check"></i>Jan 26: Visualizing the Cayley graph of the Weeks manifold</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#feb-5-the-weeks-tiling-finally"><i class="fa fa-check"></i>Feb 5: The Weeks tiling (finally)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html"><i class="fa fa-check"></i><b>2</b> Tensor Networks and Geometry</a>
@@ -115,15 +116,20 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#quasi-geodesics-in-hyperbolic-spaces"><i class="fa fa-check"></i>Quasi-geodesics in hyperbolic spaces</a></li>
 <li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#dehn"><i class="fa fa-check"></i>Dehn algorithm</a></li>
 <li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#gromov-boundaries"><i class="fa fa-check"></i>Gromov-boundaries</a></li>
+<li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#quasi-isometry-of-cayley-graphs"><i class="fa fa-check"></i>Quasi-isometry of Cayley Graphs</a></li>
 <li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#interesting-misc"><i class="fa fa-check"></i>Interesting Misc</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="covering-theory.html"><a href="covering-theory.html"><i class="fa fa-check"></i><b>4</b> Covering theory</a>
 <ul>
 <li class="chapter" data-level="" data-path="covering-theory.html"><a href="covering-theory.html#topological-preliminaries"><i class="fa fa-check"></i>Topological preliminaries</a></li>
 <li class="chapter" data-level="" data-path="covering-theory.html"><a href="covering-theory.html#švarcmilnor-lemma"><i class="fa fa-check"></i>Švarc–Milnor lemma</a></li>
-<li class="chapter" data-level="" data-path="covering-theory.html"><a href="covering-theory.html#cayley-graph-of-pi_1textweeks-manifold"><i class="fa fa-check"></i>Cayley graph of <span class="math inline">\(\pi_1(\text{Weeks manifold})\)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="hyperbolic-surfaces.html"><a href="hyperbolic-surfaces.html"><i class="fa fa-check"></i><b>5</b> Hyperbolic Surfaces</a></li>
+<li class="chapter" data-level="5" data-path="quasi-isometries-in-practice.html"><a href="quasi-isometries-in-practice.html"><i class="fa fa-check"></i><b>5</b> Quasi-isometries in Practice</a>
+<ul>
+<li class="chapter" data-level="" data-path="quasi-isometries-in-practice.html"><a href="quasi-isometries-in-practice.html#quasi-isometry-of-1d-mera"><i class="fa fa-check"></i>Quasi-isometry of 1D MERA</a></li>
+<li class="chapter" data-level="" data-path="quasi-isometries-in-practice.html"><a href="quasi-isometries-in-practice.html#cayley-graph-of-the-weeks-group"><i class="fa fa-check"></i>Cayley Graph of the Weeks Group</a></li>
+<li class="chapter" data-level="" data-path="quasi-isometries-in-practice.html"><a href="quasi-isometries-in-practice.html#hyperbolic-surfaces"><i class="fa fa-check"></i>Hyperbolic Surfaces</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
 </ul>
 
@@ -210,12 +216,16 @@ there is a subset <span class="math inline">\(B\subset X\)</span> such that:</p>
 <li><span class="math inline">\(\mathrm{diam}\, B\)</span> is finite.</li>
 <li>The <span class="math inline">\(G\)</span>-translates of <span class="math inline">\(B\)</span> cover <span class="math inline">\(X\)</span> (not necessarily disjoint).</li>
 <li>Let <span class="math inline">\(B&#39;\)</span> be the <span class="math inline">\(2b\)</span>-thickening of <span class="math inline">\(B\)</span>, the set
-<span class="math inline">\(S = \{g\in G \, | \, g\cdot B&#39;\cap B&#39;\neq \emptyset\}\)</span> is finite.</li>
+<span class="math inline">\(S = \{g\in G \, | \, g\cdot B&#39;\cap B&#39;\neq \emptyset\}\)</span> is finite.
+<ul>
+<li>The generating set <span class="math inline">\(S\)</span> is geometrically the <strong>neighboring set</strong>
+which sends the thickenedfundamental domain <span class="math inline">\(B&#39;\)</span> to overlapping neighboring translations.</li>
+</ul></li>
 </ol>
 <p>Then the following holds:</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(G\)</span> is finitely generated by <span class="math inline">\(S\)</span>.</li>
-<li>Fixing any basepoint <span class="math inline">\(x\in X\)</span>, the Cayley graph of <span class="math inline">\(G\)</span>
+<li>Fixing any basepoint <span class="math inline">\(x\in X\)</span>, the Cayley graph of <span class="math inline">\(G\)</span><br />
 is quasi-isometric to <span class="math inline">\(X\)</span> by the map
 <span class="math display">\[
 G\xrightarrow {g\mapsto g\cdot x} X
@@ -230,9 +240,18 @@ G\xrightarrow {g\mapsto g\cdot x} X
 </div>
 <p><em>Proof:</em> The proof proceeds as follows:</p>
 <ol style="list-style-type: decimal">
-<li>Proving that <span class="math inline">\(S\)</span> generates <span class="math inline">\(G\)</span>:</li>
-<li>Proving that <span class="math inline">\(g\mapsto g\cdot x\)</span> is a quasi-dense.</li>
-<li>Proving that <span class="math inline">\(g\mapsto g\cdot x\)</span> is a quasi-isometric embedding.</li>
+<li>Proving that <span class="math inline">\(S\)</span> generates <span class="math inline">\(G\)</span>: given <span class="math inline">\(g\in G\)</span>, connect <span class="math inline">\(x, g\cdot x\)</span>
+by a quasi-geodesic, then divide the geodesic into sufficiently fine intervals
+with endpoints covered by <span class="math inline">\(g_j\)</span> such that <span class="math inline">\(g_{j-1}\cdot B&#39;\cap g_j\cdot B&#39;\)</span>
+is nonempty, so that <span class="math inline">\(g_{j-1}^{-1}g_j\)</span> is in the neighboring set.</li>
+<li>Proving that <span class="math inline">\(g\mapsto g\cdot x\)</span> is a quasi-dense: follows from the tiling of
+<span class="math inline">\(X\)</span> by <span class="math inline">\(G\)</span>-translates of <span class="math inline">\(B\)</span>.</li>
+<li>Proving that <span class="math inline">\(g\mapsto g\cdot x\)</span> is a quasi-isometric embedding:
+<ul>
+<li>Use the lower bound provided by the quasi-geodesicity.</li>
+<li>Upper-bound using the fact that subsequent endpoints <span class="math inline">\((x_j)\)</span> cannot be
+too far apart.</li>
+</ul></li>
 </ol>
 <p>Fix <span class="math inline">\(g\in G\)</span> for which we wish to show that <span class="math inline">\(g\in \langle S\rangle_G\)</span>.
 Choose any <span class="math inline">\(x\in B\)</span> and construct a <span class="math inline">\((c, b)\)</span>-quasi-geodesic
@@ -307,40 +326,6 @@ proper, and cocompact. Also note that <span class="math inline">\(\widetilde M\)
 <span class="math inline">\((1, b)\)</span>-quasi-geodesic for every <span class="math inline">\(b\in \mathbb R_{&gt;0}\)</span>.
 Given such action, we simply choose <span class="math inline">\(B=M\)</span> in theorem <a href="covering-theory.html#thm:svarcMilnor">4.1</a>.
 To obtain the claimed bound, substitute <span class="math inline">\(c=1\)</span> in <a href="covering-theory.html#eq:SMquasiIsometricBound">(4.1)</a>.</p>
-</div>
-<div id="cayley-graph-of-pi_1textweeks-manifold" class="section level2 unnumbered hasAnchor">
-<h2>Cayley graph of <span class="math inline">\(\pi_1(\text{Weeks manifold})\)</span><a href="covering-theory.html#cayley-graph-of-pi_1textweeks-manifold" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>This section computes the matrix representation of select closed 3-manifolds.
-Regina provided the following presentation for the fundamental group of the Weeks manifold:
-<span class="math display">\[
-    \pi_1(\text{Weeks manifold}) = \langle a, b \, | \,
-    a^2b^2a^2b^{-1}ab^{-1}, \, a^2b^2a^{-1}ba^{-1}b^2\rangle
-\]</span>
-Using SnapPy, the <span class="math inline">\(O^+(3, 1)\)</span> representation of the generators of the fundamental group
-of the Weeks manifold are found to be (after rounding)
-<span class="math display">\[
-    \rho(a) =
-    \begin{pmatrix}
-        2.912 &amp; -1.327 &amp; -1.546 &amp; -1.824 \\
-        0.214 &amp; -0.958 &amp; 0.355 &amp; 0.053 \\
-        2.672 &amp; -1.274 &amp; -1.513 &amp; -2.056 \\
-        0.542 &amp; -0.470 &amp; -0.987 &amp; 0.314
-    \end{pmatrix}, \quad
-    \rho(b) =
-    \begin{pmatrix}
-        9.866 &amp; -1.785 &amp; -7.901 &amp; 5.543 \\
-        -0.637 &amp; 1.086 &amp; 0.281 &amp; -0.385 \\
-        9.339 &amp; -1.692 &amp; -7.736 &amp; 5.051 \\
-        -2.951 &amp; 0.376 &amp; 1.873 &amp; -2.461
-    \end{pmatrix}
-\]</span>
-Recall that the hyperboloid model for <span class="math inline">\(\mathbb H^3\)</span> is the upper sheet of
-<span class="math inline">\(-x_0^2 + x_1^2 + x_2^2 + x_3^2 = 1\)</span> in <span class="math inline">\(\mathbb R^4\)</span>.
-The map from the hyperboloid model to the Poincaré disk model is given by
-<span class="math display">\[
-    (x_0, x_1, x_2, x_3) \mapsto
-    \dfrac 1 {x_0 + 1} (x_1, x_2, x_3)
-\]</span></p>
 
 </div>
 </div>
@@ -350,7 +335,7 @@ The map from the hyperboloid model to the Poincaré disk model is given by
         </div>
       </div>
 <a href="hyperbolic-groups.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="hyperbolic-surfaces.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="quasi-isometries-in-practice.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

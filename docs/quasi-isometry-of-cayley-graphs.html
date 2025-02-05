@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Quasi-isometry of Cayley Graphs | MERA Learning Material</title>
+  <meta name="description" content="Quasi-isometry of Cayley Graphs | MERA Learning Material" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Quasi-isometry of Cayley Graphs | MERA Learning Material" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Quasi-isometry of Cayley Graphs | MERA Learning Material" />
+  
+  
+  
+
+<meta name="author" content="Nicholas Lyu" />
+
+
+<meta name="date" content="2025-01-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="hyperbolic-groups.html"/>
+<link rel="next" href="covering-theory.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Research agenda</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#progress-log"><i class="fa fa-check"></i>Progress log</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#jan-16-the-word-problem-for-candidate-groups"><i class="fa fa-check"></i>Jan 16: the word problem for candidate groups</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#jan-26-visualizing-the-cayley-graph-of-the-weeks-manifold"><i class="fa fa-check"></i>Jan 26: Visualizing the Cayley graph of the Weeks manifold</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html"><i class="fa fa-check"></i><b>2</b> Tensor Networks and Geometry</a>
+<ul>
+<li class="chapter" data-level="" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html#critical-v.-non-critical-systems"><i class="fa fa-check"></i>Critical v. non-critical systems</a></li>
+<li class="chapter" data-level="" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html#connection-to-tensor-networks"><i class="fa fa-check"></i>Connection to tensor networks</a></li>
+<li class="chapter" data-level="" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html#branched-mera"><i class="fa fa-check"></i>Branched MERA</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html"><i class="fa fa-check"></i><b>3</b> Hyperbolic Groups</a>
+<ul>
+<li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#geometric-definitions"><i class="fa fa-check"></i>Geometric definitions</a></li>
+<li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#quasi-geodesics-in-hyperbolic-spaces"><i class="fa fa-check"></i>Quasi-geodesics in hyperbolic spaces</a></li>
+<li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#dehn"><i class="fa fa-check"></i>Dehn algorithm</a></li>
+<li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#gromov-boundaries"><i class="fa fa-check"></i>Gromov-boundaries</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="quasi-isometry-of-cayley-graphs.html"><a href="quasi-isometry-of-cayley-graphs.html"><i class="fa fa-check"></i>Quasi-isometry of Cayley Graphs</a>
+<ul>
+<li class="chapter" data-level="" data-path="quasi-isometry-of-cayley-graphs.html"><a href="quasi-isometry-of-cayley-graphs.html#interesting-misc"><i class="fa fa-check"></i>Interesting Misc</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="covering-theory.html"><a href="covering-theory.html"><i class="fa fa-check"></i><b>4</b> Covering theory</a>
+<ul>
+<li class="chapter" data-level="" data-path="covering-theory.html"><a href="covering-theory.html#topological-preliminaries"><i class="fa fa-check"></i>Topological preliminaries</a></li>
+<li class="chapter" data-level="" data-path="covering-theory.html"><a href="covering-theory.html#švarcmilnor-lemma"><i class="fa fa-check"></i>Švarc–Milnor lemma</a></li>
+<li class="chapter" data-level="" data-path="covering-theory.html"><a href="covering-theory.html#cayley-graph-of-pi_1textweeks-manifold"><i class="fa fa-check"></i>Cayley graph of <span class="math inline">\(\pi_1(\text{Weeks manifold})\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="hyperbolic-surfaces.html"><a href="hyperbolic-surfaces.html"><i class="fa fa-check"></i><b>5</b> Hyperbolic Surfaces</a></li>
+<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MERA Learning Material</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="quasi-isometry-of-cayley-graphs" class="section level1 unnumbered hasAnchor">
+<h1>Quasi-isometry of Cayley Graphs<a href="quasi-isometry-of-cayley-graphs.html#quasi-isometry-of-cayley-graphs" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-14" class="proposition"><strong>Proposition 3.1  (Loh (5.2.5)) </strong></span>Given <span class="math inline">\(G\)</span> finitely generated by <span class="math inline">\(S, S&#39;\)</span>,
+the identity map <span class="math inline">\(1_G\)</span> is a bilipschitz equivalence between
+<span class="math inline">\((G, d_S)\)</span> and <span class="math inline">\((G, d_{S&#39;})\)</span>.</p>
+</div>
+<p><em>Proof:</em> Define <span class="math inline">\(c=\max_{s\in S\cup S^{-1}} d_{S&#39;}(1, s)\)</span>.
+Note that the distance is in <span class="math inline">\(s&#39;\)</span>. Using the left-invariance
+of the metric, for arbitrary <span class="math inline">\(g, h\in G\)</span>, let
+<span class="math inline">\(g^{-1}h = s_1\dots s_n\)</span> in <span class="math inline">\(S\cup S^{-1}\)</span> be the
+geodesic connecting <span class="math inline">\(g, h\)</span>, then
+<span class="math display">\[\begin{align}
+    d_{S&#39;}(g, h)
+    &amp;= d_{S&#39;}(g, gs_1\dots s_n)
+    \leq d_{S&#39;}(g, gs_1) + d_{S&#39;}(gs_1, gs_1s_2) + \dots \\
+    &amp;= d_{S&#39;}(1, s_1) + \dots + d_{S&#39;}(1, s_n)
+    \leq cn = cd_S(g, h)
+\end{align}\]</span></p>
+<div id="interesting-misc" class="section level2 unnumbered hasAnchor">
+<h2>Interesting Misc<a href="quasi-isometry-of-cayley-graphs.html#interesting-misc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The Gromov boundary of free groups (of nontrivial rank) are Cantor sets,
+which is not homeomorphic to <span class="math inline">\(S^1\)</span>. Since Gromov boundary is a quasi-isometric
+invariant, it follows that <u>nontrivial free groups are not
+quasi-isometric to the hyperbolic space</u> <span class="math inline">\(\mathbb H^2\)</span>.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="hyperbolic-groups.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="covering-theory.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -23,7 +23,7 @@
 <meta name="author" content="Nicholas Lyu" />
 
 
-<meta name="date" content="2025-01-26" />
+<meta name="date" content="2025-02-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -101,6 +101,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#jan-16-the-word-problem-for-candidate-groups"><i class="fa fa-check"></i>Jan 16: the word problem for candidate groups</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#jan-26-visualizing-the-cayley-graph-of-the-weeks-manifold"><i class="fa fa-check"></i>Jan 26: Visualizing the Cayley graph of the Weeks manifold</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#feb-5-the-weeks-tiling-finally"><i class="fa fa-check"></i>Feb 5: The Weeks tiling (finally)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html"><i class="fa fa-check"></i><b>2</b> Tensor Networks and Geometry</a>
@@ -115,15 +116,20 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#quasi-geodesics-in-hyperbolic-spaces"><i class="fa fa-check"></i>Quasi-geodesics in hyperbolic spaces</a></li>
 <li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#dehn"><i class="fa fa-check"></i>Dehn algorithm</a></li>
 <li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#gromov-boundaries"><i class="fa fa-check"></i>Gromov-boundaries</a></li>
+<li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#quasi-isometry-of-cayley-graphs"><i class="fa fa-check"></i>Quasi-isometry of Cayley Graphs</a></li>
 <li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#interesting-misc"><i class="fa fa-check"></i>Interesting Misc</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="covering-theory.html"><a href="covering-theory.html"><i class="fa fa-check"></i><b>4</b> Covering theory</a>
 <ul>
 <li class="chapter" data-level="" data-path="covering-theory.html"><a href="covering-theory.html#topological-preliminaries"><i class="fa fa-check"></i>Topological preliminaries</a></li>
 <li class="chapter" data-level="" data-path="covering-theory.html"><a href="covering-theory.html#švarcmilnor-lemma"><i class="fa fa-check"></i>Švarc–Milnor lemma</a></li>
-<li class="chapter" data-level="" data-path="covering-theory.html"><a href="covering-theory.html#cayley-graph-of-pi_1textweeks-manifold"><i class="fa fa-check"></i>Cayley graph of <span class="math inline">\(\pi_1(\text{Weeks manifold})\)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="hyperbolic-surfaces.html"><a href="hyperbolic-surfaces.html"><i class="fa fa-check"></i><b>5</b> Hyperbolic Surfaces</a></li>
+<li class="chapter" data-level="5" data-path="quasi-isometries-in-practice.html"><a href="quasi-isometries-in-practice.html"><i class="fa fa-check"></i><b>5</b> Quasi-isometries in Practice</a>
+<ul>
+<li class="chapter" data-level="" data-path="quasi-isometries-in-practice.html"><a href="quasi-isometries-in-practice.html#quasi-isometry-of-1d-mera"><i class="fa fa-check"></i>Quasi-isometry of 1D MERA</a></li>
+<li class="chapter" data-level="" data-path="quasi-isometries-in-practice.html"><a href="quasi-isometries-in-practice.html#cayley-graph-of-the-weeks-group"><i class="fa fa-check"></i>Cayley Graph of the Weeks Group</a></li>
+<li class="chapter" data-level="" data-path="quasi-isometries-in-practice.html"><a href="quasi-isometries-in-practice.html#hyperbolic-surfaces"><i class="fa fa-check"></i>Hyperbolic Surfaces</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
 </ul>
 
@@ -145,7 +151,7 @@ div.csl-indent {
 <div id="header">
 <h1 class="title">MERA Learning Material</h1>
 <p class="author"><em>Nicholas Lyu</em></p>
-<p class="date"><em>2025-01-26</em></p>
+<p class="date"><em>2025-02-05</em></p>
 </div>
 <div id="research-agenda" class="section level1 hasAnchor" number="1">
 <h1><span class="header-section-number">1</span> Research agenda<a href="index.html#research-agenda" class="anchor-section" aria-label="Anchor link to header"></a></h1>
@@ -254,12 +260,69 @@ or something more fundamental (e.g. the Svarc-Milnor quasi-isometry does not gu
 in the visual sense).</li>
 </ul></li>
 </ol>
+</div>
+<div id="feb-5-the-weeks-tiling-finally" class="section level3 unnumbered hasAnchor">
+<h3>Feb 5: The Weeks tiling (finally)<a href="index.html#feb-5-the-weeks-tiling-finally" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>New results are documented in Section 5. Summary:</p>
+<ol style="list-style-type: decimal">
+<li>With disentanglers, the 1D MERA graph is indeed quasi-isometric to <span class="math inline">\(\mathbb H^2\)</span>.</li>
+<li>The 2D MERA graph is <strong>locally quasi-isometric</strong> to <span class="math inline">\(\mathbb H^2\)</span>, but <u>not globally so</u>.
+This highlights the special dimensionality.
+<ul>
+<li>In 1D, the <span class="math inline">\(\mathbb R^1\)</span> MERA nicely wraps around <span class="math inline">\(S^1\)</span> by a covering map,
+under which translational symmetry maps onto the rotational symmetry of <span class="math inline">\(S^1\)</span> by boundary
+conditions.</li>
+<li>In 2D, there is no analogous periodic boundary condition which wraps a lattice on <span class="math inline">\(\mathbb R^2\)</span>
+onto <span class="math inline">\(S^2\)</span>.
+<ul>
+<li>There is no covering map <span class="math inline">\(\mathbb R^2\to S^2\)</span> since <span class="math inline">\(S^2\)</span> is simply connected.</li>
+<li>I believe there’re results which rule out self-similar lattices on <span class="math inline">\(S^2\)</span>.</li>
+</ul></li>
+<li>This verifies our intuition that <span style="color: blue">
+1D MERA is quasi-isometric to <span class="math inline">\(\mathbb H^2\)</span>, but the 2D MERA
+is not quasi-isometric to <span class="math inline">\(\mathbb H^3\)</span> </span>.</li>
+</ul></li>
+<li>I constructed the Svarc-Milnor quasi-isometry for a Cayley graph of the Weeks manifold group.
+<ul>
+<li>A key realization is that the resulting graph essentially represents
+a <u>regular tiling</u> of <span class="math inline">\(\mathbb H^3\)</span>.</li>
+</ul></li>
+<li>Using the tiling property, I refined the area-law argument
+for our construction (hypothesis <a href="quasi-isometries-in-practice.html#hyp:hAreaLaw">5.1</a>).</li>
+</ol>
+<p>Some questions:</p>
+<ol style="list-style-type: decimal">
+<li>After recognizing the tiling property, I realized that our construction seems
+very similar to hyperbolic-invariant MERA (hyMERA), <span class="citation">(<a href="#ref-evenbly2017hyperinvariant">Evenbly 2017</a>)</span>.
+<ul>
+<li>HyMERA takes a tiling of <span class="math inline">\(\mathbb H^2\)</span> and constructs the TN graph
+by placing vertices at the extremal points of the tiles, and edges connecting the vertices
+(effective “tracing out” the tiling).</li>
+<li>Our construction place vertices at the center of the tiles, and edges
+connecting the vertices denoting neighboring tiles.</li>
+</ul></li>
+<li><span style="color: blue"> The tiling property seems “more fundamental” </span>
+to our arguments, and it may be more general (I’m looking more into this).</li>
+<li>There is a corresponding hyMERA construction for the Weeks manifold.
+The only differences seem to be:
+<ul>
+<li>All the tensors in our construction have the same rank.
+while in the hyMERA construction, the rank vary depending on the vertex.</li>
+<li>The tensors in our construction have high rank (equal to the number of faces in the domain)
+compared to hyMERA, whose rank is bounded by maximum degree of a vertex in the tiling.</li>
+</ul></li>
+<li>The original hyMERA paper provides many future directions, e.g. finding
+an efficient optimization algorithm for the tensors.</li>
+</ol>
 
 </div>
 </div>
 </div>
 <h3>Bibliography<a href="bibliography.html#bibliography" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-evenbly2017hyperinvariant" class="csl-entry">
+Evenbly, Glen. 2017. <span>“Hyperinvariant Tensor Networks and Holography.”</span> <em>Physical Review Letters</em> 119 (14): 141602.
+</div>
 <div id="ref-loh2017geometric" class="csl-entry">
 Löh, Clara. 2017. <em>Geometric Group Theory</em>. Springer.
 </div>

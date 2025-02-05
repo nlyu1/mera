@@ -129,3 +129,47 @@ between the $\pi_1$ of closed hyperbolic $3$-manifolds and $\mbb H^3$.
     - This may be a bug in implementation, 
     or something more fundamental (e.g. the Svarc-Milnor quasi-isometry does not guarantee a neat "tiling"
     in the visual sense). 
+
+
+### Feb 5: The Weeks tiling (finally) {-}
+
+New results are documented in Section 5. Summary: 
+
+1. With disentanglers, the 1D MERA graph is indeed quasi-isometric to $\mbb H^2$. 
+2. The 2D MERA graph is **locally quasi-isometric** to $\mbb H^2$, but <u>not globally so</u>. 
+    This highlights the special dimensionality. 
+    - In 1D, the $\mbb R^1$ MERA nicely wraps around $S^1$ by a covering map, 
+    under which translational symmetry maps onto the rotational symmetry of $S^1$ by boundary 
+    conditions. 
+    - In 2D, there is no analogous periodic boundary condition which wraps a lattice on $\mbb R^2$ 
+    onto $S^2$. 
+        - There is no covering map $\mbb R^2\to S^2$ since $S^2$ is simply connected. 
+        - I believe there're results which rule out self-similar lattices on $S^2$. 
+    - This verifies our intuition that <span style="color: blue"> 
+    1D MERA is quasi-isometric to $\mbb H^2$, but the 2D MERA 
+    is not quasi-isometric to $\mbb H^3$ </span>. 
+3. I constructed the Svarc-Milnor quasi-isometry for a Cayley graph of the Weeks manifold group. 
+    - A key realization is that the resulting graph essentially represents 
+    a <u>regular tiling</u> of $\mbb H^3$. 
+4. Using the tiling property, I refined the area-law argument 
+    for our construction (hypothesis \@ref(hyp:hAreaLaw)). 
+
+Some questions: 
+
+1. After recognizing the tiling property, I realized that our construction seems 
+    very similar to hyperbolic-invariant MERA (hyMERA), [@evenbly2017hyperinvariant]. 
+    - HyMERA takes a tiling of $\mbb H^2$ and constructs the TN graph 
+    by placing vertices at the extremal points of the tiles, and edges connecting the vertices 
+    (effective "tracing out" the tiling). 
+    - Our construction place vertices at the center of the tiles, and edges 
+    connecting the vertices denoting neighboring tiles. 
+2. <span style="color: blue"> The tiling property seems "more fundamental" </span> 
+    to our arguments, and it may be more general (I'm looking more into this). 
+2. There is a corresponding hyMERA construction for the Weeks manifold. 
+    The only differences seem to be: 
+    - All the tensors in our construction have the same rank. 
+    while in the hyMERA construction, the rank vary depending on the vertex. 
+    - The tensors in our construction have high rank (equal to the number of faces in the domain) 
+    compared to hyMERA, whose rank is bounded by maximum degree of a vertex in the tiling. 
+3. The original hyMERA paper provides many future directions, e.g. finding 
+    an efficient optimization algorithm for the tensors. 

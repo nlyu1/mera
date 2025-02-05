@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Quasi-isometries in Practice | MERA Learning Material</title>
+  <meta name="description" content="5 Quasi-isometries in Practice | MERA Learning Material" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Quasi-isometries in Practice | MERA Learning Material" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Quasi-isometries in Practice | MERA Learning Material" />
+  
+  
+  
+
+<meta name="author" content="Nicholas Lyu" />
+
+
+<meta name="date" content="2025-02-05" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="covering-theory.html"/>
+<link rel="next" href="bibliography.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Research agenda</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#progress-log"><i class="fa fa-check"></i>Progress log</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#jan-16-the-word-problem-for-candidate-groups"><i class="fa fa-check"></i>Jan 16: the word problem for candidate groups</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#jan-26-visualizing-the-cayley-graph-of-the-weeks-manifold"><i class="fa fa-check"></i>Jan 26: Visualizing the Cayley graph of the Weeks manifold</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#feb-5-the-weeks-tiling-finally"><i class="fa fa-check"></i>Feb 5: The Weeks tiling (finally)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html"><i class="fa fa-check"></i><b>2</b> Tensor Networks and Geometry</a>
+<ul>
+<li class="chapter" data-level="" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html#critical-v.-non-critical-systems"><i class="fa fa-check"></i>Critical v. non-critical systems</a></li>
+<li class="chapter" data-level="" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html#connection-to-tensor-networks"><i class="fa fa-check"></i>Connection to tensor networks</a></li>
+<li class="chapter" data-level="" data-path="tensor-networks-and-geometry.html"><a href="tensor-networks-and-geometry.html#branched-mera"><i class="fa fa-check"></i>Branched MERA</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html"><i class="fa fa-check"></i><b>3</b> Hyperbolic Groups</a>
+<ul>
+<li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#geometric-definitions"><i class="fa fa-check"></i>Geometric definitions</a></li>
+<li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#quasi-geodesics-in-hyperbolic-spaces"><i class="fa fa-check"></i>Quasi-geodesics in hyperbolic spaces</a></li>
+<li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#dehn"><i class="fa fa-check"></i>Dehn algorithm</a></li>
+<li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#gromov-boundaries"><i class="fa fa-check"></i>Gromov-boundaries</a></li>
+<li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#quasi-isometry-of-cayley-graphs"><i class="fa fa-check"></i>Quasi-isometry of Cayley Graphs</a></li>
+<li class="chapter" data-level="" data-path="hyperbolic-groups.html"><a href="hyperbolic-groups.html#interesting-misc"><i class="fa fa-check"></i>Interesting Misc</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="covering-theory.html"><a href="covering-theory.html"><i class="fa fa-check"></i><b>4</b> Covering theory</a>
+<ul>
+<li class="chapter" data-level="" data-path="covering-theory.html"><a href="covering-theory.html#topological-preliminaries"><i class="fa fa-check"></i>Topological preliminaries</a></li>
+<li class="chapter" data-level="" data-path="covering-theory.html"><a href="covering-theory.html#švarcmilnor-lemma"><i class="fa fa-check"></i>Švarc–Milnor lemma</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="quasi-isometries-in-practice.html"><a href="quasi-isometries-in-practice.html"><i class="fa fa-check"></i><b>5</b> Quasi-isometries in Practice</a>
+<ul>
+<li class="chapter" data-level="" data-path="quasi-isometries-in-practice.html"><a href="quasi-isometries-in-practice.html#quasi-isometry-of-1d-mera"><i class="fa fa-check"></i>Quasi-isometry of 1D MERA</a></li>
+<li class="chapter" data-level="" data-path="quasi-isometries-in-practice.html"><a href="quasi-isometries-in-practice.html#cayley-graph-of-the-weeks-group"><i class="fa fa-check"></i>Cayley Graph of the Weeks Group</a></li>
+<li class="chapter" data-level="" data-path="quasi-isometries-in-practice.html"><a href="quasi-isometries-in-practice.html#hyperbolic-surfaces"><i class="fa fa-check"></i>Hyperbolic Surfaces</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MERA Learning Material</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="quasi-isometries-in-practice" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Quasi-isometries in Practice<a href="quasi-isometries-in-practice.html#quasi-isometries-in-practice" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="quasi-isometry-of-1d-mera" class="section level2 unnumbered hasAnchor">
+<h2>Quasi-isometry of 1D MERA<a href="quasi-isometries-in-practice.html#quasi-isometry-of-1d-mera" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this section, we intuitively demonstrate how the tensor network graph
+of a 1D MERA is quasi-isometric to <span class="math inline">\(\mathbb H^2\)</span>. Below is a graphical
+representation of a 1D MERA:</p>
+<ul>
+<li>Isometry tensors are denoted by blue dots.</li>
+<li>Disentanger unitaries are denoted by orange.</li>
+<li>The graphical representation starts from 4 sites.</li>
+<li>The disentanglers are put on the same radius as the branching isometries.</li>
+</ul>
+<iframe src="./images/1d_mera.html" width="100%" style="border: none; width: 100%; min-height: 400px;" onload="this.style.height=this.contentDocument.body.scrollHeight +&#39;px&#39;;"></iframe>
+<p>Concretely, the MERA graph is specified as follows:</p>
+<ol style="list-style-type: decimal">
+<li>At radius <span class="math inline">\(r\)</span>, there are <span class="math inline">\(\sim^{(8\cdot)} 2^r\)</span> vertices in a regular polygon.
+The odd and even vertices correspond to isometries and disentanglers, respectively.</li>
+<li>Each disentangler at <span class="math inline">\(r\)</span> is connected to two isometries at <span class="math inline">\(r+1\)</span>.</li>
+</ol>
+<p>We next consider the behavior of geodesics in the 1D MERA. The highlighted
+paths are all geodesics from endpoints on the boundary.</p>
+<iframe src="./images/1d_mera_shortest_path.html" width="100%" style="border: none; width: 100%; min-height: 400px;" onload="this.style.height=this.contentDocument.body.scrollHeight +&#39;px&#39;;"></iframe>
+<p>The graph of the 1D MERA with disentanglers <strong>should be</strong> quasi-isometric to the graph below,
+after identifying the disentanglers with the isometries using local transformations
+(quasi-isometries only care about global properties).
+The geodesics in the following graph between two points at the same radius
+separated by angle <span class="math inline">\(\theta\)</span> are determined by the following greedy rule:</p>
+<ol style="list-style-type: decimal">
+<li>Connecting two points by an arc has distance <span class="math inline">\(\sim 2^r \theta\)</span>.</li>
+<li>Alternatively, we can reduce to <span class="math inline">\(r\mapsto r-1\)</span> by extending the connecting path
+radially towards the center.</li>
+</ol>
+<p>In particular, we see that the simplified graph captures:</p>
+<ol style="list-style-type: decimal">
+<li>Exponential growth of the hyperbolic circumference w.r.t. the hyperbolic radius.</li>
+<li>Sideways connections by an angular arc (enabled by disentanglers).</li>
+</ol>
+<p>The fundamental reason why a TTN (MERA without disentanglers) is not quasi-isometric
+to <span class="math inline">\(\mathbb H^2\)</span> is that the tree structure only captures (1), but not (2).
+The metric for <span class="math inline">\(\mathbb H^2\)</span> under <span class="math inline">\((\rho, \theta)\)</span>, where <span class="math inline">\(\rho\)</span> is the
+hyperbolic radius, and <span class="math inline">\(\theta\)</span> the angle, is
+<span class="math display">\[
+    ds^2 = d\rho^2 + \sinh^2(\rho) d\theta^2
+    \xrightarrow{\rho \to \infty} d\rho^2 + \dfrac{e^{2\rho}}{4} d\theta^2
+\]</span>
+<span style="color: blue;">
+Both the <span class="math inline">\(d\rho\)</span> and <span class="math inline">\(e^\rho \, d\theta\)</span> terms
+are faithfully represented by the graph structure via the visual embedding
+below, so that the 1D MERA graph is quasi-isometric to <span class="math inline">\(\mathbb H^2\)</span>.
+</span></p>
+<iframe src="./images/1d_mera_qisom.html" width="100%" style="border: none; width: 100%; min-height: 400px;" onload="this.style.height=this.contentDocument.body.scrollHeight +&#39;px&#39;;"></iframe>
+<p>Observations:</p>
+<ol style="list-style-type: decimal">
+<li>Dimensional difficulty
+<ul>
+<li>In 1D, imposing periodic boundary conditions
+straightforwardly folds <span class="math inline">\(\mathbb R\)</span> to <span class="math inline">\(S^1\)</span>, and the translational
+symmetry of the MERA is mapped to the rotational symmetry of <span class="math inline">\(S^1\)</span>.</li>
+<li>However in 2D, there is no straightforward boundary conditions
+which folds <span class="math inline">\(\mathbb R^2\to S^2\)</span>. In particular, such transformation
+will not map the 2D translational symmetry of the MERA to the rotational
+symmetries of <span class="math inline">\(S^2\)</span>.</li>
+</ul></li>
+<li>How does this relate to the Gromov boundaries? We know that the 1D
+MERA is quasi-isometric to <span class="math inline">\(\mathbb H^2\)</span> so has <span class="math inline">\(S^1\)</span> Gromov boundary.
+Does anything break down in two-dimensions?
+Is the graph of the 2D-MERA quasi-isometric to <span class="math inline">\(\mathbb H^3\)</span>?
+This seems plausible in the half-space model.</li>
+<li>Does the notion of quasi-isometry capture the argument in point (1), or
+are they unrelated? Why can’t we use a quasi-isometry to
+represent the 2D MERA in the Poincare sphere model, then truncate after
+a finite radius?</li>
+</ol>
+</div>
+<div id="cayley-graph-of-the-weeks-group" class="section level2 unnumbered hasAnchor">
+<h2>Cayley Graph of the Weeks Group<a href="quasi-isometries-in-practice.html#cayley-graph-of-the-weeks-group" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Recalling the Svarc-Milnor lemma, we have an explicit embedding
+of the Cayley graph of the fundamental group of the Weeks manifold
+into <span class="math inline">\(\mathbb H^3\)</span> by <u> the tiling generated by the fundamental domain </u>.</p>
+<p>We retrieved the Dirichlet domain and its associated face-pairing
+transformations from <a href="https://snappy.computop.org/additional_classes.html#dirichletdomain">SnapPy</a>.</p>
+<ul>
+<li>The Dirichlet domain is a canonical method for visualizing the fundamental domain
+of a manifold within its universal cover.</li>
+<li>The face-pairing transformations send the Dirichlet domain to its neighbors,
+effectively generating a <strong>regular tiling</strong> of <span class="math inline">\(\mathbb H^3\)</span>.</li>
+<li>The vertices of the Svarc-Milnor Cayley graph are the centers of the Dirichlet domains,
+with edges connecting vertices of neighboring domains.</li>
+<li>The Weeks Dirichlet domain has 26 vertices, 42 edges, and 18 faces. So
+<strong>the boundary grows approximately as</strong> <span class="math inline">\(18^r\)</span>.</li>
+<li>I only visualized the immediate neighbors of the center and the Cayley graph up to <span class="math inline">\(r=2\)</span>,
+to reduce clutter. <em>Toggle the right-hand side to visualize specific components</em>.</li>
+</ul>
+<iframe src="./images/weeks_tiling.html" width="100%" style="border: none; width: 100%; min-height: 800px;" onload="this.style.height=this.contentDocument.body.scrollHeight +&#39;px&#39;;"></iframe>
+</div>
+<div id="hyperbolic-surfaces" class="section level2 unnumbered hasAnchor">
+<h2>Hyperbolic Surfaces<a href="quasi-isometries-in-practice.html#hyperbolic-surfaces" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The Poincaré ball model of <span class="math inline">\(\mathbb H^3\cong B_1(0)\)</span> is equipped with
+the Riemmanian metric
+<span class="math display">\[
+    ds^2 = \dfrac{4(dx^2 + dy^2 + dz^2)}{(1-r^2)^2}, \quad
+    g_{ab} = \dfrac 4 {(1-r^2)^2} \begin{pmatrix}
+        1 &amp; 0 &amp; 0 \\
+        0 &amp; 1 &amp; 0 \\
+        0 &amp; 0 &amp; 1
+    \end{pmatrix}
+\]</span></p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-15" class="proposition"><strong>Proposition 5.1  (Poincaré's and hyperbolic radius) </strong></span>The length <span class="math inline">\(\rho\)</span> of a radial line which goes from <span class="math inline">\(r=0\)</span> to <span class="math inline">\(r=R\)</span> is
+<span class="math inline">\(\rho = 2\, \mathrm{arctanh}\, R\)</span>.</p>
+</div>
+<p><em>Proof:</em> The radial scaling factor of length is <span class="math inline">\(2/(1-r^2)\)</span>.
+Integrating this yields
+<span class="math display">\[
+    \rho =  \int_0^R dr\, \dfrac{2}{1-r^2}
+    = \log \dfrac{1+R}{1-R} = 2\, \mathrm{arctanh}\, R
+\]</span></p>
+<div class="proposition">
+<p><span id="prp:hSectorArea" class="proposition"><strong>Proposition 5.2  (hyperbolic sector area) </strong></span>The area <span class="math inline">\(A\)</span> of the hyperbolic sector subtended by angle <span class="math inline">\(\phi\)</span> and
+Poincaré radius <span class="math inline">\(R\in (0, 1)\)</span> is
+<span class="math display">\[
+    A = \dfrac{2\phi}{1/R^2 - 1}
+\]</span></p>
+</div>
+<p><em>Proof:</em>
+The Jacobian of the inclusion map and the induced metric <span class="math inline">\(g&#39;\)</span> in <span class="math inline">\((\theta, r)\)</span>
+coordinates are, respectively,
+<span class="math display">\[\begin{align}
+    J &amp;= T\, \iota = \begin{pmatrix}
+        \partial_{\theta }(r\cos\theta) &amp; \partial_{\theta }(r\sin\theta) &amp; 0 \\
+        \partial_{r} (r\cos\theta) &amp; \partial_{r} (r\sin\theta) &amp; 0
+    \end{pmatrix} = \begin{pmatrix}
+        -r\sin\theta &amp; r\cos\theta &amp; 0 \\
+        \cos\theta &amp; \sin\theta &amp; 0
+    \end{pmatrix} \\
+    g&#39; &amp;= JgJ^T = \dfrac 4 {(1-r^2)^2} \begin{pmatrix}
+        r^2 \\ &amp; 1
+    \end{pmatrix}, \quad \sqrt{\det g&#39;} = \dfrac{4r}{(1-r^2)^2}
+\end{align}\]</span>
+Direct integration yields the desired area:
+<span class="math display">\[\begin{align}
+    A = \int_0^R \int_0^\phi \sqrt{\det g&#39;} \, d\theta \, dr
+    &amp;= \phi \int_0^R \dfrac{4r}{(1-r^2)^2} \, dr
+    = \phi \dfrac{2R^2}{1-R^2} = \dfrac{2\phi}{1/R^2 - 1}
+\end{align}\]</span></p>
+<div class="proposition">
+<p><span id="prp:hSectorLength" class="proposition"><strong>Proposition 5.3  (hyperbolic arc length) </strong></span>The length <span class="math inline">\(L\)</span> of the arc subtended by angle <span class="math inline">\(\phi\)</span> and Poincaré radius <span class="math inline">\(R\)</span> is
+<span class="math display">\[
+    L = \dfrac{2R\phi}{1-R^2}
+\]</span></p>
+</div>
+<p><em>Proof:</em>
+The inclusion map <span class="math inline">\(\iota&#39;\)</span> of the curve has Jacobian
+<span class="math inline">\(J&#39; = (-R\sin\theta, R\cos\theta, 0)\)</span>.
+The induced metric and length follows:
+<span class="math display">\[
+    g&#39;&#39; = J&#39; g (J&#39;)^T = \dfrac{4R^2}{(1-R^2)^2},
+    \quad \sqrt{\det g&#39;&#39;} = \dfrac{2R}{1-R^2} \implies
+    L = \dfrac{2R\phi}{1-R^2}
+\]</span></p>
+<div class="proposition">
+<p><span id="prp:hAreaLaw" class="proposition"><strong>Proposition 5.4  (area law for hyperbolic spherical surfaces) </strong></span></p>
+Consider a surface <span class="math inline">\(S\)</span> on a hyperbolic sphere of radius <span class="math inline">\(\rho\in (0, \infty)\)</span>.
+Let <span class="math inline">\(A\)</span> be the lateral area of the radial cone covering <span class="math inline">\(S\)</span>.
+We have
+<span class="math display">\[
+    A = \tanh(\rho/2) |\partial S| \leq |\partial S|
+\]</span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
+<img src="images/hSphereAreaLaw.png" alt="Hypothetical (for contradiction) constructions are in green. Geodesics are in blue." width="85%" />
+<p class="caption">
+Figure 5.1: Hypothetical (for contradiction) constructions are in green. Geodesics are in blue.
+</p>
+</div>
+</div>
+<p><em>Proof:</em> Comparing propositions <a href="quasi-isometries-in-practice.html#prp:hSectorArea">5.2</a> and <a href="quasi-isometries-in-practice.html#prp:hSectorLength">5.3</a>,
+we obtain <span class="math inline">\(A = RL\)</span>. Take the infinitesimal limit <span class="math inline">\((A, L)\mapsto (dA, d|\partial S|)\)</span>
+and integrate to yield <span class="math inline">\(A = R|\partial S| = \tanh(\rho/2) |\partial S| \leq |\partial S|\)</span>.</p>
+<div class="hypothesis">
+<p><span id="hyp:hAreaLaw" class="hypothesis"><strong>Hypothesis 5.1  (area law for hyperbolic MERAs) </strong></span>For MERAs representing a Cayley graph generated
+by neighboring transformations per the Svarc-Milnor lemma,
+the area law is satisfied in the asymptotic limit of small lattices.</p>
+</div>
+<p><em>Proof:</em> The area law follows from proposition <a href="quasi-isometries-in-practice.html#prp:hAreaLaw">5.4</a>
+if the following two claims are true:</p>
+<ol style="list-style-type: decimal">
+<li>Given a subsystem <span class="math inline">\(B\)</span> of the lattice embedded on a hyperbolic sphere,
+the area (size) of the subsystem is faithfully represented by the
+hyperbolic area <span class="math inline">\(S\)</span> as in proposition <a href="quasi-isometries-in-practice.html#prp:hAreaLaw">5.4</a>.</li>
+<li>The number of tensor legs crossing the lateral surface of the radial cone
+covering <span class="math inline">\(B\)</span> is proportional to the lateral area <span class="math inline">\(A\)</span> of the surface.</li>
+</ol>
+<p>Note that <span style="color: blue">
+the Cayley graph represents a regular tiling </span> of <span class="math inline">\(\mathbb H^3\)</span>,
+so that in the small-tile limit:</p>
+<ul>
+<li>The hyperbolic area of a surface is approximated by the number of tiles
+intersecting the surface up to constant factors.
+<ul>
+<li>I’m imagining cubical volume elements in Euclidean space: the area of a surface
+is approximated by the number of cubical volume elements intersecting the surface.</li>
+</ul></li>
+<li>We can approximate the surface as a plane
+in the small-tile limit, so the number of tile intersections is approximated
+by the number of graph-edge cuts up to constant factors.
+<ul>
+<li>In the Euclidean space, the intersection of a cubical volume element
+with a plane (assuming no intersection with vertices) cuts between
+<span class="math inline">\(3\)</span> and <span class="math inline">\(4\)</span> edges.</li>
+</ul></li>
+</ul>
+<p>Combining the two observations, the number of tensor legs crossing the lateral
+surface and the radial patch are both proportional to the hyperbolic area
+of the surfaces.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="covering-theory.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bibliography.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
