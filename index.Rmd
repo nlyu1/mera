@@ -44,7 +44,9 @@ link-citations: true
 
 In this project, we aim to construct a tensor-network ansatz 
 for CFT ground states on $S^2$. Such an ansatz will help understand 
-$AdS_3$ gravity by the holography conjecture. 
+$AdS_3$ gravity by the holography conjecture. As demonstrated by  
+[@pastawski2015holographic], holography also implies interesting quantum 
+error-correcting possibilities for codes which model higher-dimensional CFTs. 
 
 1. Identify "nice" groups with Gromov boundary $S^2$. 
 2. Construct their Cayley graphs out to a fixed radius, 
@@ -182,3 +184,4 @@ Some questions:
     compared to hyMERA, whose rank is bounded by maximum degree of a vertex in the tiling. 
 3. The original hyMERA paper provides many future directions, e.g. finding 
     an efficient optimization algorithm for the tensors. 
+
