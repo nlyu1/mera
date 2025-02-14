@@ -28,8 +28,14 @@ prp:hSectorLength
 prp:hAreaLaw
 fig:unnamed-chunk-6
 hyp:hAreaLaw
+def:unlabeled-div-16
+def:unlabeled-div-17
+def:unlabeled-div-18
+def:unlabeled-div-19
+thm:unlabeled-div-20
 research-agenda
 tensor-networks-and-geometry
 hyperbolic-groups
 covering-theory
 quasi-isometries-in-practice
+relevant-works

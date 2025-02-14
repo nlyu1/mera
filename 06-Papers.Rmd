@@ -1,0 +1,109 @@
+# Relevant Works
+
+1. Holographic states emphasizes faithful reproduction of 
+    entanglement and correlation properties. 
+2. Holographic codes emphasize exact error-correction. 
+    - HaPPY codes sacrifices exact (become state-dependent) 
+    error-correction for algebraic decay. 
+3. Both HaPPY codes and HTN are based on hyperbolic tilings, which 
+    are readily generalizable to $S^2$ boundary. The hyperbolic 
+    tiling structure is sufficient to ensure the Ryu-Takayanagi formula. 
+
+## HaPPY Code {-}
+
+In [@pastawski2015holographic], the authors defined holographic 
+states and codes based on a regular tiling of hyperbolic space, 
+and perfect tensors (corresponding to maximal absolutely entangled states). 
+
+:::{.definition name="holographic state"}
+A holographic state is a tensor network composed of perfect tensors which 
+cover a geometric manifold with boundary, with interior tensor legs contracted. 
+The open legs are associated with physical degrees of freedom. 
+:::
+
+Due to the property of perfect tensors, which can be viewed 
+as isometric mappings, we can associate open indices with the 
+bulk tensors and turn the whole TN into an isometric mapping 
+from bulk to boundary degrees of freedom. 
+
+:::{.definition name="holographic code"}
+A holographic code is an isometry from bulk to boundary degrees of freedom, 
+represented by a TN covering some geometric manifold with boundary. 
+:::
+
+For example, a pentagon tiling of $\mbb H^2$ needs to be 
+combined with a rank-$6$ tensor to form a holographic code. 
+<span style="color: blue">
+Holographic states are associated with AdS / CFT models 
+by varying the tensor ansatz, while holographic codes 
+provide a whole code isometric mapping of Hilbert spaces. 
+</span>
+
+The merits and shortcomings of the HaPPY code model are:
+
+1. Exact RT formula for hyperbolic tilings (Theorem 2, and Appendix B).  
+2. Erasure correction: bulk local observable can be realized by many boundary operators. 
+3. Two-point correlators can be nontrivial for some cases. 
+
+:::{.definition name="wedges and cones"}
+Given a (not necessarily connected) boundary region: 
+
+0. If $A$ is connected, its <u> causal wedge </u> is the set of points 
+    reached by applying the greedy algorithm. 
+    - The greedy algorithm starts from $A$ and progressively add 
+    tensors which are "more-than-half connected" to the current set. 
+    - Any bulk local operator on the causal wedge can be reconstructed 
+    as a boundary operator supported on $A$ (Theorem 5). 
+1. Its <u> geometric entanglement wedge </u> is the set of bulk points 
+    bounded by $A$ and the minimal surface with the same boundary as $A$. 
+2. Its <u> greedy entanglement wedge </u> is defined analogously. 
+:::
+
+In general, entanglement wedge is larger than the causal cone. 
+    - Hypothesis: some operators in the causal cone are reconstructable. 
+
+## HTN and Holography {-}
+
+Hyper-invariant tensor-networks [@evenbly2017hyperinvariant]
+is built upon HaPPY codes. It is a **holographic state** construction 
+which satisfies the following properties: 
+
+1. Uniform in the holographic bulk (unlike MERA). 
+2. Produces correlations and entanglement compatible with 
+    critical ground states. 
+    - Algebraic decay of correlations: the numerical spectra of 
+        descending super-operators are nontrivial. 
+    - Holographic causality (area law): see below. 
+3. Every finite subsystem has a canonical representation, 
+    even in the limit of infinite-depth networks. 
+
+Possible future work:
+
+1. Fully characterize the degrees of freedom of doubly unitary tensors. 
+
+:::{.definition name="various cones"}
+The various definitions of cones about a boundary region $\mca R$ are: 
+
+1. <u> Causal cone </u>: the set of tensors in the bulk which 
+    possibly affect $\tr_{\bar {\mca R}} |\psi\ra \la \psi|$. 
+2. <u> Entanglement wedge </u>: the set of bulk tensors bounded 
+    by $\mca R$ and $\gamma_R$, where $\gamma_R$ is the minimal 
+    surface whose boundary matches the boundary of $\mca R$ 
+    (and such that maximizes the volume of the enclosure). 
+:::
+
+:::{.theorem name="holographic causality"}
+In the limit $N\to \infty$, the HTN construction satisfies, for 
+simply connected $\mca R$, $\mca R(\mca R)\approx \mca E(\mca R)$. 
+:::
+_Proof_: Apply the coarse-graining super-operator continuously. 
+By symmetry, choose the bulk "center" to be the place where the 
+shrinking regime transitions to the steady regime. 
+
+## HTN Codes {-}
+
+HTN Codes [@steinberg2023holographic] constructed a way to 
+associate bulk degrees of freedom to HTNs. 
+It yields an model which satisfies algebraic boundary 
+decay, at the cost of having state-dependent, instead of perfect, 
+error-correction (complementary reality). 
