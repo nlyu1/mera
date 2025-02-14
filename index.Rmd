@@ -43,7 +43,8 @@ link-citations: true
 # Research agenda 
 
 In this project, we aim to construct a tensor-network ansatz 
-for CFT ground states on $S^2$. Such an ansatz will help understand 
+for CFT ground states on $S^2$ based on a hyperbolic tiling of $\mbb H^3$. 
+Such an ansatz will help understand 
 $AdS_3$ gravity by the holography conjecture. As demonstrated by  
 [@pastawski2015holographic], holography also implies interesting quantum 
 error-correcting possibilities for codes which model higher-dimensional CFTs. 
